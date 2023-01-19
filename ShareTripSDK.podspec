@@ -32,10 +32,10 @@ Pod::Spec.new do |s|
     s.ios.deployment_target = '11.0'
     s.swift_version = '5.0'
     
-    s.source_files = 'ShareTripSDK/Classes/**/*'
+    s.source_files = 'ShareTripSDK/Classes/**/*.{swift}'
     
     s.resource_bundles = {
-        'ShareTripSDK' => ['ShareTripSDK/**/*']
+        'Resoucres' => ['ShareTripSDK/**/*']
     }
     
     s.resources = "ShareTripSDK/Assets/**/*.{storyboard,xib,xcassets,pdf}"
