@@ -8,7 +8,7 @@
 
 import UIKit
 import WebKit
-import STCoreKit
+
 
 class FareRulesAndPolicyVC: UIViewController {
 

@@ -7,8 +7,8 @@
 //
 
 import UIKit
-import STCoreKit
-import STFlightKit
+
+
 
 protocol BaggageSelectionViewDelegate: AnyObject {
     func travellerSelectedOption(travellerType: BaggageTravellerType, travellerIndex: Int, optionIndex: Int, option: BaggageWholeFlightOptions)

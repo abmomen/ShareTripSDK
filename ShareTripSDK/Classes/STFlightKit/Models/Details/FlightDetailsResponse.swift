@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import STCoreKit
+
 
 public struct FlightDetailsResponse: Decodable {
     public let promotionalCoupon: [PromotionalCoupon]

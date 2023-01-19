@@ -6,7 +6,7 @@
 //
 
 import Alamofire
-import STCoreKit
+
 
 public enum FlightAPIRouter: APIEndpoint {
     case airportSearch(name: String)

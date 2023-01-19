@@ -6,7 +6,7 @@
 //  Copyright © 2022 ShareTrip. All rights reserved.
 //
 
-import STCoreKit
+
 
 struct PaymentUrls {
     var paymentURL: String = ""

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import STCoreKit
+
 
 protocol FlightPassengerListCoordinatorDelegate: AnyObject {
     func onSelectPassenger(at index: Int)

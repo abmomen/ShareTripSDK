@@ -6,7 +6,7 @@
 //
 
 import Alamofire
-import STCoreKit
+
 
 public class FlightAPIClient: APIClient {
     public init () { }

@@ -5,7 +5,7 @@
 //  Created by ST-iOS on 11/23/22.
 //
 
-import STCoreKit
+
 
 public class FlightFilterViewModelOld {
     public let filter: FlightFilter

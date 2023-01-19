@@ -5,7 +5,7 @@
 //  Created by ST-iOS on 11/20/22.
 //
 
-import STCoreKit
+
 
 class Traveller {
     var title: TitleType = .mr

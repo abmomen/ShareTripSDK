@@ -8,7 +8,7 @@
 
 import UIKit
 import PKHUD
-import STCoreKit
+
 import FloatingPanel
 
 class FlightDetailsVC: UIViewController {

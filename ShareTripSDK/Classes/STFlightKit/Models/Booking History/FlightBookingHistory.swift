@@ -5,7 +5,7 @@
 //  Created by ST-iOS on 11/20/22.
 //
 
-import STCoreKit
+
 
 public enum FlightBookingStatus: String, Codable {
     case pending = "Pending"

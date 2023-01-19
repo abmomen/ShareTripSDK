@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import STFlightKit
+
 
 enum BaggageHistoryType {
     case basic

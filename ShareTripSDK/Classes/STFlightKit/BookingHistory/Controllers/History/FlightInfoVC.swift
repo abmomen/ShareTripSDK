@@ -8,8 +8,8 @@
 
 import UIKit
 import Kingfisher
-import STFlightKit
-import STCoreKit
+
+
 
 class FlightInfoVC: UITableViewController {
 

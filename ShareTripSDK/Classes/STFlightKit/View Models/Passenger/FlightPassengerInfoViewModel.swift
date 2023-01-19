@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import STCoreKit
+
 
 public protocol FlightPassengerInfoViewModelViewDelegate: AnyObject {
     func validationError(for indexPath: IndexPath, message: String, completion: (()->Void)?)

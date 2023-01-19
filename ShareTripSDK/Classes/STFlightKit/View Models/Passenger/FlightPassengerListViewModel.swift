@@ -5,7 +5,7 @@
 //  Created by ST-iOS on 11/28/22.
 //
 
-import STCoreKit
+
 
 public protocol FlightPassengerListViewModel: TableViewViewModel {
     var flightBookingData: FlightBookigData { get }

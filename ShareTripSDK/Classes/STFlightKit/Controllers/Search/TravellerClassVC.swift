@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import STCoreKit
+
 
 protocol TravellerClassVCDelegate: AnyObject {
     func travellerInfoChanged()

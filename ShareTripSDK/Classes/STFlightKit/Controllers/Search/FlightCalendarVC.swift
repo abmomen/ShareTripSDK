@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import STCoreKit
+
 import JTAppleCalendar
 
 public class FlightCalendarVC: JTCalendarVC {

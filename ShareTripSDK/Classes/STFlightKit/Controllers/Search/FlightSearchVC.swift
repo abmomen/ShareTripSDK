@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import STCoreKit
+
 
 //MARK: - FlightSerachVC Delegate
 public protocol FlightSearchVCDelegate: AnyObject {

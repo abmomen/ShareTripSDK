@@ -8,7 +8,7 @@
 
 import UIKit
 import PKHUD
-import STCoreKit
+
 
 class VoidQuotationDetailsVC: UIViewController {
     @IBOutlet private weak var nextButton: UIButton! {

@@ -5,7 +5,7 @@
 //  Created by ST-iOS on 11/20/22.
 //
 
-import STCoreKit
+
 
 public class FlightPassengerInfoValidator {
     public static func isOptional(rowType: UserInfoRowType, isPrimaryPassenger: Bool, isDomesticFlight: Bool, isAttachmentAvailable: Bool) -> Bool {

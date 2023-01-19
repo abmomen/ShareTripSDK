@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import STCoreKit
+
 
 protocol FlightFilterCardViewDelgate: AnyObject {
     func crossButtonTapped()

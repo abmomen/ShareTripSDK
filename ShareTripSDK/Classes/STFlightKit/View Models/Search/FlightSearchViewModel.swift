@@ -6,7 +6,7 @@
 //
 
 import Alamofire
-import STCoreKit
+
 
 public typealias FlightInfoTuple = (departure: Airport?, arrival: Airport?, dateRange: ClosedRange<Date>?)
 

@@ -9,7 +9,7 @@
 import UIKit
 import PKHUD
 import MessageUI
-import STCoreKit
+
 
 class FlightBookingHistoryDetailVC: UIViewController {
     private var cancellationAlertView: CancellationAlertView?

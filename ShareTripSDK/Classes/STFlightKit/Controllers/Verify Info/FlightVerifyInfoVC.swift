@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import STCoreKit
+
 
 enum InfoCellType: Int, CaseIterable {
     case name

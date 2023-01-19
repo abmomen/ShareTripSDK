@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import STFlightKit
+
 
 protocol FlightLegDetailsVCDelegate: AnyObject {
     func showNextLeg(legId: Int)

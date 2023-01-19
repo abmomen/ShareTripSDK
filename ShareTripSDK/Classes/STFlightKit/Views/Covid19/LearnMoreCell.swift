@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import STCoreKit
+
 
 enum UserInfoOptionalRowType {
     case covid

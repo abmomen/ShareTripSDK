@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import STCoreKit
+
 
 public enum PriceRangeType {
     case cheap, moderate, expensive, unknown

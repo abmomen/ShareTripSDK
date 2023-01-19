@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import STCoreKit
+
 
 public class FlightBookingCell: UITableViewCell {
 

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import STCoreKit
+
 
 class FlightCalendarTopView: UIView, NibBased {
     @IBOutlet weak var chepIndicator: UIView!

@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import STCoreKit
+
 
 public protocol ItemShareable {
     func share(for serviceType: ServiceType)

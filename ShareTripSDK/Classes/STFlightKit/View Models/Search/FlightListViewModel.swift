@@ -5,7 +5,7 @@
 //  Created by ST-iOS on 11/23/22.
 //
 
-import STCoreKit
+
 import Alamofire
 
 public protocol FlightListViewModelDelegate: AnyObject {

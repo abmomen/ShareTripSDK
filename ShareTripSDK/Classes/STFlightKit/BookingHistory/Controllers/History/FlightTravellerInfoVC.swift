@@ -7,8 +7,8 @@
 //
 
 import UIKit
-import STCoreKit
-import STFlightKit
+
+
 
 class FlightTravellerInfoVC: UITableViewController {
     private let travellerInfo: [TravellerInfo]

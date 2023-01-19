@@ -7,7 +7,7 @@
 
 import Foundation
 import FirebaseRemoteConfig
-import STCoreKit
+
 
 public struct SelectedFlightInfo {
     public let adult: Int

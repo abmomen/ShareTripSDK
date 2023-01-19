@@ -7,7 +7,7 @@
 
 import UIKit
 import Alamofire
-import STCoreKit
+
 
 public struct FlightSearchRequest {
     public let flightRouteType: FlightRouteType

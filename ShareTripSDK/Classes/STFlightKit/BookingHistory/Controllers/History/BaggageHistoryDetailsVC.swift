@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import STCoreKit
+
 
 class BaggageHistoryDetailsVC: UIViewController {
 

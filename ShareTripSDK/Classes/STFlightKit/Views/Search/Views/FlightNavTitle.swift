@@ -6,7 +6,7 @@
 //  Copyright © 2019 TBBD IOS. All rights reserved.
 //
 import UIKit
-import STCoreKit
+
 
 class FlightNavTitleView: UIView {
     

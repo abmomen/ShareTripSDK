@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import STCoreKit
+
 
 protocol FlightFilterVCDelegate: AnyObject {
     func resetFilterButtonDidTapped()

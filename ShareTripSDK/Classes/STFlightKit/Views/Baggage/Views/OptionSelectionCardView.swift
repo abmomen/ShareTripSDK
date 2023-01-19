@@ -7,7 +7,7 @@
 //
 
 //import UIKit
-//import STCoreKit
+//
 //
 //public protocol OptionSelectionCardViewDelegate: PopupInputViewDelegate {
 //    func didSelectOption(optionIndex: Int, option: String)

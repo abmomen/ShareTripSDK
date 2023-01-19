@@ -9,7 +9,7 @@
 import UIKit
 import FloatingPanel
 import PKHUD
-import STCoreKit
+
 
 class FlightSummaryVC: UIViewController {
     @IBOutlet weak var legViewTitleLabel: UILabel!
