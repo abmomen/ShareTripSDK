@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '10.0'
+
+target 'ShareTripSDK_Example' do
+  pod 'ShareTripSDK', :path => '../'
+
+  target 'ShareTripSDK_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
