@@ -7,14 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14CC9D5949F473010B8A8AE1 /* Pods_ShareTripSDK_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C32A94F506111328BD162E24 /* Pods_ShareTripSDK_Example.framework */; };
+		1F2585731A1F9DC1467DE502 /* Pods_ShareTripSDK_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02BB8F5846FCA82488663A7F /* Pods_ShareTripSDK_Tests.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
-		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
-		9A4CB95B2484B76CEE323F7A /* Pods_ShareTripSDK_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFB033AB625111AB80C800DD /* Pods_ShareTripSDK_Example.framework */; };
-		9D6DDDCC8017CB3851EE2F71 /* Pods_ShareTripSDK_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8205DD6B2C6B5C87EF96A189 /* Pods_ShareTripSDK_Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +27,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02BB8F5846FCA82488663A7F /* Pods_ShareTripSDK_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShareTripSDK_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		17069A3FDE60591E64107558 /* ShareTripSDK.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ShareTripSDK.podspec; path = ../ShareTripSDK.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		499AADA87BFF80478B3871D0 /* Pods-ShareTripSDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareTripSDK_Tests.debug.xcconfig"; path = "Target Support Files/Pods-ShareTripSDK_Tests/Pods-ShareTripSDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* ShareTripSDK_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareTripSDK_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -39,14 +40,12 @@
 		607FACE51AFB9204008FA782 /* ShareTripSDK_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShareTripSDK_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		641BF1A4D644306F84811C6A /* Pods-ShareTripSDK_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareTripSDK_Example.debug.xcconfig"; path = "Target Support Files/Pods-ShareTripSDK_Example/Pods-ShareTripSDK_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		8205DD6B2C6B5C87EF96A189 /* Pods_ShareTripSDK_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShareTripSDK_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A5ED7251825FADA8935D449 /* Pods-ShareTripSDK_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareTripSDK_Example.debug.xcconfig"; path = "Target Support Files/Pods-ShareTripSDK_Example/Pods-ShareTripSDK_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		BD31A5ECF826A262FCAD40C7 /* Pods-ShareTripSDK_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareTripSDK_Tests.release.xcconfig"; path = "Target Support Files/Pods-ShareTripSDK_Tests/Pods-ShareTripSDK_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		C32A94F506111328BD162E24 /* Pods_ShareTripSDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShareTripSDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C72C95571DFD7CC2DAFC03DE /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		CFB033AB625111AB80C800DD /* Pods_ShareTripSDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShareTripSDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D5583418D41411E4B837B4AD /* Pods-ShareTripSDK_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareTripSDK_Example.release.xcconfig"; path = "Target Support Files/Pods-ShareTripSDK_Example/Pods-ShareTripSDK_Example.release.xcconfig"; sourceTree = "<group>"; };
-		DB3507446CBF76E2A4C91345 /* Pods-ShareTripSDK_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareTripSDK_Tests.release.xcconfig"; path = "Target Support Files/Pods-ShareTripSDK_Tests/Pods-ShareTripSDK_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		D0480F3ECDDC19EA05CA8CA5 /* Pods-ShareTripSDK_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareTripSDK_Example.release.xcconfig"; path = "Target Support Files/Pods-ShareTripSDK_Example/Pods-ShareTripSDK_Example.release.xcconfig"; sourceTree = "<group>"; };
 		E8CB265444ED907A67EA7DE1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		EF6AEC48CCCE3543BD95F634 /* Pods-ShareTripSDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareTripSDK_Tests.debug.xcconfig"; path = "Target Support Files/Pods-ShareTripSDK_Tests/Pods-ShareTripSDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A4CB95B2484B76CEE323F7A /* Pods_ShareTripSDK_Example.framework in Frameworks */,
+				14CC9D5949F473010B8A8AE1 /* Pods_ShareTripSDK_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,13 +61,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D6DDDCC8017CB3851EE2F71 /* Pods_ShareTripSDK_Tests.framework in Frameworks */,
+				1F2585731A1F9DC1467DE502 /* Pods_ShareTripSDK_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		33C0963772A18199E301460D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C32A94F506111328BD162E24 /* Pods_ShareTripSDK_Example.framework */,
+				02BB8F5846FCA82488663A7F /* Pods_ShareTripSDK_Tests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
@@ -77,7 +85,7 @@
 				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
 				72CE88E4BBC25A679E3DD8B9 /* Pods */,
-				64F436D2A323C72725D50312 /* Frameworks */,
+				33C0963772A18199E301460D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -139,22 +147,13 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
-		64F436D2A323C72725D50312 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				CFB033AB625111AB80C800DD /* Pods_ShareTripSDK_Example.framework */,
-				8205DD6B2C6B5C87EF96A189 /* Pods_ShareTripSDK_Tests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		72CE88E4BBC25A679E3DD8B9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				641BF1A4D644306F84811C6A /* Pods-ShareTripSDK_Example.debug.xcconfig */,
-				D5583418D41411E4B837B4AD /* Pods-ShareTripSDK_Example.release.xcconfig */,
-				EF6AEC48CCCE3543BD95F634 /* Pods-ShareTripSDK_Tests.debug.xcconfig */,
-				DB3507446CBF76E2A4C91345 /* Pods-ShareTripSDK_Tests.release.xcconfig */,
+				6A5ED7251825FADA8935D449 /* Pods-ShareTripSDK_Example.debug.xcconfig */,
+				D0480F3ECDDC19EA05CA8CA5 /* Pods-ShareTripSDK_Example.release.xcconfig */,
+				499AADA87BFF80478B3871D0 /* Pods-ShareTripSDK_Tests.debug.xcconfig */,
+				BD31A5ECF826A262FCAD40C7 /* Pods-ShareTripSDK_Tests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -166,12 +165,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "ShareTripSDK_Example" */;
 			buildPhases = (
-				DCE34C4CF06ED46FABD1CD77 /* [CP] Check Pods Manifest.lock */,
+				84C878C450ACDAECF5EB205F /* [CP] Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				CA0E1A7E36CDD4EAD226BC76 /* [CP] Embed Pods Frameworks */,
-				8A8C67D9B2D12ACD51D4BE49 /* [CP] Copy Pods Resources */,
+				C6BEE936061ABAD7F06A29F4 /* [CP] Embed Pods Frameworks */,
+				B626D1C2AC183E16C7E25A13 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -186,7 +185,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "ShareTripSDK_Tests" */;
 			buildPhases = (
-				08B10A9C08F68A2F90D409E1 /* [CP] Check Pods Manifest.lock */,
+				377DE131E57BEE4C7D76544C /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
@@ -251,7 +250,6 @@
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
-				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,7 +263,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		08B10A9C08F68A2F90D409E1 /* [CP] Check Pods Manifest.lock */ = {
+		377DE131E57BEE4C7D76544C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -287,25 +285,225 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8A8C67D9B2D12ACD51D4BE49 /* [CP] Copy Pods Resources */ = {
+		84C878C450ACDAECF5EB205F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShareTripSDK_Example-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B626D1C2AC183E16C7E25A13 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ShareTripSDK_Example/Pods-ShareTripSDK_Example-resources.sh",
-				"${PODS_CONFIGURATION_BUILD_DIR}/ShareTripSDK/ShareTripSDK.bundle",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/MyBL.storyboardc",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/AllServicesButtonCell.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/LoadingVC.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/PaymentConfirmationVC.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/CouponSuggestionView.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/PhoneNumberVerificationView.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/MainEntry.storyboardc",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/TravelAdvice.storyboardc",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/ExploreDestinationTVCell.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/PermissionInfoTVCell.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/TravelAdviceTVCell.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/TravelAdvisoryLevelTVCell.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/TravelDetailsInfoTVCell.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/JTCalendarHeader.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/JTCalendarView.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/JTDateCell.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/DiscountOptionsCell.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/EarnTripcoinView.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/RedeemTripcoinView.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/UseCouponView.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/FilterCell.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/FilterResetCell.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/BriefInfoCardCell.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/InfoSelectionCell.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/InfoTextFieldCell.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/InfoUploadCell.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/PaymentGatewaysView.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/FareCardSingleLineCell.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/PriceBreakdownFareCell.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/PriceViewCell.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/PriceRangeCell.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/SingleCellShareView.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/SingleCellTripCoinView.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/TripCoinCardCell.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/TripCoinViewCell.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/PostCardCell.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/SharePostTVCell.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/RightArrowTitleCell.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/DoubleInputCell.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/FirstNameInputCell.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/LastNameInputCell.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/TowColGivenNameInputCell.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/RetryInfoCardCell.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/SearchCountryTVCell.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/SingleInputCell.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/SingleInputTakenCell.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/SingleInputTitleCell.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/STSingleButtonCell.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/SingleButtonCardCell.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/SingleLabelInfoTVCell.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/SingleLineInfoCardCell.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/SwitchCell.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/FlightBooking.storyboardc",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/Base.lproj/Flight.storyboardc",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/BaggageInfoTVCell.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/BaggageSelectionCell.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/FlightBookingCell.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/FlightCalendarTopView.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/CovidInfoCell.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/CovidTestChargeCell.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/LearnMoreCell.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/LearnMoreCVCell.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/FlightLegCardCell.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/FlightSegmentCardCell.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/FlightSegmentCell.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/NextPrevLegDetailsCell.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/SeatAndBagageInfoCardCell.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/WarningMessageCell.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/FlightInfoHeaderView.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/FlightLegPlaceholderView.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/FlightLegView.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/FlightNameCollectionViewCell.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/AirportCell.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/AirportInputCell.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/FilterFlightDurationCell.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/FilterFlightScheduleCell.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/FilterPriceRangeCell.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/FlightFilterAirlinesCell.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/OptionSelectTBCell.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/NameInputGuideCell.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/FlightCell.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/TravelerCell.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/PriceChangeView.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/ConditionCell.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/EditableContactCell.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/FlightEditContactButtonCell.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/InfoDetailCell.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/NameCell.nib",
+				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/PassportVisaCell.nib",
+				"${PODS_ROOT}/../../ShareTripSDK/Assets/FlightAssets.xcassets",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ShareTripSDK.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MyBL.storyboardc",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AllServicesButtonCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/LoadingVC.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/PaymentConfirmationVC.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CouponSuggestionView.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/PhoneNumberVerificationView.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MainEntry.storyboardc",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TravelAdvice.storyboardc",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ExploreDestinationTVCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/PermissionInfoTVCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TravelAdviceTVCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TravelAdvisoryLevelTVCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TravelDetailsInfoTVCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/JTCalendarHeader.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/JTCalendarView.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/JTDateCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/DiscountOptionsCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/EarnTripcoinView.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/RedeemTripcoinView.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/UseCouponView.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FilterCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FilterResetCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BriefInfoCardCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/InfoSelectionCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/InfoTextFieldCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/InfoUploadCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/PaymentGatewaysView.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FareCardSingleLineCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/PriceBreakdownFareCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/PriceViewCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/PriceRangeCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SingleCellShareView.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SingleCellTripCoinView.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TripCoinCardCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TripCoinViewCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/PostCardCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SharePostTVCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/RightArrowTitleCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/DoubleInputCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirstNameInputCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/LastNameInputCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TowColGivenNameInputCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/RetryInfoCardCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SearchCountryTVCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SingleInputCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SingleInputTakenCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SingleInputTitleCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/STSingleButtonCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SingleButtonCardCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SingleLabelInfoTVCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SingleLineInfoCardCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SwitchCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FlightBooking.storyboardc",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Flight.storyboardc",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BaggageInfoTVCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BaggageSelectionCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FlightBookingCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FlightCalendarTopView.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CovidInfoCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CovidTestChargeCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/LearnMoreCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/LearnMoreCVCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FlightLegCardCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FlightSegmentCardCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FlightSegmentCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/NextPrevLegDetailsCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SeatAndBagageInfoCardCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/WarningMessageCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FlightInfoHeaderView.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FlightLegPlaceholderView.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FlightLegView.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FlightNameCollectionViewCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AirportCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AirportInputCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FilterFlightDurationCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FilterFlightScheduleCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FilterPriceRangeCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FlightFilterAirlinesCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/OptionSelectTBCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/NameInputGuideCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FlightCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TravelerCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/PriceChangeView.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ConditionCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/EditableContactCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FlightEditContactButtonCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/InfoDetailCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/NameCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/PassportVisaCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Assets.car",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ShareTripSDK_Example/Pods-ShareTripSDK_Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		CA0E1A7E36CDD4EAD226BC76 /* [CP] Embed Pods Frameworks */ = {
+		C6BEE936061ABAD7F06A29F4 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -419,28 +617,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ShareTripSDK_Example/Pods-ShareTripSDK_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DCE34C4CF06ED46FABD1CD77 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ShareTripSDK_Example-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -594,7 +770,7 @@
 		};
 		607FACF01AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 641BF1A4D644306F84811C6A /* Pods-ShareTripSDK_Example.debug.xcconfig */;
+			baseConfigurationReference = 6A5ED7251825FADA8935D449 /* Pods-ShareTripSDK_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = YDN344UV2Z;
@@ -611,7 +787,7 @@
 		};
 		607FACF11AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D5583418D41411E4B837B4AD /* Pods-ShareTripSDK_Example.release.xcconfig */;
+			baseConfigurationReference = D0480F3ECDDC19EA05CA8CA5 /* Pods-ShareTripSDK_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = YDN344UV2Z;
@@ -628,7 +804,7 @@
 		};
 		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EF6AEC48CCCE3543BD95F634 /* Pods-ShareTripSDK_Tests.debug.xcconfig */;
+			baseConfigurationReference = 499AADA87BFF80478B3871D0 /* Pods-ShareTripSDK_Tests.debug.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = YDN344UV2Z;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -652,7 +828,7 @@
 		};
 		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DB3507446CBF76E2A4C91345 /* Pods-ShareTripSDK_Tests.release.xcconfig */;
+			baseConfigurationReference = BD31A5ECF826A262FCAD40C7 /* Pods-ShareTripSDK_Tests.release.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = YDN344UV2Z;
 				FRAMEWORK_SEARCH_PATHS = (
