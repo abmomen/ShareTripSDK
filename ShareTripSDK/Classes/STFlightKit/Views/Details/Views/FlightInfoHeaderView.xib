@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="FlightInfoHeaderView" customModule="ShareTrip" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4wD-dc-dRR" userLabel="Container View">
+                    <rect key="frame" x="0.0" y="8" width="375" height="48"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DAC - KUL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t5d-Br-Boc">
+                            <rect key="frame" x="16" y="9.5" width="303" height="29"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                            <color key="textColor" red="0.1803921568627451" green="0.19215686274509802" blue="0.5725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plane-mono" translatesAutoresizingMaskIntoConstraints="NO" id="06M-Bh-5vq">
+                            <rect key="frame" x="327" y="8" width="32" height="32"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="06M-Bh-5vq" secondAttribute="height" multiplier="1:1" id="qmw-d3-DB3"/>
+                                <constraint firstAttribute="height" constant="32" id="tVi-0B-Dkm"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="t5d-Br-Boc" firstAttribute="leading" secondItem="4wD-dc-dRR" secondAttribute="leading" constant="16" id="9Pa-Ue-Pn9"/>
+                        <constraint firstItem="06M-Bh-5vq" firstAttribute="leading" secondItem="t5d-Br-Boc" secondAttribute="trailing" constant="8" id="Rlp-PT-yVD"/>
+                        <constraint firstItem="t5d-Br-Boc" firstAttribute="centerY" secondItem="4wD-dc-dRR" secondAttribute="centerY" id="Um9-KH-S9m"/>
+                        <constraint firstAttribute="trailing" secondItem="06M-Bh-5vq" secondAttribute="trailing" constant="16" id="jAY-kQ-VD7"/>
+                        <constraint firstItem="06M-Bh-5vq" firstAttribute="centerY" secondItem="t5d-Br-Boc" secondAttribute="centerY" id="pKR-4k-VuN"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="4wD-dc-dRR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="AEl-AC-xIn"/>
+                <constraint firstItem="4wD-dc-dRR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="SdR-Gg-dNj"/>
+                <constraint firstAttribute="bottom" secondItem="4wD-dc-dRR" secondAttribute="bottom" id="YP0-ke-xKR"/>
+                <constraint firstAttribute="trailing" secondItem="4wD-dc-dRR" secondAttribute="trailing" id="qKz-6B-zWd"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="fromCodeLabel" destination="t5d-Br-Boc" id="K0H-0y-mF9"/>
+            </connections>
+            <point key="canvasLocation" x="329.71014492753625" y="-125.89285714285714"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="plane-mono" width="32" height="32"/>
+    </resources>
+</document>

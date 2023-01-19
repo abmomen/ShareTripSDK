@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="LearnMoreCVCell" customModule="ShareTrip" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="273" height="138"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="273" height="138"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DtD-DG-yRf">
+                        <rect key="frame" x="5" y="5" width="263" height="128"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UMy-6H-iqW">
+                                <rect key="frame" x="16" y="16" width="231" height="84"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="vTx-di-2o4"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Praava Health" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jpq-YJ-I7n">
+                                <rect key="frame" x="8" y="108" width="247" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="kQc-CV-xNW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" systemColor="systemBlueColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UMy-6H-iqW" firstAttribute="leading" secondItem="DtD-DG-yRf" secondAttribute="leading" constant="16" id="Pg7-7g-j1O"/>
+                            <constraint firstAttribute="trailing" secondItem="UMy-6H-iqW" secondAttribute="trailing" constant="16" id="RCK-pp-e5i"/>
+                            <constraint firstAttribute="trailing" secondItem="Jpq-YJ-I7n" secondAttribute="trailing" constant="8" id="aXS-ZP-eqw"/>
+                            <constraint firstAttribute="bottom" secondItem="Jpq-YJ-I7n" secondAttribute="bottom" constant="4" id="b8C-tf-VGL"/>
+                            <constraint firstItem="Jpq-YJ-I7n" firstAttribute="top" secondItem="UMy-6H-iqW" secondAttribute="bottom" constant="8" id="vlm-kg-nCg"/>
+                            <constraint firstItem="Jpq-YJ-I7n" firstAttribute="leading" secondItem="DtD-DG-yRf" secondAttribute="leading" constant="8" id="vp9-dv-MvG"/>
+                            <constraint firstItem="UMy-6H-iqW" firstAttribute="top" secondItem="DtD-DG-yRf" secondAttribute="top" constant="16" id="zU0-Lz-VvW"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="DtD-DG-yRf" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="6Jb-9n-0Os"/>
+                <constraint firstAttribute="bottom" secondItem="DtD-DG-yRf" secondAttribute="bottom" constant="5" id="DAa-9n-WgF"/>
+                <constraint firstItem="DtD-DG-yRf" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="a1h-N2-sHb"/>
+                <constraint firstAttribute="trailing" secondItem="DtD-DG-yRf" secondAttribute="trailing" constant="5" id="lCE-yu-Eo0"/>
+            </constraints>
+            <size key="customSize" width="273" height="138"/>
+            <connections>
+                <outlet property="containerView" destination="DtD-DG-yRf" id="zEd-hr-Sx7"/>
+                <outlet property="imageView" destination="UMy-6H-iqW" id="6DP-jD-tTy"/>
+                <outlet property="titleLabel" destination="Jpq-YJ-I7n" id="Mo6-N7-yNb"/>
+            </connections>
+            <point key="canvasLocation" x="-911" y="-2"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

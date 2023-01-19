@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Refundable Passengers SelectionVC-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="RefundablePassengersSelectionVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="RefundablePassengersSelectionVC" customModule="ShareTrip" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" contentInsetAdjustmentBehavior="never" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NLS-fo-5Ww">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="28j-Ol-oIU">
+                                <rect key="frame" x="16" y="802" width="382" height="44"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="0gS-eb-ImO"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="NEXT">
+                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="15"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="didTapNextButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="1af-GY-h5Z"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="NLS-fo-5Ww" secondAttribute="trailing" id="Adb-yR-fzx"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="28j-Ol-oIU" secondAttribute="bottom" constant="16" id="Oxl-ti-0U6"/>
+                            <constraint firstItem="NLS-fo-5Ww" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="T8d-q3-knb"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="28j-Ol-oIU" secondAttribute="trailing" constant="16" id="Z2R-O2-Heo"/>
+                            <constraint firstItem="28j-Ol-oIU" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="bZN-ON-7mf"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="NLS-fo-5Ww" secondAttribute="bottom" id="d6f-p7-HD9"/>
+                            <constraint firstItem="NLS-fo-5Ww" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="hZa-Qb-ThR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nextButton" destination="28j-Ol-oIU" id="JsL-XL-y63"/>
+                        <outlet property="tableView" destination="NLS-fo-5Ww" id="VwJ-qZ-kbW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-809" y="104"/>
+        </scene>
+        <!--Refund Quotation DetailsVC-->
+        <scene sceneID="1kX-lJ-z3B">
+            <objects>
+                <viewController storyboardIdentifier="RefundQuotationDetailsVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uVU-Rp-hXT" customClass="RefundQuotationDetailsVC" customModule="ShareTrip" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="l5j-fH-V4V">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="qQN-NT-ATT">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ASh-Ol-fWh">
+                                <rect key="frame" x="16" y="802" width="382" height="44"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="rBE-g0-hA0"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="NEXT">
+                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="15"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="didTapNextButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="UzU-Vf-EZu"/>
+                                    <action selector="didTapNextButton:" destination="uVU-Rp-hXT" eventType="touchUpInside" id="kix-2B-GLX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Q3G-1E-SEg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Q3G-1E-SEg" firstAttribute="trailing" secondItem="ASh-Ol-fWh" secondAttribute="trailing" constant="16" id="2Ah-yA-i7f"/>
+                            <constraint firstItem="Q3G-1E-SEg" firstAttribute="bottom" secondItem="ASh-Ol-fWh" secondAttribute="bottom" constant="16" id="7Pf-DR-6Z7"/>
+                            <constraint firstItem="Q3G-1E-SEg" firstAttribute="trailing" secondItem="qQN-NT-ATT" secondAttribute="trailing" id="FZp-YR-lN3"/>
+                            <constraint firstItem="qQN-NT-ATT" firstAttribute="top" secondItem="Q3G-1E-SEg" secondAttribute="top" id="Mye-n6-CWb"/>
+                            <constraint firstItem="ASh-Ol-fWh" firstAttribute="leading" secondItem="Q3G-1E-SEg" secondAttribute="leading" constant="16" id="U1D-9i-O9I"/>
+                            <constraint firstItem="Q3G-1E-SEg" firstAttribute="bottom" secondItem="qQN-NT-ATT" secondAttribute="bottom" id="UO5-vy-5yd"/>
+                            <constraint firstItem="qQN-NT-ATT" firstAttribute="leading" secondItem="Q3G-1E-SEg" secondAttribute="leading" id="u5Q-Ra-TNn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nextButton" destination="ASh-Ol-fWh" id="Ooz-B3-ter"/>
+                        <outlet property="tableView" destination="qQN-NT-ATT" id="cQU-EU-Cud"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0lO-Zd-dVU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-120" y="104"/>
+        </scene>
+        <!--Confirm Flight RefundVC-->
+        <scene sceneID="TXA-rW-LRI">
+            <objects>
+                <viewController storyboardIdentifier="ConfirmFlightRefundVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y0K-fq-Pkp" customClass="ConfirmFlightRefundVC" customModule="ShareTrip" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zfS-ON-88l">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="vj1-IR-tEO">
+                                <rect key="frame" x="36" y="88" width="342" height="350.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="750" image="flight-processing" translatesAutoresizingMaskIntoConstraints="NO" id="8hB-DM-FRX">
+                                        <rect key="frame" x="111" y="0.0" width="120" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="oHE-Rv-pqI"/>
+                                            <constraint firstAttribute="width" secondItem="8hB-DM-FRX" secondAttribute="height" multiplier="1:1" id="s2G-2B-iDy"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Refund my booking" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j3O-1k-HNC">
+                                        <rect key="frame" x="66" y="140" width="210" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRG-Dy-g3o">
+                                        <rect key="frame" x="21.5" y="189" width="299" height="33.5"/>
+                                        <string key="text">I  acknowledged the refund policy (mentioned 
+right) and agree to Terms and Conditions.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="0.29803921568627451" green="0.29803921568627451" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FdP-i9-AHW">
+                                        <rect key="frame" x="0.0" y="242.5" width="342" height="44"/>
+                                        <color key="backgroundColor" systemColor="linkColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="03c-SC-QMa"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="CONFIRM">
+                                            <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="14"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="didTapConfirmButton:" destination="Y0K-fq-Pkp" eventType="touchUpInside" id="aP0-Hp-Qxq"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GPc-m4-mw4">
+                                        <rect key="frame" x="0.0" y="306.5" width="342" height="44"/>
+                                        <color key="tintColor" red="0.29803921570000003" green="0.29803921570000003" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="CANCEL">
+                                            <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="14"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="didTapCancelButton:" destination="Y0K-fq-Pkp" eventType="touchUpInside" id="fNf-kD-a3B"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="GPc-m4-mw4" firstAttribute="height" secondItem="FdP-i9-AHW" secondAttribute="height" id="VFI-sU-Bbc"/>
+                                    <constraint firstItem="FdP-i9-AHW" firstAttribute="width" secondItem="vj1-IR-tEO" secondAttribute="width" id="jFJ-lM-rMT"/>
+                                    <constraint firstItem="GPc-m4-mw4" firstAttribute="width" secondItem="FdP-i9-AHW" secondAttribute="width" id="xoq-of-RK5"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="t9f-k9-vsw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="t9f-k9-vsw" firstAttribute="trailing" secondItem="vj1-IR-tEO" secondAttribute="trailing" constant="36" id="2Fc-TM-GNq"/>
+                            <constraint firstItem="vj1-IR-tEO" firstAttribute="leading" secondItem="t9f-k9-vsw" secondAttribute="leading" constant="36" id="jEW-IT-VKz"/>
+                            <constraint firstItem="vj1-IR-tEO" firstAttribute="top" secondItem="t9f-k9-vsw" secondAttribute="top" constant="44" id="rFv-Fz-Hj9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="GPc-m4-mw4" id="1Qs-AR-0h8"/>
+                        <outlet property="confimButton" destination="FdP-i9-AHW" id="PcH-R1-AiR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xeK-XB-sPJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="584" y="104"/>
+        </scene>
+        <!--Flight Refund SuccessVC-->
+        <scene sceneID="T6w-rA-eGT">
+            <objects>
+                <viewController storyboardIdentifier="FlightRefundSuccessVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Dbp-Xj-YRn" customClass="FlightRefundSuccessVC" customModule="ShareTrip" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="C4X-Pa-AAM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="bzo-dn-8AD">
+                                <rect key="frame" x="36" y="88" width="342" height="303.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="750" image="flight-processing" translatesAutoresizingMaskIntoConstraints="NO" id="yih-WG-hd7">
+                                        <rect key="frame" x="111" y="0.0" width="120" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="yih-WG-hd7" secondAttribute="height" multiplier="1:1" id="NTt-8W-k7J"/>
+                                            <constraint firstAttribute="height" constant="120" id="YJ2-7j-fCx"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your refund is being processed" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2dj-v6-yfl">
+                                        <rect key="frame" x="3.5" y="140" width="335" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7OO-ud-KPf">
+                                        <rect key="frame" x="29" y="189" width="284" height="50.5"/>
+                                        <string key="text">We have received your request. You will get 
+refund as per policy.
+Thank you for being with ShareTrip.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="0.29803921570000003" green="0.29803921570000003" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfu-4x-pgW">
+                                        <rect key="frame" x="0.0" y="259.5" width="342" height="44"/>
+                                        <color key="backgroundColor" systemColor="linkColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="nY3-MA-gf5"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="GO BACK TO YOUR BOOKING">
+                                            <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="14"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="didTapGoBack:" destination="Dbp-Xj-YRn" eventType="touchUpInside" id="6vi-aX-uvx"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="hfu-4x-pgW" firstAttribute="width" secondItem="bzo-dn-8AD" secondAttribute="width" id="dcS-w4-wUD"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="uvv-RI-Y5S"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bzo-dn-8AD" firstAttribute="leading" secondItem="uvv-RI-Y5S" secondAttribute="leading" constant="36" id="aYt-f3-mZV"/>
+                            <constraint firstItem="uvv-RI-Y5S" firstAttribute="trailing" secondItem="bzo-dn-8AD" secondAttribute="trailing" constant="36" id="kbz-Yi-LhC"/>
+                            <constraint firstItem="bzo-dn-8AD" firstAttribute="top" secondItem="uvv-RI-Y5S" secondAttribute="top" constant="44" id="tag-nc-WWl"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="hfu-4x-pgW" id="oo6-ne-5Jd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z8n-8g-apA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1312" y="104"/>
+        </scene>
+        <!--Void Quotation DetailsVC-->
+        <scene sceneID="eJV-Qx-C1L">
+            <objects>
+                <viewController storyboardIdentifier="VoidQuotationDetailsVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="iUq-oY-o2Y" customClass="VoidQuotationDetailsVC" customModule="ShareTrip" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1ph-U9-zgj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="6qf-Lb-tpI">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1pK-Qf-a4x">
+                                <rect key="frame" x="16" y="802" width="382" height="44"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="JDm-Ju-dM0"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="NEXT">
+                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="15"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="didTapNextButton:" destination="iUq-oY-o2Y" eventType="touchUpInside" id="BU1-SW-91W"/>
+                                    <action selector="didTapNextButton:" destination="uVU-Rp-hXT" eventType="touchUpInside" id="TGQ-a0-81q"/>
+                                    <action selector="didTapNextButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="daR-J7-Lv3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7dh-fH-TsN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6qf-Lb-tpI" firstAttribute="top" secondItem="7dh-fH-TsN" secondAttribute="top" id="AZD-Xd-CA2"/>
+                            <constraint firstItem="6qf-Lb-tpI" firstAttribute="leading" secondItem="7dh-fH-TsN" secondAttribute="leading" id="BhL-CO-pxI"/>
+                            <constraint firstItem="7dh-fH-TsN" firstAttribute="bottom" secondItem="1pK-Qf-a4x" secondAttribute="bottom" constant="16" id="D6X-Mx-nQO"/>
+                            <constraint firstItem="7dh-fH-TsN" firstAttribute="bottom" secondItem="6qf-Lb-tpI" secondAttribute="bottom" id="Zo5-BG-cxg"/>
+                            <constraint firstItem="7dh-fH-TsN" firstAttribute="trailing" secondItem="1pK-Qf-a4x" secondAttribute="trailing" constant="16" id="mhh-gb-z1S"/>
+                            <constraint firstItem="6qf-Lb-tpI" firstAttribute="trailing" secondItem="7dh-fH-TsN" secondAttribute="trailing" id="peY-Fq-hzb"/>
+                            <constraint firstItem="1pK-Qf-a4x" firstAttribute="leading" secondItem="7dh-fH-TsN" secondAttribute="leading" constant="16" id="xV5-aF-FGq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nextButton" destination="1pK-Qf-a4x" id="KsD-jb-cjO"/>
+                        <outlet property="tableView" destination="6qf-Lb-tpI" id="6CC-Ru-Uha"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hEp-1H-eMi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-810" y="763"/>
+        </scene>
+        <!--Flight Confirm VoidVC-->
+        <scene sceneID="OCa-hm-x47">
+            <objects>
+                <viewController storyboardIdentifier="FlightConfirmVoidVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="H3d-Rq-DZc" customClass="FlightConfirmVoidVC" customModule="ShareTrip" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="D1J-lL-Hwb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="e2V-Dp-ddY">
+                                <rect key="frame" x="36" y="88" width="342" height="350.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="750" image="flight-processing" translatesAutoresizingMaskIntoConstraints="NO" id="LDk-a3-mIc">
+                                        <rect key="frame" x="111" y="0.0" width="120" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="LDk-a3-mIc" secondAttribute="height" multiplier="1:1" id="2TZ-gZ-vke"/>
+                                            <constraint firstAttribute="height" constant="120" id="8iW-Ji-Zed"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Void my booking" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jtz-dB-Vce">
+                                        <rect key="frame" x="81" y="140" width="180" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qrJ-oI-8wH">
+                                        <rect key="frame" x="29" y="189" width="284" height="33.5"/>
+                                        <string key="text">I  acknowledged the void policy (mentioned 
+right) and agree to Terms and Conditions.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="0.29803921570000003" green="0.29803921570000003" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YI0-QP-jz2">
+                                        <rect key="frame" x="0.0" y="242.5" width="342" height="44"/>
+                                        <color key="backgroundColor" systemColor="linkColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="LOT-2q-akP"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="CONFIRM">
+                                            <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="14"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="didTapConfirmButton:" destination="H3d-Rq-DZc" eventType="touchUpInside" id="NW4-S6-wKH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Kt-PM-cU7">
+                                        <rect key="frame" x="0.0" y="306.5" width="342" height="44"/>
+                                        <color key="tintColor" red="0.29803921570000003" green="0.29803921570000003" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="CANCEL">
+                                            <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="14"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="didTapCancelButton:" destination="H3d-Rq-DZc" eventType="touchUpInside" id="Uqb-oa-7by"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="YI0-QP-jz2" firstAttribute="width" secondItem="e2V-Dp-ddY" secondAttribute="width" id="oeR-sa-hZi"/>
+                                    <constraint firstItem="7Kt-PM-cU7" firstAttribute="height" secondItem="YI0-QP-jz2" secondAttribute="height" id="rOl-nj-nV6"/>
+                                    <constraint firstItem="7Kt-PM-cU7" firstAttribute="width" secondItem="YI0-QP-jz2" secondAttribute="width" id="zR2-hh-wA1"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9G4-S6-lQg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9G4-S6-lQg" firstAttribute="trailing" secondItem="e2V-Dp-ddY" secondAttribute="trailing" constant="36" id="e2N-ZI-q79"/>
+                            <constraint firstItem="e2V-Dp-ddY" firstAttribute="leading" secondItem="9G4-S6-lQg" secondAttribute="leading" constant="36" id="m4u-8M-p7Y"/>
+                            <constraint firstItem="e2V-Dp-ddY" firstAttribute="top" secondItem="9G4-S6-lQg" secondAttribute="top" constant="44" id="oed-N0-Bp3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="7Kt-PM-cU7" id="t2x-aP-L9Z"/>
+                        <outlet property="confimButton" destination="YI0-QP-jz2" id="are-LD-Iia"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ytj-Cf-eK5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-120" y="763"/>
+        </scene>
+        <!--Flight Void SuccessVC-->
+        <scene sceneID="5Q8-TP-v75">
+            <objects>
+                <viewController storyboardIdentifier="FlightVoidSuccessVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="oRW-zp-DUT" customClass="FlightVoidSuccessVC" customModule="ShareTrip" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hta-oq-ojv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="bCr-QW-aOs">
+                                <rect key="frame" x="36" y="88" width="342" height="303.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="750" image="flight-processing" translatesAutoresizingMaskIntoConstraints="NO" id="ICr-rr-wkg">
+                                        <rect key="frame" x="111" y="0.0" width="120" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="H6Z-3r-05o"/>
+                                            <constraint firstAttribute="width" secondItem="ICr-rr-wkg" secondAttribute="height" multiplier="1:1" id="eLl-j5-jh1"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your void is being processed" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fxS-hf-ekc">
+                                        <rect key="frame" x="16.5" y="140" width="309" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J5T-xS-Q9U">
+                                        <rect key="frame" x="29" y="189" width="284" height="50.5"/>
+                                        <string key="text">We have received your request. You will get 
+refund as per policy.
+Thank you for being with ShareTrip.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="0.29803921570000003" green="0.29803921570000003" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vW9-yg-4ui">
+                                        <rect key="frame" x="0.0" y="259.5" width="342" height="44"/>
+                                        <color key="backgroundColor" systemColor="linkColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="3ZO-FP-J2e"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="GO BACK TO YOUR BOOKING">
+                                            <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="14"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="didTapGoBack:" destination="oRW-zp-DUT" eventType="touchUpInside" id="xzP-Fv-W3t"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="vW9-yg-4ui" firstAttribute="width" secondItem="bCr-QW-aOs" secondAttribute="width" id="aJw-5r-D2J"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="LYw-Or-MI4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bCr-QW-aOs" firstAttribute="leading" secondItem="LYw-Or-MI4" secondAttribute="leading" constant="36" id="9ES-EB-ffY"/>
+                            <constraint firstItem="LYw-Or-MI4" firstAttribute="trailing" secondItem="bCr-QW-aOs" secondAttribute="trailing" constant="36" id="JQs-JP-WPb"/>
+                            <constraint firstItem="bCr-QW-aOs" firstAttribute="top" secondItem="LYw-Or-MI4" secondAttribute="top" constant="44" id="jHC-5F-yGZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="vW9-yg-4ui" id="PIE-Sz-MAk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qxm-1c-pBO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="583" y="763"/>
+        </scene>
+        <!--Refundable Travellers DetailsVC-->
+        <scene sceneID="FLo-C7-1cE">
+            <objects>
+                <viewController storyboardIdentifier="RefundableTravellersDetailsVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1nr-nt-DNy" customClass="RefundableTravellersDetailsVC" customModule="ShareTrip" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nsG-OU-VgD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="om1-Yl-j4l">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4ms-u7-N5w"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="om1-Yl-j4l" firstAttribute="leading" secondItem="4ms-u7-N5w" secondAttribute="leading" id="1V7-4Q-Vz5"/>
+                            <constraint firstItem="4ms-u7-N5w" firstAttribute="trailing" secondItem="om1-Yl-j4l" secondAttribute="trailing" id="Vyh-fU-o2V"/>
+                            <constraint firstItem="om1-Yl-j4l" firstAttribute="top" secondItem="4ms-u7-N5w" secondAttribute="top" id="tWe-7q-SLh"/>
+                            <constraint firstItem="4ms-u7-N5w" firstAttribute="bottom" secondItem="om1-Yl-j4l" secondAttribute="bottom" id="w4d-O6-i9l"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="om1-Yl-j4l" id="poo-me-ImL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cle-TX-Qe9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1312" y="763"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="flight-processing" width="87" height="87"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

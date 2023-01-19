@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="138" id="KGk-i7-Jjw" customClass="PassportVisaCell" customModule="ShareTrip" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="360" height="129"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="360" height="129"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="UVj-4C-4y3">
+                        <rect key="frame" x="16" y="0.0" width="328" height="113"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pjE-bc-hIP" userLabel="PassportView">
+                                <rect key="frame" x="0.0" y="0.0" width="156" height="113"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Passport Copy(max 2MB)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hix-8B-OSr">
+                                        <rect key="frame" x="0.0" y="4" width="156" height="13"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <color key="textColor" red="0.29803921570000003" green="0.29803921570000003" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image-mono" translatesAutoresizingMaskIntoConstraints="NO" id="j2x-YV-eKX" userLabel="PassportImage">
+                                        <rect key="frame" x="0.0" y="23" width="156" height="90"/>
+                                        <color key="backgroundColor" red="0.65098039215686276" green="0.92941176470588238" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="90" id="HCv-yU-Uf5"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="j2x-YV-eKX" firstAttribute="leading" secondItem="pjE-bc-hIP" secondAttribute="leading" id="TJ1-cs-j1g"/>
+                                    <constraint firstItem="Hix-8B-OSr" firstAttribute="top" secondItem="pjE-bc-hIP" secondAttribute="top" constant="4" id="Uzs-n0-Otx"/>
+                                    <constraint firstItem="Hix-8B-OSr" firstAttribute="leading" secondItem="pjE-bc-hIP" secondAttribute="leading" id="Yzt-Lq-wxW"/>
+                                    <constraint firstAttribute="trailing" secondItem="j2x-YV-eKX" secondAttribute="trailing" id="Zn6-Kv-LYj"/>
+                                    <constraint firstItem="j2x-YV-eKX" firstAttribute="top" secondItem="Hix-8B-OSr" secondAttribute="bottom" constant="6" id="b5c-fR-CUu"/>
+                                    <constraint firstAttribute="trailing" secondItem="Hix-8B-OSr" secondAttribute="trailing" id="rut-lK-6Vy"/>
+                                    <constraint firstAttribute="bottom" secondItem="j2x-YV-eKX" secondAttribute="bottom" id="sUh-Cd-54g"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XvR-Jv-6YV" userLabel="VisaView">
+                                <rect key="frame" x="172" y="0.0" width="156" height="113"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Visa Copy(max 2MB)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J5H-Vu-UTs">
+                                        <rect key="frame" x="0.0" y="4" width="156" height="13"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <color key="textColor" red="0.29803921570000003" green="0.29803921570000003" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image-mono" translatesAutoresizingMaskIntoConstraints="NO" id="bNS-DE-e37" userLabel="VisaImage">
+                                        <rect key="frame" x="0.0" y="23" width="156" height="90"/>
+                                        <color key="backgroundColor" red="0.65098039215686276" green="0.92941176470588238" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="bNS-DE-e37" firstAttribute="leading" secondItem="XvR-Jv-6YV" secondAttribute="leading" id="5H6-Z5-87W"/>
+                                    <constraint firstAttribute="bottom" secondItem="bNS-DE-e37" secondAttribute="bottom" id="Bz9-LZ-BP9"/>
+                                    <constraint firstAttribute="trailing" secondItem="bNS-DE-e37" secondAttribute="trailing" id="J5A-KO-jaM"/>
+                                    <constraint firstItem="J5H-Vu-UTs" firstAttribute="leading" secondItem="XvR-Jv-6YV" secondAttribute="leading" id="fAI-KU-Gu3"/>
+                                    <constraint firstAttribute="trailing" secondItem="J5H-Vu-UTs" secondAttribute="trailing" id="gLZ-vP-yoZ"/>
+                                    <constraint firstItem="J5H-Vu-UTs" firstAttribute="top" secondItem="XvR-Jv-6YV" secondAttribute="top" constant="4" id="nZI-xa-UpR"/>
+                                    <constraint firstItem="bNS-DE-e37" firstAttribute="top" secondItem="J5H-Vu-UTs" secondAttribute="bottom" constant="6" id="wmQ-TB-nqY"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="bNS-DE-e37" firstAttribute="height" secondItem="j2x-YV-eKX" secondAttribute="height" id="hHV-ap-X1n"/>
+                            <constraint firstItem="bNS-DE-e37" firstAttribute="width" secondItem="j2x-YV-eKX" secondAttribute="width" id="iwB-3S-oC7"/>
+                        </constraints>
+                    </stackView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fQd-xf-a30">
+                        <rect key="frame" x="16" y="113" width="328" height="16"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="QWa-vp-Ttg"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="fQd-xf-a30" secondAttribute="trailing" constant="16" id="0eS-Wl-904"/>
+                    <constraint firstItem="UVj-4C-4y3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Ru7-pL-bqu"/>
+                    <constraint firstAttribute="trailing" secondItem="UVj-4C-4y3" secondAttribute="trailing" constant="16" id="SoI-hY-416"/>
+                    <constraint firstAttribute="bottom" secondItem="fQd-xf-a30" secondAttribute="bottom" id="W1O-Wl-Cg1"/>
+                    <constraint firstItem="UVj-4C-4y3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="tGY-1A-VS8"/>
+                    <constraint firstItem="fQd-xf-a30" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="wdW-B4-x9L"/>
+                    <constraint firstItem="fQd-xf-a30" firstAttribute="top" secondItem="UVj-4C-4y3" secondAttribute="bottom" id="xZD-5f-RXW"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="passportImageView" destination="j2x-YV-eKX" id="azQ-lH-KUx"/>
+                <outlet property="visaImageView" destination="bNS-DE-e37" id="F36-im-EGc"/>
+            </connections>
+            <point key="canvasLocation" x="100.00000000000001" y="96.09375"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="image-mono" width="24" height="24"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
