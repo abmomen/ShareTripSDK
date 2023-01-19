@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="56" id="KGk-i7-Jjw" customClass="SwitchCell" customModule="ShareTrip" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="324" height="56"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="324" height="56"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eAi-wh-WtA" userLabel="CellContainerView">
+                        <rect key="frame" x="8" y="1" width="308" height="54"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6VL-ns-flK" userLabel="Left Cell">
+                                <rect key="frame" x="16" y="17" width="229" height="20"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dubai International…" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="4Ia-BS-IgC" userLabel="title">
+                                        <rect key="frame" x="0.0" y="0.0" width="229" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BDT 23,059" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="5YD-gg-Xhi" userLabel="Subtitle">
+                                        <rect key="frame" x="0.0" y="6.5" width="229" height="13.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="11"/>
+                                        <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="4Ia-BS-IgC" firstAttribute="leading" secondItem="6VL-ns-flK" secondAttribute="leading" id="7fa-Wz-Lp2"/>
+                                    <constraint firstAttribute="bottom" secondItem="4Ia-BS-IgC" secondAttribute="bottom" id="QvN-e3-qiP"/>
+                                    <constraint firstItem="5YD-gg-Xhi" firstAttribute="leading" secondItem="6VL-ns-flK" secondAttribute="leading" id="ZDF-dF-JCj"/>
+                                    <constraint firstAttribute="trailing" secondItem="5YD-gg-Xhi" secondAttribute="trailing" id="dl7-IN-eKA"/>
+                                    <constraint firstAttribute="bottom" secondItem="5YD-gg-Xhi" secondAttribute="bottom" id="hFp-Z2-jgT"/>
+                                    <constraint firstAttribute="trailing" secondItem="4Ia-BS-IgC" secondAttribute="trailing" id="qDG-9W-JC2"/>
+                                    <constraint firstItem="4Ia-BS-IgC" firstAttribute="top" secondItem="6VL-ns-flK" secondAttribute="top" id="wvd-nM-AZB"/>
+                                </constraints>
+                            </view>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="B3e-Ll-oLu">
+                                <rect key="frame" x="251" y="11.5" width="51" height="31"/>
+                                <color key="onTintColor" red="0.094117647060000004" green="0.50980392159999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="switchButtonAction:" destination="KGk-i7-Jjw" eventType="valueChanged" id="yTi-nN-CDi"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="B3e-Ll-oLu" firstAttribute="centerY" secondItem="eAi-wh-WtA" secondAttribute="centerY" id="WZ7-8e-J3G"/>
+                            <constraint firstItem="B3e-Ll-oLu" firstAttribute="leading" secondItem="6VL-ns-flK" secondAttribute="trailing" constant="6" id="aLe-kV-337"/>
+                            <constraint firstItem="6VL-ns-flK" firstAttribute="leading" secondItem="eAi-wh-WtA" secondAttribute="leading" constant="16" id="iCN-dc-b0h"/>
+                            <constraint firstAttribute="trailing" secondItem="B3e-Ll-oLu" secondAttribute="trailing" constant="8" id="rV3-vz-Kcz"/>
+                            <constraint firstItem="6VL-ns-flK" firstAttribute="centerY" secondItem="eAi-wh-WtA" secondAttribute="centerY" id="tV2-fJ-xur"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="eAi-wh-WtA" secondAttribute="trailing" constant="8" id="EZ7-fS-2vi"/>
+                    <constraint firstAttribute="bottom" secondItem="eAi-wh-WtA" secondAttribute="bottom" constant="1" id="FxE-zM-DMd"/>
+                    <constraint firstItem="eAi-wh-WtA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="GTS-fP-zVp"/>
+                    <constraint firstItem="eAi-wh-WtA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="1" id="qbB-ep-aZs"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="cellContainerView" destination="eAi-wh-WtA" id="m9C-eM-3qw"/>
+                <outlet property="optionSwitch" destination="B3e-Ll-oLu" id="GEY-RY-hLG"/>
+                <outlet property="titleLabel" destination="4Ia-BS-IgC" id="gPc-9U-wBX"/>
+            </connections>
+            <point key="canvasLocation" x="134.78260869565219" y="147.99107142857142"/>
+        </tableViewCell>
+    </objects>
+</document>

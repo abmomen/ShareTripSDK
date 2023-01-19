@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="128" id="KGk-i7-Jjw" customClass="InfoUploadCell" customModule="ShareTrip" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="381" height="128"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="381" height="128"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Passport Copy(max 2MB)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y7b-e0-J0t">
+                        <rect key="frame" x="16" y="16" width="133.5" height="39"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" red="0.55699998140335083" green="0.55699998140335083" blue="0.57599997520446777" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vBx-xy-lPL" userLabel="PassportUpload">
+                        <rect key="frame" x="16" y="63" width="169" height="64"/>
+                        <color key="backgroundColor" red="0.93699997663497925" green="0.93699997663497925" blue="0.9570000171661377" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="64" id="zhR-dC-G7o"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                        <color key="tintColor" red="0.29803921568627451" green="0.29803921568627451" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <state key="normal" title="Upload" image="upload-mono">
+                            <color key="titleColor" red="0.011764705882352941" green="0.011764705882352941" blue="0.011764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="passportButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="bkm-uI-PD4"/>
+                        </connections>
+                    </button>
+                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="LzU-c0-tAx">
+                        <rect key="frame" x="16" y="123" width="169" height="4"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="4" id="aFX-jm-ZI6"/>
+                        </constraints>
+                        <color key="progressTintColor" red="0.16500000655651093" green="0.54900002479553223" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="trackTintColor" red="0.84313725490000002" green="0.89019607840000003" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </progressView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Visa Copy(max 2MB)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vve-0l-36X">
+                        <rect key="frame" x="196" y="41" width="109.5" height="14"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" red="0.55699998140335083" green="0.55699998140335083" blue="0.57599997520446777" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9rY-qJ-CoM" userLabel="VisaUpload">
+                        <rect key="frame" x="196" y="63" width="169" height="64"/>
+                        <color key="backgroundColor" red="0.93699997663497925" green="0.93699997663497925" blue="0.9570000171661377" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="64" id="J4t-RO-LLk"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                        <color key="tintColor" red="0.29803921570000003" green="0.29803921570000003" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <state key="normal" title="Upload" image="upload-mono">
+                            <color key="titleColor" red="0.01176470588" green="0.01176470588" blue="0.01176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="visaButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="sOw-Bc-Ojo"/>
+                        </connections>
+                    </button>
+                    <progressView hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="OxH-4X-zAO">
+                        <rect key="frame" x="196" y="123" width="169" height="4"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="4" id="sAz-vY-vqe"/>
+                        </constraints>
+                        <color key="progressTintColor" red="0.16500000655651093" green="0.54900002479553223" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="trackTintColor" red="0.84313725490000002" green="0.89019607840000003" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </progressView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="vBx-xy-lPL" firstAttribute="leading" secondItem="Y7b-e0-J0t" secondAttribute="leading" id="1ZQ-oR-6OG"/>
+                    <constraint firstItem="LzU-c0-tAx" firstAttribute="bottom" secondItem="vBx-xy-lPL" secondAttribute="bottom" id="1fN-uW-kGb"/>
+                    <constraint firstItem="vBx-xy-lPL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="BRF-j7-Egw"/>
+                    <constraint firstItem="9rY-qJ-CoM" firstAttribute="bottom" secondItem="OxH-4X-zAO" secondAttribute="bottom" id="BiL-he-68b"/>
+                    <constraint firstItem="9rY-qJ-CoM" firstAttribute="trailing" secondItem="OxH-4X-zAO" secondAttribute="trailing" id="Q3X-qB-nx5"/>
+                    <constraint firstItem="9rY-qJ-CoM" firstAttribute="width" secondItem="vBx-xy-lPL" secondAttribute="width" id="Vqz-PJ-1CF"/>
+                    <constraint firstAttribute="bottom" secondItem="vBx-xy-lPL" secondAttribute="bottom" constant="1" id="WTd-0C-6om"/>
+                    <constraint firstItem="9rY-qJ-CoM" firstAttribute="top" secondItem="Vve-0l-36X" secondAttribute="bottom" constant="8" id="b5U-K4-iZb"/>
+                    <constraint firstItem="9rY-qJ-CoM" firstAttribute="leading" secondItem="vBx-xy-lPL" secondAttribute="trailing" constant="11" id="b6W-g9-b72"/>
+                    <constraint firstItem="LzU-c0-tAx" firstAttribute="leading" secondItem="vBx-xy-lPL" secondAttribute="leading" id="gL1-KU-THb"/>
+                    <constraint firstItem="9rY-qJ-CoM" firstAttribute="leading" secondItem="OxH-4X-zAO" secondAttribute="leading" id="hCM-tj-xHR"/>
+                    <constraint firstItem="Vve-0l-36X" firstAttribute="leading" secondItem="9rY-qJ-CoM" secondAttribute="leading" id="hwj-Ni-jvg"/>
+                    <constraint firstAttribute="trailing" secondItem="9rY-qJ-CoM" secondAttribute="trailing" constant="16" id="qmc-Ik-Hei"/>
+                    <constraint firstItem="vBx-xy-lPL" firstAttribute="top" secondItem="Y7b-e0-J0t" secondAttribute="bottom" constant="8" id="rIO-PN-wbA"/>
+                    <constraint firstItem="Y7b-e0-J0t" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="s5O-Rf-lX3"/>
+                    <constraint firstAttribute="bottom" secondItem="9rY-qJ-CoM" secondAttribute="bottom" constant="1" id="tRS-JB-SkP"/>
+                    <constraint firstItem="LzU-c0-tAx" firstAttribute="trailing" secondItem="vBx-xy-lPL" secondAttribute="trailing" id="yWY-dM-Y9H"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="passportBtn" destination="vBx-xy-lPL" id="eWY-Sh-B4C"/>
+                <outlet property="passportLabel" destination="Y7b-e0-J0t" id="hMe-E0-sj0"/>
+                <outlet property="passportProgressView" destination="LzU-c0-tAx" id="aGS-QM-31v"/>
+                <outlet property="visaBtn" destination="9rY-qJ-CoM" id="8qR-nS-R1S"/>
+                <outlet property="visaLabel" destination="Vve-0l-36X" id="TfH-kM-Ezy"/>
+                <outlet property="visaProgressView" destination="OxH-4X-zAO" id="1lq-s6-E4Q"/>
+            </connections>
+            <point key="canvasLocation" x="-19.565217391304348" y="40.848214285714285"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="upload-mono" width="24" height="24"/>
+    </resources>
+</document>

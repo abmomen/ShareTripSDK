@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" id="Wsd-nR-MQF" customClass="RedeemTripcoinView" customModule="ShareTrip" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="494" height="139"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gab-2F-Ch2" userLabel="CheckboxView">
+                    <rect key="frame" x="0.0" y="0.0" width="494" height="54"/>
+                    <subviews>
+                        <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wul-p2-jfE" customClass="GDCheckbox" customModule="ShareTrip" customModuleProvider="target">
+                            <rect key="frame" x="16" y="15" width="24" height="24"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" priority="999" constant="24" id="PvP-27-xuV"/>
+                                <constraint firstAttribute="width" constant="24" id="XoP-Yc-xA3"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="checkColor">
+                                    <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="isRadiobox" value="YES"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="checkWidth">
+                                    <real key="value" value="3"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="isSquare" value="NO"/>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="isCircular" value="NO"/>
+                                <userDefinedRuntimeAttribute type="color" keyPath="containerColor">
+                                    <color key="value" red="0.55699998139999995" green="0.55699998139999995" blue="0.57599997520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="containerFillColor">
+                                    <color key="value" red="0.093999996779999997" green="0.5099999905" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="containerWidth">
+                                    <real key="value" value="2"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="isOn" value="YES"/>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="shouldFillContainer" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I want to redeem trip coin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lrU-Xk-4du">
+                            <rect key="frame" x="48" y="18" width="446" height="18"/>
+                            <gestureRecognizers/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstItem="lrU-Xk-4du" firstAttribute="leading" secondItem="Wul-p2-jfE" secondAttribute="trailing" constant="8" id="49k-EV-WfO"/>
+                        <constraint firstItem="Wul-p2-jfE" firstAttribute="leading" secondItem="Gab-2F-Ch2" secondAttribute="leading" constant="16" id="N3k-3k-wzc"/>
+                        <constraint firstItem="lrU-Xk-4du" firstAttribute="centerY" secondItem="Gab-2F-Ch2" secondAttribute="centerY" id="Rwp-C1-kTU"/>
+                        <constraint firstAttribute="bottom" secondItem="Wul-p2-jfE" secondAttribute="bottom" priority="999" constant="15" id="eZ8-1I-oBd"/>
+                        <constraint firstItem="Wul-p2-jfE" firstAttribute="top" secondItem="Gab-2F-Ch2" secondAttribute="top" priority="999" constant="15" id="fxv-FA-ab5"/>
+                        <constraint firstAttribute="trailing" secondItem="lrU-Xk-4du" secondAttribute="trailing" id="hA1-dQ-raC"/>
+                    </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="rgR-g2-N7j" appends="YES" id="D0a-du-B9w"/>
+                    </connections>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MG8-lV-SGm" userLabel="SliderView">
+                    <rect key="frame" x="0.0" y="54" width="494" height="85"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drag to slider to redeem trip coin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tlm-pd-vdG">
+                            <rect key="frame" x="24" y="0.0" width="200.5" height="37"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W6a-Ty-M4L">
+                            <rect key="frame" x="440" y="0.0" width="30" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ayi-Ke-87Y">
+                            <rect key="frame" x="22" y="37" width="450" height="49"/>
+                            <constraints>
+                                <constraint firstAttribute="height" priority="750" constant="48" id="FbU-wt-2Ot"/>
+                            </constraints>
+                            <color key="minimumTrackTintColor" red="0.0" green="0.47799998519999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="maximumTrackTintColor" red="0.77999997139999999" green="0.77999997139999999" blue="0.80000001190000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="thumbTintColor" red="0.093999996779999997" green="0.5099999905" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </slider>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="W6a-Ty-M4L" firstAttribute="top" secondItem="MG8-lV-SGm" secondAttribute="top" id="6zG-2h-Fh6"/>
+                        <constraint firstItem="ayi-Ke-87Y" firstAttribute="trailing" secondItem="W6a-Ty-M4L" secondAttribute="trailing" id="9pS-sh-dFZ"/>
+                        <constraint firstItem="ayi-Ke-87Y" firstAttribute="top" secondItem="tlm-pd-vdG" secondAttribute="bottom" id="HBb-Sb-lij"/>
+                        <constraint firstItem="tlm-pd-vdG" firstAttribute="top" secondItem="MG8-lV-SGm" secondAttribute="top" id="N4w-qz-hbd"/>
+                        <constraint firstItem="tlm-pd-vdG" firstAttribute="leading" secondItem="MG8-lV-SGm" secondAttribute="leading" constant="24" id="c6U-vb-USi"/>
+                        <constraint firstAttribute="trailing" secondItem="W6a-Ty-M4L" secondAttribute="trailing" constant="24" id="dYj-cz-Iyf"/>
+                        <constraint firstItem="W6a-Ty-M4L" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="tlm-pd-vdG" secondAttribute="trailing" constant="8" symbolic="YES" id="fcn-mQ-VFJ"/>
+                        <constraint firstAttribute="bottom" secondItem="ayi-Ke-87Y" secondAttribute="bottom" id="kpG-5d-vPn"/>
+                        <constraint firstItem="ayi-Ke-87Y" firstAttribute="leading" secondItem="tlm-pd-vdG" secondAttribute="leading" id="wme-36-8x1"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="TdF-Nf-edF"/>
+            <connections>
+                <outlet property="checkbox" destination="Wul-p2-jfE" id="SSS-AU-yMw"/>
+                <outlet property="collapsibleContainer" destination="MG8-lV-SGm" id="r9K-yj-DRh"/>
+                <outlet property="redeemAmountLabel" destination="W6a-Ty-M4L" id="bY6-IV-Dff"/>
+                <outlet property="slider" destination="ayi-Ke-87Y" id="CxO-j1-CYY"/>
+                <outlet property="subtitleLabel" destination="tlm-pd-vdG" id="GVE-BQ-z7z"/>
+                <outlet property="titleLabel" destination="lrU-Xk-4du" id="YmU-M5-Nue"/>
+            </connections>
+            <point key="canvasLocation" x="-200" y="-533"/>
+        </stackView>
+        <tapGestureRecognizer id="rgR-g2-N7j">
+            <connections>
+                <action selector="onTapped:" destination="Wsd-nR-MQF" id="Hcf-bh-JRb"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CouponSuggestionView" customModule="ShareTrip" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="93"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="bDP-x0-BEN">
+                    <rect key="frame" x="12" y="6" width="390" height="81"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="xI5-Mc-TqW">
+                            <rect key="frame" x="0.0" y="0.0" width="390" height="38.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v7D-UR-9kv">
+                                    <rect key="frame" x="0.0" y="0.0" width="37" height="38.5"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="With ST Discount" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hlh-2X-jvB">
+                                    <rect key="frame" x="299" y="0.0" width="91" height="38.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                    <color key="textColor" red="0.26274509800000001" green="0.62745098040000002" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZZx-Is-UZI">
+                            <rect key="frame" x="0.0" y="42.5" width="390" height="38.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mqy-kw-yYm">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="93"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <connections>
+                        <action selector="didTapCoupon:" destination="iN0-l3-epB" eventType="touchUpInside" id="brb-7J-he1"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="bDP-x0-BEN" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="12" id="3an-zJ-TLr"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="mqy-kw-yYm" secondAttribute="trailing" id="7Qy-cO-vGx"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="mqy-kw-yYm" secondAttribute="bottom" id="C6u-zq-NgE"/>
+                <constraint firstItem="mqy-kw-yYm" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="IXR-Kx-gmf"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="bDP-x0-BEN" secondAttribute="trailing" constant="12" id="epT-na-9F2"/>
+                <constraint firstAttribute="bottom" secondItem="bDP-x0-BEN" secondAttribute="bottom" constant="6" id="rRi-B2-odC"/>
+                <constraint firstItem="bDP-x0-BEN" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="6" id="vJx-gk-lIW"/>
+                <constraint firstItem="mqy-kw-yYm" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="y10-pU-6rX"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="couponLabel" destination="v7D-UR-9kv" id="oDY-2B-3HS"/>
+                <outlet property="subTitleLabel" destination="ZZx-Is-UZI" id="xz8-Vx-INj"/>
+                <outlet property="withDiscountLabel" destination="hlh-2X-jvB" id="3Jg-uu-tAQ"/>
+            </connections>
+            <point key="canvasLocation" x="136.23188405797103" y="-31.138392857142854"/>
+        </view>
+    </objects>
+</document>

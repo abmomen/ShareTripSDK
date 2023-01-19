@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" id="bHj-In-12s" customClass="UseCouponView" customModule="ShareTrip" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="494" height="196"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KxI-Xu-Pr7" userLabel="CheckboxView">
+                    <rect key="frame" x="0.0" y="0.0" width="494" height="54"/>
+                    <subviews>
+                        <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xcg-Hz-bsc" customClass="GDCheckbox" customModule="ShareTrip" customModuleProvider="target">
+                            <rect key="frame" x="16" y="15" width="24" height="24"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="24" id="9Xp-0m-PMC"/>
+                                <constraint firstAttribute="height" priority="250" constant="24" id="NXH-Nq-hkz"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="checkColor">
+                                    <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="isRadiobox" value="YES"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="checkWidth">
+                                    <real key="value" value="3"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="isSquare" value="NO"/>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="isCircular" value="NO"/>
+                                <userDefinedRuntimeAttribute type="color" keyPath="containerColor">
+                                    <color key="value" red="0.55699998139999995" green="0.55699998139999995" blue="0.57599997520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="containerFillColor">
+                                    <color key="value" red="0.093999996779999997" green="0.5099999905" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="containerWidth">
+                                    <real key="value" value="2"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="isOn" value="YES"/>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="shouldFillContainer" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I want to use a coupon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s2z-M1-MFX">
+                            <rect key="frame" x="48" y="18" width="430" height="18"/>
+                            <gestureRecognizers/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="s2z-M1-MFX" secondAttribute="trailing" constant="16" id="M4w-oR-dXe"/>
+                        <constraint firstAttribute="bottom" secondItem="Xcg-Hz-bsc" secondAttribute="bottom" priority="250" constant="15" id="Zb2-zP-w5p"/>
+                        <constraint firstItem="s2z-M1-MFX" firstAttribute="centerY" secondItem="KxI-Xu-Pr7" secondAttribute="centerY" id="epd-9e-T9a"/>
+                        <constraint firstItem="s2z-M1-MFX" firstAttribute="leading" secondItem="Xcg-Hz-bsc" secondAttribute="trailing" constant="8" id="mki-Cf-1bM"/>
+                        <constraint firstItem="Xcg-Hz-bsc" firstAttribute="top" secondItem="KxI-Xu-Pr7" secondAttribute="top" priority="250" constant="15" id="wRC-V4-GjO"/>
+                        <constraint firstItem="Xcg-Hz-bsc" firstAttribute="leading" secondItem="KxI-Xu-Pr7" secondAttribute="leading" constant="16" id="wfM-ZM-ZmF"/>
+                    </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="ORr-Un-2QI" appends="YES" id="m2N-ix-PHZ"/>
+                    </connections>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pHC-ua-SaA" userLabel="CouponView">
+                    <rect key="frame" x="0.0" y="54" width="494" height="142"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Enter the coupon code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ENJ-KS-7bx">
+                            <rect key="frame" x="16" y="0.0" width="138" height="16"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3wE-bY-BSS">
+                            <rect key="frame" x="408" y="16" width="70" height="30"/>
+                            <color key="backgroundColor" red="0.094117647060000004" green="0.50980392159999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="70" id="1kI-Qb-Av7"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                            <state key="normal" title="APPLY">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="applyButtonTapped:" destination="bHj-In-12s" eventType="touchUpInside" id="sMA-nA-wke"/>
+                            </connections>
+                        </button>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v1M-Ej-6vx" customClass="NoSelectTextField" customModule="ShareTrip" customModuleProvider="target">
+                            <rect key="frame" x="16" y="16" width="376" height="32"/>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" priority="750" constant="32" id="QrW-8r-z5a"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HE0-g0-ReC" userLabel="Divider">
+                            <rect key="frame" x="16" y="48" width="376" height="1"/>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" priority="250" constant="1" id="6WL-GW-Q1j"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Available coupon" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YxM-fs-EIN" userLabel="Available coupon">
+                            <rect key="frame" x="16" y="57" width="462" height="14"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="14" id="VPQ-Fr-ZIu"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="sTG-LX-8XU">
+                            <rect key="frame" x="16" y="75" width="462" height="51"/>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="sTG-LX-8XU" firstAttribute="leading" secondItem="pHC-ua-SaA" secondAttribute="leading" constant="16" id="1OJ-P4-Pmx"/>
+                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ENJ-KS-7bx" secondAttribute="trailing" constant="20" symbolic="YES" id="DuU-aP-rS5"/>
+                        <constraint firstAttribute="bottom" secondItem="sTG-LX-8XU" secondAttribute="bottom" constant="16" id="GFb-ij-0zX"/>
+                        <constraint firstItem="YxM-fs-EIN" firstAttribute="top" secondItem="HE0-g0-ReC" secondAttribute="bottom" priority="999" constant="8" id="GtX-Es-zuR"/>
+                        <constraint firstItem="HE0-g0-ReC" firstAttribute="top" secondItem="v1M-Ej-6vx" secondAttribute="bottom" id="Nb5-Dg-7KY"/>
+                        <constraint firstAttribute="trailing" secondItem="sTG-LX-8XU" secondAttribute="trailing" constant="16" id="Q5u-yc-veB"/>
+                        <constraint firstItem="ENJ-KS-7bx" firstAttribute="leading" secondItem="v1M-Ej-6vx" secondAttribute="leading" id="Qwd-ft-Jfk"/>
+                        <constraint firstItem="sTG-LX-8XU" firstAttribute="top" secondItem="YxM-fs-EIN" secondAttribute="bottom" constant="4" id="RCb-nC-VX9"/>
+                        <constraint firstAttribute="trailing" secondItem="3wE-bY-BSS" secondAttribute="trailing" constant="16" id="Rh5-Iq-BCZ"/>
+                        <constraint firstItem="v1M-Ej-6vx" firstAttribute="top" secondItem="ENJ-KS-7bx" secondAttribute="bottom" id="YCM-kp-EhN"/>
+                        <constraint firstItem="3wE-bY-BSS" firstAttribute="leading" secondItem="v1M-Ej-6vx" secondAttribute="trailing" constant="16" id="d24-Hd-yZj"/>
+                        <constraint firstItem="v1M-Ej-6vx" firstAttribute="trailing" secondItem="HE0-g0-ReC" secondAttribute="trailing" id="due-It-UpV"/>
+                        <constraint firstItem="v1M-Ej-6vx" firstAttribute="leading" secondItem="HE0-g0-ReC" secondAttribute="leading" id="el8-hV-ZUt"/>
+                        <constraint firstItem="HE0-g0-ReC" firstAttribute="leading" secondItem="pHC-ua-SaA" secondAttribute="leading" constant="16" id="mQr-he-bfS"/>
+                        <constraint firstItem="ENJ-KS-7bx" firstAttribute="top" secondItem="pHC-ua-SaA" secondAttribute="top" id="s4c-Rg-Kjb"/>
+                        <constraint firstItem="HE0-g0-ReC" firstAttribute="top" secondItem="3wE-bY-BSS" secondAttribute="bottom" priority="250" constant="2" id="sRe-O5-uW5"/>
+                        <constraint firstAttribute="trailing" secondItem="YxM-fs-EIN" secondAttribute="trailing" constant="16" id="uqc-e2-KwL"/>
+                        <constraint firstItem="YxM-fs-EIN" firstAttribute="leading" secondItem="pHC-ua-SaA" secondAttribute="leading" constant="16" id="zMO-sr-21j"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="MId-HL-Cq6"/>
+            <connections>
+                <outlet property="applyButton" destination="3wE-bY-BSS" id="Bn7-fr-ne2"/>
+                <outlet property="checkbox" destination="Xcg-Hz-bsc" id="tiM-3U-QuE"/>
+                <outlet property="collapsibleContainer" destination="pHC-ua-SaA" id="eq8-Gg-qnG"/>
+                <outlet property="couponSuggestionTitleHLC" destination="VPQ-Fr-ZIu" id="3yY-wm-2S2"/>
+                <outlet property="couponSuggestionTitleLabel" destination="YxM-fs-EIN" id="xtl-JF-ggq"/>
+                <outlet property="couponTextField" destination="v1M-Ej-6vx" id="QLi-gj-bXR"/>
+                <outlet property="couponsContainerStackView" destination="sTG-LX-8XU" id="VW4-ws-brG"/>
+                <outlet property="subtitleLabel" destination="ENJ-KS-7bx" id="P8d-FG-AIb"/>
+                <outlet property="titleLabel" destination="s2z-M1-MFX" id="e42-Tg-ZVK"/>
+            </connections>
+            <point key="canvasLocation" x="-543" y="-298"/>
+        </stackView>
+        <tapGestureRecognizer id="ORr-Un-2QI">
+            <connections>
+                <action selector="onTapped:" destination="bHj-In-12s" id="QgO-DS-FmT"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

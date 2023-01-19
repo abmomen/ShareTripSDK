@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Semibold.ttf">
+            <string>SFProDisplay-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PackageDetailsViews" customModule="ShareTrip" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="211" id="grV-3G-1GR" customClass="BriefInfoCardCell" customModule="ShareTrip" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="553" height="211"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="grV-3G-1GR" id="ivT-4h-O9J">
+                <rect key="frame" x="0.0" y="0.0" width="553" height="211"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 Day Long Bangkok and Pattaya Adventure Trip" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zOY-0h-gSI" userLabel="Title">
+                        <rect key="frame" x="16" y="22" width="521" height="65.5"/>
+                        <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="28"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="map-pin-mono" translatesAutoresizingMaskIntoConstraints="NO" id="9zl-xv-xvf">
+                        <rect key="frame" x="16" y="95.5" width="24" height="24"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="9zl-xv-xvf" secondAttribute="height" multiplier="1:1" id="RB1-zP-kan"/>
+                            <constraint firstAttribute="height" constant="24" id="nZl-rD-N91"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5UF-a0-QHb">
+                        <rect key="frame" x="48" y="99.5" width="52.5" height="16"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calander-mono" translatesAutoresizingMaskIntoConstraints="NO" id="LDO-xt-urC">
+                        <rect key="frame" x="462.5" y="95.5" width="24" height="24"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="LDO-xt-urC" secondAttribute="height" multiplier="1:1" id="Vsq-jS-mbC"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 days" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lgh-bS-XAd">
+                        <rect key="frame" x="494.5" y="99.5" width="42.5" height="16"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vAD-LJ-ikQ" userLabel="Description">
+                        <rect key="frame" x="16" y="127.5" width="521" height="59.5"/>
+                        <string key="text">Bangkok - Pattaya 4 Nights trip. Pattaya is a city on Thailand’s eastern Gulf coast known for its beaches. A quiet recently… READ MORE</string>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.2627450980392157" green="0.2627450980392157" blue="0.2627450980392157" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="Lgh-bS-XAd" firstAttribute="leading" secondItem="LDO-xt-urC" secondAttribute="trailing" constant="8" id="8Y6-i1-MHN"/>
+                    <constraint firstItem="9zl-xv-xvf" firstAttribute="top" secondItem="zOY-0h-gSI" secondAttribute="bottom" constant="8" id="BaG-5K-ywt"/>
+                    <constraint firstAttribute="trailing" secondItem="Lgh-bS-XAd" secondAttribute="trailing" constant="16" id="HMl-Jc-BXj"/>
+                    <constraint firstItem="LDO-xt-urC" firstAttribute="height" secondItem="9zl-xv-xvf" secondAttribute="height" id="Idr-D0-6N7"/>
+                    <constraint firstItem="9zl-xv-xvf" firstAttribute="leading" secondItem="ivT-4h-O9J" secondAttribute="leading" constant="16" id="Jew-PU-Sjp"/>
+                    <constraint firstAttribute="bottom" secondItem="vAD-LJ-ikQ" secondAttribute="bottom" constant="24" id="N7H-dd-GjN"/>
+                    <constraint firstItem="vAD-LJ-ikQ" firstAttribute="top" secondItem="9zl-xv-xvf" secondAttribute="bottom" constant="8" id="PRf-g7-0hh"/>
+                    <constraint firstItem="zOY-0h-gSI" firstAttribute="leading" secondItem="9zl-xv-xvf" secondAttribute="leading" id="QOG-E5-9xf"/>
+                    <constraint firstAttribute="trailing" secondItem="zOY-0h-gSI" secondAttribute="trailing" constant="16" id="U6l-MC-qAa"/>
+                    <constraint firstItem="5UF-a0-QHb" firstAttribute="leading" secondItem="9zl-xv-xvf" secondAttribute="trailing" constant="8" id="Vxw-JG-sUh"/>
+                    <constraint firstItem="zOY-0h-gSI" firstAttribute="top" secondItem="ivT-4h-O9J" secondAttribute="top" constant="22" id="bN2-h1-Pmv"/>
+                    <constraint firstItem="5UF-a0-QHb" firstAttribute="centerY" secondItem="9zl-xv-xvf" secondAttribute="centerY" id="bm3-Sy-DxE"/>
+                    <constraint firstAttribute="trailing" secondItem="vAD-LJ-ikQ" secondAttribute="trailing" constant="16" id="kHO-uo-Mcm"/>
+                    <constraint firstItem="vAD-LJ-ikQ" firstAttribute="leading" secondItem="9zl-xv-xvf" secondAttribute="leading" id="tUA-px-1YT"/>
+                    <constraint firstItem="LDO-xt-urC" firstAttribute="centerY" secondItem="9zl-xv-xvf" secondAttribute="centerY" id="wZ9-kr-GdS"/>
+                    <constraint firstItem="Lgh-bS-XAd" firstAttribute="centerY" secondItem="9zl-xv-xvf" secondAttribute="centerY" id="y8K-Kv-Hcu"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="countryNameLabel" destination="5UF-a0-QHb" id="mdE-FU-A0Y"/>
+                <outlet property="descriptionLabel" destination="vAD-LJ-ikQ" id="bP3-VH-0Ih"/>
+                <outlet property="durationLabel" destination="Lgh-bS-XAd" id="QVJ-4E-knl"/>
+                <outlet property="titleLabel" destination="zOY-0h-gSI" id="ciP-jt-Aqo"/>
+            </connections>
+            <point key="canvasLocation" x="197.59999999999999" y="-568.9655172413793"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="calander-mono" width="24" height="24"/>
+        <image name="map-pin-mono" width="24" height="24"/>
+    </resources>
+</document>

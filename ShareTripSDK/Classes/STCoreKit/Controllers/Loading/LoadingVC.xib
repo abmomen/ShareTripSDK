@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoadingVC" customModule="ShareTrip" customModuleProvider="target">
+            <connections>
+                <outlet property="loadingAnimationView" destination="tob-zB-S54" id="1fC-ar-0kM"/>
+                <outlet property="subtitleLabel" destination="siL-so-mgS" id="RqO-Cj-i5l"/>
+                <outlet property="titleLabel" destination="8Mo-j0-nYN" id="3gl-Hs-1DJ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FINDING YOUR FLIGHTS!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="8Mo-j0-nYN">
+                    <rect key="frame" x="16" y="480.5" width="343" height="42"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                    <nil key="textColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fetching best hotels" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="siL-so-mgS">
+                    <rect key="frame" x="16" y="530.5" width="343" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <color key="highlightedColor" red="0.29803921568627451" green="0.29803921568627451" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tob-zB-S54" customClass="AnimationView" customModule="Lottie">
+                    <rect key="frame" x="0.0" y="89.5" width="375" height="375"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="600" id="62J-4M-pHb"/>
+                        <constraint firstAttribute="width" secondItem="tob-zB-S54" secondAttribute="height" multiplier="1:1" id="hNr-wu-cTc"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="siL-so-mgS" firstAttribute="centerX" secondItem="8Mo-j0-nYN" secondAttribute="centerX" id="0RX-6b-i4W"/>
+                <constraint firstItem="8Mo-j0-nYN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="AVk-BR-bG4"/>
+                <constraint firstItem="siL-so-mgS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Ccc-Ys-QgK"/>
+                <constraint firstItem="siL-so-mgS" firstAttribute="top" secondItem="8Mo-j0-nYN" secondAttribute="bottom" constant="8" id="LC8-Q6-2mq"/>
+                <constraint firstItem="tob-zB-S54" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="bfG-AW-93h"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="siL-so-mgS" secondAttribute="trailing" constant="16" id="gGf-bO-kqd"/>
+                <constraint firstItem="tob-zB-S54" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="hNe-u1-9qh"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="8Mo-j0-nYN" secondAttribute="trailing" constant="16" id="hkv-om-9fF"/>
+                <constraint firstItem="8Mo-j0-nYN" firstAttribute="top" secondItem="tob-zB-S54" secondAttribute="bottom" constant="16" id="rrb-og-pXk"/>
+                <constraint firstItem="8Mo-j0-nYN" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="sXu-xQ-GFR"/>
+                <constraint firstItem="tob-zB-S54" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" multiplier="0.83" id="tAT-eS-kio"/>
+            </constraints>
+            <point key="canvasLocation" x="142" y="133"/>
+        </view>
+    </objects>
+</document>

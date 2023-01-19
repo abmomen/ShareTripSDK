@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="395" id="KGk-i7-Jjw" customClass="TravelAdviceTVCell" customModule="ShareTrip" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="585" height="395"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="585" height="395"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rYc-QU-h7W">
+                        <rect key="frame" x="8" y="16" width="569" height="371"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stay safe when you travel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FdG-5A-ZPD">
+                                <rect key="frame" x="16" y="16" width="537" height="20.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xb3-jU-wdc">
+                                <rect key="frame" x="16" y="52.5" width="537" height="31.5"/>
+                                <string key="text">The Centers for Disease Control and Prevention (CDC) recommends following these steps to protect yourself and others when you travel:</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dot-mono" translatesAutoresizingMaskIntoConstraints="NO" id="6lx-c1-ai0">
+                                <rect key="frame" x="16" y="100" width="15" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="15" id="3qZ-QH-Zl3"/>
+                                    <constraint firstAttribute="width" secondItem="6lx-c1-ai0" secondAttribute="height" multiplier="1:1" id="gFz-bU-z8P"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maintain a distance of 6 feet (2 meters) between you and others as much as possible." textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZJq-TP-oIv">
+                                <rect key="frame" x="39" y="100" width="522" height="13.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dot-mono" translatesAutoresizingMaskIntoConstraints="NO" id="K35-Xh-Wrf">
+                                <rect key="frame" x="16" y="121.5" width="15" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="K35-Xh-Wrf" secondAttribute="height" multiplier="1:1" id="8aQ-gw-ZrN"/>
+                                    <constraint firstAttribute="width" constant="15" id="hW3-Cm-b9z"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Avoid contact with anyone who is sick." textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EPh-he-m7i">
+                                <rect key="frame" x="39" y="121.5" width="522" height="13.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dot-mono" translatesAutoresizingMaskIntoConstraints="NO" id="FkS-jo-dWV">
+                                <rect key="frame" x="16" y="143" width="15" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="FkS-jo-dWV" secondAttribute="height" multiplier="1:1" id="1Dq-gL-wlH"/>
+                                    <constraint firstAttribute="width" constant="15" id="w5b-do-clX"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="011-50-5Of">
+                                <rect key="frame" x="39" y="143" width="522" height="26.5"/>
+                                <string key="text">Limit contact with frequently touched surfaces, such as handrails, elevator buttons and kiosks. If you must touch these surfaces, use hand sanitizer or wash your hands afterward.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dot-mono" translatesAutoresizingMaskIntoConstraints="NO" id="cEU-ld-3fR">
+                                <rect key="frame" x="16" y="177.5" width="15" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="15" id="7SZ-dG-G6N"/>
+                                    <constraint firstAttribute="width" secondItem="cEU-ld-3fR" secondAttribute="height" multiplier="1:1" id="aHe-gu-qVT"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wear a cloth face mask." textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xCp-y6-aov">
+                                <rect key="frame" x="39" y="177.5" width="522" height="13.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dot-mono" translatesAutoresizingMaskIntoConstraints="NO" id="Nq0-I0-Rqh">
+                                <rect key="frame" x="16" y="199" width="15" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="15" id="bVO-Nf-HCw"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cover coughs and sneezes." textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U23-Sl-Tls">
+                                <rect key="frame" x="39" y="200" width="522" height="13.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dot-mono" translatesAutoresizingMaskIntoConstraints="NO" id="GPB-G7-VJI">
+                                <rect key="frame" x="16" y="221.5" width="15" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="15" id="4rY-G1-jst"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cun-K6-Lmw">
+                                <rect key="frame" x="39" y="221.5" width="522" height="26.5"/>
+                                <string key="text">Clean your hands often. It’s especially important after going to the bathroom, before eating, and after coughing, sneezing or blowing your nose.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FkS-jo-dWV" firstAttribute="leading" secondItem="K35-Xh-Wrf" secondAttribute="leading" id="0Ve-60-0oI"/>
+                            <constraint firstItem="EPh-he-m7i" firstAttribute="leading" secondItem="K35-Xh-Wrf" secondAttribute="trailing" constant="8" id="2iy-ch-XdF"/>
+                            <constraint firstItem="K35-Xh-Wrf" firstAttribute="leading" secondItem="6lx-c1-ai0" secondAttribute="leading" id="2tz-9b-Q0R"/>
+                            <constraint firstAttribute="trailing" secondItem="xCp-y6-aov" secondAttribute="trailing" constant="8" id="9BF-MD-xqg"/>
+                            <constraint firstItem="cEU-ld-3fR" firstAttribute="width" secondItem="cEU-ld-3fR" secondAttribute="height" multiplier="1:1" id="9pd-Pz-cDo"/>
+                            <constraint firstItem="K35-Xh-Wrf" firstAttribute="top" secondItem="ZJq-TP-oIv" secondAttribute="bottom" constant="8" id="Cou-bZ-Z7p"/>
+                            <constraint firstItem="FdG-5A-ZPD" firstAttribute="top" secondItem="rYc-QU-h7W" secondAttribute="top" constant="16" id="DBF-WZ-MaR"/>
+                            <constraint firstItem="Nq0-I0-Rqh" firstAttribute="leading" secondItem="cEU-ld-3fR" secondAttribute="leading" id="Dv0-A2-UdT"/>
+                            <constraint firstItem="FdG-5A-ZPD" firstAttribute="leading" secondItem="rYc-QU-h7W" secondAttribute="leading" constant="16" id="E1g-tZ-R9c"/>
+                            <constraint firstItem="U23-Sl-Tls" firstAttribute="leading" secondItem="Nq0-I0-Rqh" secondAttribute="trailing" constant="8" id="EgU-dQ-VdR"/>
+                            <constraint firstItem="xCp-y6-aov" firstAttribute="top" secondItem="cEU-ld-3fR" secondAttribute="top" id="EpF-Jk-msx"/>
+                            <constraint firstItem="011-50-5Of" firstAttribute="leading" secondItem="FkS-jo-dWV" secondAttribute="trailing" constant="8" id="Eti-4o-74y"/>
+                            <constraint firstItem="ZJq-TP-oIv" firstAttribute="top" secondItem="6lx-c1-ai0" secondAttribute="top" id="GlV-n4-bho"/>
+                            <constraint firstItem="GPB-G7-VJI" firstAttribute="top" secondItem="U23-Sl-Tls" secondAttribute="bottom" constant="8" id="HFJ-8v-J0w"/>
+                            <constraint firstItem="cun-K6-Lmw" firstAttribute="leading" secondItem="GPB-G7-VJI" secondAttribute="trailing" constant="8" id="Hup-dv-bIZ"/>
+                            <constraint firstItem="ZJq-TP-oIv" firstAttribute="leading" secondItem="6lx-c1-ai0" secondAttribute="trailing" constant="8" id="IgA-X7-cd9"/>
+                            <constraint firstItem="cEU-ld-3fR" firstAttribute="leading" secondItem="FkS-jo-dWV" secondAttribute="leading" id="NOb-g0-Css"/>
+                            <constraint firstItem="xCp-y6-aov" firstAttribute="leading" secondItem="cEU-ld-3fR" secondAttribute="trailing" constant="8" id="NZJ-BD-UnP"/>
+                            <constraint firstItem="Xb3-jU-wdc" firstAttribute="leading" secondItem="FdG-5A-ZPD" secondAttribute="leading" id="Nd9-wZ-hPG"/>
+                            <constraint firstAttribute="trailing" secondItem="FdG-5A-ZPD" secondAttribute="trailing" constant="16" id="Oll-uJ-gPF"/>
+                            <constraint firstItem="011-50-5Of" firstAttribute="top" secondItem="FkS-jo-dWV" secondAttribute="top" id="PfF-f7-WMs"/>
+                            <constraint firstItem="FkS-jo-dWV" firstAttribute="top" secondItem="EPh-he-m7i" secondAttribute="bottom" constant="8" id="SGX-Df-aie"/>
+                            <constraint firstItem="GPB-G7-VJI" firstAttribute="leading" secondItem="Nq0-I0-Rqh" secondAttribute="leading" id="VEN-vZ-9Ok"/>
+                            <constraint firstAttribute="trailing" secondItem="011-50-5Of" secondAttribute="trailing" constant="8" id="a0r-X3-Wsm"/>
+                            <constraint firstItem="cEU-ld-3fR" firstAttribute="top" secondItem="011-50-5Of" secondAttribute="bottom" constant="8" id="aHU-Gd-7dp"/>
+                            <constraint firstItem="cun-K6-Lmw" firstAttribute="top" secondItem="GPB-G7-VJI" secondAttribute="top" id="acO-cQ-v0r"/>
+                            <constraint firstItem="Xb3-jU-wdc" firstAttribute="trailing" secondItem="FdG-5A-ZPD" secondAttribute="trailing" id="bTB-Gm-XpG"/>
+                            <constraint firstAttribute="trailing" secondItem="ZJq-TP-oIv" secondAttribute="trailing" constant="8" id="bsF-IG-qLr"/>
+                            <constraint firstItem="Xb3-jU-wdc" firstAttribute="top" secondItem="FdG-5A-ZPD" secondAttribute="bottom" constant="16" id="bu0-Rc-Zl2"/>
+                            <constraint firstItem="Nq0-I0-Rqh" firstAttribute="top" secondItem="xCp-y6-aov" secondAttribute="bottom" constant="8" id="ddl-9c-xkm"/>
+                            <constraint firstItem="EPh-he-m7i" firstAttribute="top" secondItem="K35-Xh-Wrf" secondAttribute="top" id="dhr-k7-oMb"/>
+                            <constraint firstItem="GPB-G7-VJI" firstAttribute="width" secondItem="GPB-G7-VJI" secondAttribute="height" multiplier="1:1" id="dhu-Bx-3jY"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="cun-K6-Lmw" secondAttribute="bottom" constant="20" id="fDL-QT-0i0"/>
+                            <constraint firstAttribute="trailing" secondItem="EPh-he-m7i" secondAttribute="trailing" constant="8" id="siC-XK-qwc"/>
+                            <constraint firstItem="Nq0-I0-Rqh" firstAttribute="width" secondItem="Nq0-I0-Rqh" secondAttribute="height" multiplier="1:1" id="x8P-dn-fF3"/>
+                            <constraint firstAttribute="trailing" secondItem="U23-Sl-Tls" secondAttribute="trailing" constant="8" id="yFe-Zp-Np2"/>
+                            <constraint firstItem="U23-Sl-Tls" firstAttribute="centerY" secondItem="Nq0-I0-Rqh" secondAttribute="centerY" id="yWP-K5-di8"/>
+                            <constraint firstItem="6lx-c1-ai0" firstAttribute="top" secondItem="Xb3-jU-wdc" secondAttribute="bottom" constant="16" id="yZc-AV-LLt"/>
+                            <constraint firstItem="6lx-c1-ai0" firstAttribute="leading" secondItem="Xb3-jU-wdc" secondAttribute="leading" id="yej-Ft-Rkq"/>
+                            <constraint firstAttribute="trailing" secondItem="cun-K6-Lmw" secondAttribute="trailing" constant="8" id="yfO-4A-ARE"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="rYc-QU-h7W" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="2KS-cT-taU"/>
+                    <constraint firstAttribute="bottom" secondItem="rYc-QU-h7W" secondAttribute="bottom" constant="8" id="sB5-hk-jp2"/>
+                    <constraint firstAttribute="trailing" secondItem="rYc-QU-h7W" secondAttribute="trailing" constant="8" id="tC7-MF-6R9"/>
+                    <constraint firstItem="rYc-QU-h7W" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="xun-Ug-iC8"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="containerView" destination="rYc-QU-h7W" id="0C8-Is-0gz"/>
+                <outlet property="headlineLabel" destination="FdG-5A-ZPD" id="Y0c-EQ-8Wp"/>
+                <outlet property="infoLabel" destination="Xb3-jU-wdc" id="pUq-dL-quD"/>
+            </connections>
+            <point key="canvasLocation" x="-1478.985507246377" y="-147.65625"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="dot-mono" width="24" height="24"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
