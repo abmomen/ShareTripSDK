@@ -40,6 +40,8 @@ Pod::Spec.new do |s|
     
     s.resources = "ShareTripSDK/Assets/**/*.{storyboard,xib,xcassets,pdf}"
     
+    s.static_framework = true
+    
     s.dependency 'JWT'
     s.dependency 'PKHUD'
     s.dependency 'Base64'

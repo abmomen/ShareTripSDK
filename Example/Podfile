@@ -1,13 +1,46 @@
 use_frameworks!
 
-platform :ios, '10.0'
+platform :ios, '11.0'
 
 target 'ShareTripSDK_Example' do
   pod 'ShareTripSDK', :path => '../'
-
+  
+  pod 'JWT'
+  pod 'PKHUD'
+  pod 'Base64'
+  pod 'Koloda'
+  pod 'BlueECC'
+  pod 'BlueRSA'
+  pod 'Alamofire'
+  pod 'lottie-ios'
+  pod 'SwiftyJSON'
+  pod 'Kingfisher'
+  pod 'Bolts-Swift'
+  pod 'BlueCryptor'
+  pod 'FloatingPanel'
+  pod 'GoogleSignIn'
+  pod 'ImageSlideshow'
+  pod 'JTAppleCalendar'
+  pod 'SwiftKeychainWrapper'
+  pod 'Socket.IO-Client-Swift'
+  
+  pod 'FBSDKCoreKit'
+  pod 'FBSDKLoginKit'
+  pod 'FBSDKShareKit'
+  
+  pod 'FirebaseAuth'
+  pod 'FirebaseFirestore'
+  pod 'FirebaseAnalytics'
+  pod 'FirebaseMessaging'
+  pod 'FirebaseCrashlytics'
+  pod 'FirebaseRemoteConfig'
+  pod 'FirebaseDynamicLinks'
+  pod 'IQKeyboardManagerSwift'
+  pod 'FirebaseCoreDiagnostics'
+  
   target 'ShareTripSDK_Tests' do
     inherit! :search_paths
-
+    
     
   end
 end
