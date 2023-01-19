@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
     s.name             = 'ShareTripSDK'
     s.version          = '0.1.0'
-    s.summary          = 'A short description of ShareTripSDK.'
+    s.summary          = 'A Title name of ShareTripSDK.'
     
     # This description is used to generate tags and improve search results.
     #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,8 @@ Pod::Spec.new do |s|
     #   * Finally, don't worry about the indent, CocoaPods strips it!
     
     s.description      = <<-DESC
-    TODO: Add long description of the pod here.
+    
+    TODO: will add long description.
     
     DESC
     
@@ -29,18 +30,12 @@ Pod::Spec.new do |s|
     s.source           = { :git => 'https://github.com/sharetrip-ios/ShareTripSDK.git', :tag => s.version.to_s }
     # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
     
-    s.ios.deployment_target = '11.0'
     s.swift_version = '5.0'
+    s.static_framework = true
+    s.ios.deployment_target = '11.0'
     
     s.source_files = 'ShareTripSDK/Classes/**/*.{swift}'
-    
-    s.resource_bundles = {
-        'Resoucres' => ['ShareTripSDK/**/*']
-    }
-    
-    s.resources = "ShareTripSDK/Assets/**/*.{storyboard,xib,xcassets,pdf}"
-    
-    s.static_framework = true
+    s.resource_bundles = { 'Resources' => ['ShareTripSDK/**/*.{storyboard,xib,xcassets}'] }
     
     s.dependency 'JWT'
     s.dependency 'PKHUD'
