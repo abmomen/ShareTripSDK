@@ -46,7 +46,7 @@ class FareRulesAndPolicyVC: UIViewController {
         let activityIndicator = UIActivityIndicatorView()
         activityIndicator.frame = CGRect(x: 0, y: 0, width: 44.0, height: 44.0)
         activityIndicator.hidesWhenStopped = true
-        activityIndicator.style = .large
+        activityIndicator.style = .white
         activityIndicator.color = .gray
         return activityIndicator
     }()

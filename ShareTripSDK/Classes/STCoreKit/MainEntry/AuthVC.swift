@@ -203,17 +203,18 @@ public class AuthVC: UIViewController {
         passwordConfirmationTFRregisterView.isSecureTextEntry.toggle()
         handleEyeIconButtonPress(passwordConfirmationTFRregisterView, registerViewEyeIconForPasswordConfirmation)
     }
-
+    
     private func handleEyeIconButtonPress(_ textField: UITextField, _ button: UIButton ) {
-        if textField.isSecureTextEntry {
-            if let image = UIImage(systemName: "eye.slash.fill")?.withTintColor(.black, renderingMode: .alwaysOriginal) {
-                button.setImage(image, for: .normal)
-            }
-        } else {
-            if let image = UIImage(systemName: "eye.fill")?.withTintColor(.black, renderingMode: .alwaysOriginal) {
-                button.setImage(image, for: .normal)
-            }
-        }
+//        if textField.isSecureTextEntry {
+//            if let image = UIImage(systemName: "eye.slash.fill") {
+//                button.setImage(image, for: .normal)
+//            }
+//            
+//        } else {
+//            if let image = UIImage(systemName: "eye.fill") {
+//                button.setImage(image, for: .normal)
+//            }
+//        }
     }
     
     // MARK: Entry View's Action
@@ -226,6 +227,7 @@ public class AuthVC: UIViewController {
         viewModel.signInWithFacebook(vc: self)
     }
     
+    @available(iOS 13.0, *)
     @objc private func handleAppleIdRequest(){
         let appleIDProvider = ASAuthorizationAppleIDProvider()
         let request = appleIDProvider.createRequest()
@@ -304,22 +306,28 @@ public class AuthVC: UIViewController {
     
     // MARK: - Apple SignIn Button Setup
     private func setUpSignInAppleButton() {
-        let authorizationButton = ASAuthorizationAppleIDButton(authorizationButtonType: .continue, authorizationButtonStyle: .black)
-        authorizationButton.addTarget(self, action: #selector(handleAppleIdRequest), for: .touchUpInside)
-        authorizationButton.cornerRadius = 3.0
-        setupButtonsLook(buttonContainerView: appleSigninButtonCotainer)
-        self.appleSigninButtonCotainer.addSubview(authorizationButton)
+        if #available(iOS 13.0, *) {
+            let authorizationButton = ASAuthorizationAppleIDButton(authorizationButtonType: .continue, authorizationButtonStyle: .black)
+            authorizationButton.addTarget(self, action: #selector(handleAppleIdRequest), for: .touchUpInside)
+            authorizationButton.cornerRadius = 3.0
+            setupButtonsLook(buttonContainerView: appleSigninButtonCotainer)
+            self.appleSigninButtonCotainer.addSubview(authorizationButton)
+            
+            authorizationButton.translatesAutoresizingMaskIntoConstraints = false
+            NSLayoutConstraint.activate([
+                authorizationButton.leadingAnchor.constraint(equalTo: appleSigninButtonCotainer.leadingAnchor),
+                authorizationButton.trailingAnchor.constraint(equalTo: appleSigninButtonCotainer.trailingAnchor),
+                authorizationButton.topAnchor.constraint(equalTo: appleSigninButtonCotainer.topAnchor),
+                authorizationButton.bottomAnchor.constraint(equalTo: appleSigninButtonCotainer.bottomAnchor)
+            ])
+            
+            appleSigninButtonContainerHLC.constant = 44.0
+            appleSignInButtonContainerTLC.constant = 16.0
+        } else {
+            appleSigninButtonContainerHLC.constant = .zero
+            appleSignInButtonContainerTLC.constant = .zero
+        }
         
-        authorizationButton.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            authorizationButton.leadingAnchor.constraint(equalTo: appleSigninButtonCotainer.leadingAnchor),
-            authorizationButton.trailingAnchor.constraint(equalTo: appleSigninButtonCotainer.trailingAnchor),
-            authorizationButton.topAnchor.constraint(equalTo: appleSigninButtonCotainer.topAnchor),
-            authorizationButton.bottomAnchor.constraint(equalTo: appleSigninButtonCotainer.bottomAnchor)
-        ])
-        
-        appleSigninButtonContainerHLC.constant = 44.0
-        appleSignInButtonContainerTLC.constant = 16.0
     }
     
     private func setupButtonsLook(buttonContainerView: UIView) {
@@ -486,6 +494,7 @@ extension AuthVC: StoryboardBased {
 }
 
 // MARK: - Apple login Delegates
+@available(iOS 13.0, *)
 extension AuthVC: ASAuthorizationControllerDelegate, ASAuthorizationControllerPresentationContextProviding {
     public func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
         switch authorization.credential {

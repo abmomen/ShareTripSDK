@@ -54,8 +54,15 @@ public extension UIViewController {
     
     var statusBarHeight: CGFloat {
         let window =  UIApplication.shared.windows.filter { $0.isKeyWindow }.first
-        guard let height = window?.windowScene?.statusBarManager?.statusBarFrame.height else { return 0 }
-        return height
+        
+        var statusBarFrame: CGRect = .zero
+        if #available(iOS 13.0, *) {
+            statusBarFrame = view.window?.windowScene?.statusBarManager?.statusBarFrame ?? CGRect.zero
+        } else {
+            statusBarFrame = UIApplication.shared.statusBarFrame
+        }
+        
+        return statusBarFrame.height
     }
     
     var navigationBarHeight: CGFloat {

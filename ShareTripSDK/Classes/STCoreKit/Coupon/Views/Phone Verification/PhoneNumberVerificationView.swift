@@ -190,7 +190,11 @@ extension PhoneNumberVerificationView {
             case .phone:
                 return .telephoneNumber
             case .otp:
-                return .oneTimeCode
+                if #available(iOS 12.0, *) {
+                    return .oneTimeCode
+                } else {
+                    return .password
+                }
             }
         }
     }

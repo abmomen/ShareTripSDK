@@ -52,7 +52,7 @@ open class DefaultActivityIndicator: ActivityIndicatorFactory {
     ///
     /// - style: activity indicator style
     /// - color: activity indicator color
-    public init(style: UIActivityIndicatorViewStyle = .medium, color: UIColor? = nil) {
+    public init(style: UIActivityIndicatorViewStyle = .white, color: UIColor? = nil) {
         self.style = style
         self.color = color
     }

@@ -177,7 +177,7 @@ public extension UITableView {
         activityIndicator.frame = CGRect(x: 0, y: 0, width: 44.0, height: 44.0)
         activityIndicator.center = center
         activityIndicator.hidesWhenStopped = true
-        activityIndicator.style = .large
+        activityIndicator.style = .gray
         activityIndicator.color = .gray
         activityIndicator.startAnimating()
         
