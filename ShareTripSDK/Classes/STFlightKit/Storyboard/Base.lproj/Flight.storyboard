@@ -894,7 +894,7 @@ Discount Offer</string>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OVk-k5-F2H">
                                                 <rect key="frame" x="0.0" y="138" width="398" height="50"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tp0-s3-mGQ" customClass="GDCheckbox" customModule="STCoreKit">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tp0-s3-mGQ" customClass="GDCheckbox" customModule="ShareTripSDK">
                                                         <rect key="frame" x="16" y="16" width="20" height="20"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
