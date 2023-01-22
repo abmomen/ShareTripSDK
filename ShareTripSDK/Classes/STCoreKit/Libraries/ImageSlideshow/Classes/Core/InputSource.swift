@@ -40,7 +40,7 @@ open class ImageSource: NSObject, InputSource {
     /// - parameter imageString: name of the file in the application's main bundle
     @available(*, deprecated, message: "Use `BundleImageSource` instead")
     public init?(imageString: String) {
-        if let image = UIImage(named: imageString) {
+        if let image = UIImage.image(name: imageString) {
             self.image = image
             super.init()
         } else {
@@ -67,7 +67,7 @@ open class BundleImageSource: NSObject, InputSource {
     }
     
     public func load(to imageView: UIImageView, with callback: @escaping (UIImage?) -> Void) {
-        let image = UIImage(named: imageString)
+        let image = UIImage.image(name: imageString)
         imageView.image = image
         callback(image)
     }

@@ -17,12 +17,12 @@ public extension UITableView {
     }
     
     func registerNibConfigurableCellDataContainer<T: UITableViewCell>(_ cellClass: T.Type, nibName: String = T.reuseID)  where T: ConfigurableTableViewCellDataContainer {
-        let nib = UINib(nibName: nibName, bundle: Bundle(for: T.self))
+        let nib = UINib(nibName: nibName, bundle: ShareTripSDK.bundle)
         register(nib, forCellReuseIdentifier: T.reuseableContainerID)
     }
     
     func registerNibCell<T: UITableViewCell>(_ cellClass: T.Type, nibName: String = T.reuseID) {
-        let nib = UINib(nibName: nibName, bundle: Bundle(for: T.self))
+        let nib = UINib(nibName: nibName, bundle: ShareTripSDK.bundle)
         register(nib, forCellReuseIdentifier: T.reuseID)
     }
     
@@ -31,7 +31,7 @@ public extension UITableView {
     }
     
     func registerNibHeaderFooter<T: UITableViewHeaderFooterView>(_ viewClass: T.Type, nibName: String = T.reuseID) {
-        let nib = UINib(nibName: nibName, bundle: Bundle(for: T.self))
+        let nib = UINib(nibName: nibName, bundle: ShareTripSDK.bundle)
         register(nib, forHeaderFooterViewReuseIdentifier: T.reuseID)
     }
     

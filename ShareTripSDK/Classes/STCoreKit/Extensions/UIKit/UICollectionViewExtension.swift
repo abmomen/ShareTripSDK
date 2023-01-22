@@ -13,7 +13,7 @@ public extension UICollectionView {
     }
     
     func registerNibCell<T: UICollectionViewCell>(_ cellClass: T.Type, nibName: String = T.reuseID) {
-        let nib = UINib(nibName: nibName, bundle: Bundle(for: T.self))
+        let nib = UINib(nibName: nibName, bundle: ShareTripSDK.bundle)
         register(nib, forCellWithReuseIdentifier: T.reuseID)
     }
     

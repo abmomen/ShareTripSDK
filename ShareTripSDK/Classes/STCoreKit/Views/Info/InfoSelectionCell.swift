@@ -69,7 +69,7 @@ public class InfoSelectionCell: UITableViewCell {
         pickerAccessory?.items = [cancelButton, flexSpace, doneButton]
         infoTextField.inputAccessoryView = pickerAccessory
         
-        let downArrowImageView = UIImageView(image: UIImage(named: "arrow-down-mono"))
+        let downArrowImageView = UIImageView(image: UIImage.image(name: "arrow-down-mono"))
         downArrowImageView.contentMode = UIView.ContentMode.center
         infoTextField.rightView = downArrowImageView
         infoTextField.rightView?.tintColor = UIColor.blueGray

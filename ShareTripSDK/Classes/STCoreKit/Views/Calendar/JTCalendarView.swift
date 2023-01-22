@@ -51,12 +51,11 @@ public class JTCalendarView: UIView, NibBased {
     
     //MARK:- SetupUI
     private func setupUI() {
-        calendar.scrollingMode = .none
-        
-        let cellNib = UINib(nibName: "\(JTDateCell.self)", bundle: Bundle(for: JTDateCell.self))
+        calendar.scrollingMode = .none        
+        let cellNib = UINib(nibName: "\(JTDateCell.self)", bundle: ShareTripSDK.bundle)
         calendar.register(cellNib, forCellWithReuseIdentifier: "\(JTDateCell.self)")
         
-        let headerNib = UINib(nibName: "\(JTCalendarHeader.self)", bundle: Bundle(for: JTCalendarHeader.self))
+        let headerNib = UINib(nibName: "\(JTCalendarHeader.self)", bundle: ShareTripSDK.bundle)
         calendar.register(headerNib, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "\(JTCalendarHeader.self)")
         
         let calendarWidth = Double(UIScreen.main.bounds.size.width)
@@ -69,12 +68,12 @@ public class JTCalendarView: UIView, NibBased {
     public func configure(firstDateData: JTCalendarDateViewData,
                    secondDateData: JTCalendarDateViewData? = nil) {
         
-        firstImageView.image = UIImage(named:  firstDateData.imageStr)
+        firstImageView.image = UIImage.image(name: firstDateData.imageStr)
         firstTitleLabel.text = firstDateData.title
         
         if let secondDateData = secondDateData {
             secondDateView.isHidden = false
-            secondImageView.image = UIImage(named: secondDateData.imageStr)
+            secondImageView.image = UIImage.image(name: secondDateData.imageStr)
             secondTitleLabel.text = secondDateData.title
         } else {
             secondDateView.isHidden = true

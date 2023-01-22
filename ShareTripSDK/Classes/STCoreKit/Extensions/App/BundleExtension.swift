@@ -8,6 +8,5 @@
 import Foundation
 
 public extension Bundle {
-    static var core = Bundle(identifier: "net.sharetrip.ios.core")
-    static var flight = Bundle(identifier: "net.sharetrip.ios.flight")
+   
 }

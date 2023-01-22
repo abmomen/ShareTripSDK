@@ -39,7 +39,7 @@ public class InfoTextFieldCell: UITableViewCell {
         self.delegate = delegate
         
         self.titleLabel.text = title
-        self.typeImageView.image = UIImage(named: typeImage)
+        self.typeImageView.image = UIImage.image(name: typeImage)
         self.infoTextField.placeholder = placeholder
         
         infoTextField.keyboardType = keyboardType

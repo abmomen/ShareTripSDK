@@ -81,7 +81,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="74S-vv-sdJ">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                                 <subviews>
-                                    <searchBar contentMode="redraw" placeholder="Search City or Destination" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S39-pb-Plo" customClass="SearchBar" customModule="STCoreKit">
+                                    <searchBar contentMode="redraw" placeholder="Search City or Destination" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S39-pb-Plo" customClass="SearchBar" customModule="ShareTripSDK">
                                         <rect key="frame" x="8" y="4" width="398" height="48"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </searchBar>

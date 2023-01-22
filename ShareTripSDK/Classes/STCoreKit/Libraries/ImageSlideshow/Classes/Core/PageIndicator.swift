@@ -122,7 +122,7 @@ public class CustomLabelPageIndicator: UILabel, PageIndicatorView {
 
     lazy var imageString: NSAttributedString = {
         // create our NSTextAttachment
-        let image = UIImage(named: "image-album-mono")!.tint(with: .white)!
+        let image = UIImage.image(name: "image-album-mono")!.tint(with: .white)!
         let rect = CGRect(x: 0, y: ((self.font.capHeight) - image.size.height).rounded() / 2, width: image.size.width, height: image.size.height)
         let imageAttachment = NSTextAttachment()
         imageAttachment.image = image

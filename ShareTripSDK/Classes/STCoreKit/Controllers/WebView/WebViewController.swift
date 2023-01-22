@@ -95,7 +95,7 @@ public class WebViewController: UIViewController {
         
         if isModal {
             let closeItem = UIBarButtonItem(
-                image: UIImage(named: "close-mono"),
+                image: UIImage.image(name: "close-mono"),
                 style: .done, target: self,
                 action: #selector(closedButtonTapped(_:))
             )

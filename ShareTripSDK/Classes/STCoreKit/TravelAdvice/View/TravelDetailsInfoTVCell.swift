@@ -96,20 +96,20 @@ class TravelDetailsInfoTVCell: UITableViewCell {
         /// handle restrictions toggling
         if isRestrictionDetailVisible {
             recommandationDetailsLabel.text = self.travelAdviceVM.getDestinationDetailsData().countryRestriction
-            recommandationToggleButton.setImage(UIImage(named: "arrow-up-mono"), for: .normal)
+            recommandationToggleButton.setImage(UIImage.image(name: "arrow-up-mono"), for: .normal)
         } else {
             recommandationDetailsLabel.text = ""
-            recommandationToggleButton.setImage(UIImage(named: "arrow-down-mono"), for: .normal)
+            recommandationToggleButton.setImage(UIImage.image(name: "arrow-down-mono"), for: .normal)
         }
 
         /// handle recommandation toggling
         if isRecommandationDetailVisible {
             entryRestrictionDetailsLabel.text = self.travelAdviceVM.getDestinationDetailsData().countryRecommandation
-            entryRestrictionToggleButton.setImage(UIImage(named: "arrow-up-mono"), for: .normal)
+            entryRestrictionToggleButton.setImage(UIImage.image(name: "arrow-up-mono"), for: .normal)
 
         } else {
             entryRestrictionDetailsLabel.text = ""
-            entryRestrictionToggleButton.setImage(UIImage(named: "arrow-down-mono"), for: .normal)
+            entryRestrictionToggleButton.setImage(UIImage.image(name: "arrow-down-mono"), for: .normal)
         }
 
     }

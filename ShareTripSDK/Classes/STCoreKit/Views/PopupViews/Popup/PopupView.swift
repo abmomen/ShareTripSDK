@@ -39,14 +39,14 @@ public class PopupView: UIView {
     public lazy var imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
-        imageView.image = UIImage(named: "tripcoins-onboarding")
+        imageView.image = UIImage.image(name: "tripcoins-onboarding")
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
     
     lazy var closeButton: UIButton = {
         let button = UIButton()
-        button.setImage(UIImage(named: "close-mono"), for: .normal)
+        button.setImage(UIImage.image(name: "close-mono"), for: .normal)
         button.tintColor = UIColor.blueGray
         button.translatesAutoresizingMaskIntoConstraints = false
         return button

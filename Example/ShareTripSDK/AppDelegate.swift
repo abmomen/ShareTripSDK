@@ -18,8 +18,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        STUserSession.current.authToken = AuthToken(accessToken: "$2b$10$pv.ZAnzyuSTD7GIMm/yHL.hdPTFQgUDN2rfXPnQXh67e4JsKJ0Fl.", loginType: .email)
-        window?.rootViewController = UINavigationController(rootViewController: FlightSearchVC.instantiate()) //MyBLHomeVC.instantiate()
+        let navigationController = NavigationController(rootViewController: FlightSearchVC.instantiate())
+        
+        STUserSession.current.authToken = AuthToken(
+            accessToken: "$2b$10$pv.ZAnzyuSTD7GIMm/yHL.hdPTFQgUDN2rfXPnQXh67e4JsKJ0Fl.",
+            loginType: .email
+        )
+        window?.rootViewController = navigationController //MyBLHomeVC.instantiate()
         window?.makeKeyAndVisible()
         
         FirebaseApp.configure()

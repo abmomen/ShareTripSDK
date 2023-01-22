@@ -42,7 +42,7 @@ public class LoginCardView: UIView {
     lazy var imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
-        imageView.image = UIImage(named: "tripcoins-onboarding")
+        imageView.image = UIImage.image(name: "tripcoins-onboarding")
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
@@ -106,7 +106,7 @@ public class LoginCardView: UIView {
         
         titleLabel.text = viewData.title
         subtitleLabel.text = viewData.subtitle
-        imageView.image = UIImage(named: viewData.imageName)
+        imageView.image = UIImage.image(name: viewData.imageName)
         
         loginButton.addTarget(self, action: #selector(loginButtonTapped(_:)), for: .touchUpInside)
     }

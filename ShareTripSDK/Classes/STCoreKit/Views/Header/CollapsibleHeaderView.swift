@@ -54,7 +54,7 @@ open class CollapsibleHeaderView: UITableViewHeaderFooterView {
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         horizontalLineView.translatesAutoresizingMaskIntoConstraints = false
         
-        arrowImageView.image = UIImage(named: "arrow-down-mono")
+        arrowImageView.image = UIImage.image(name: "arrow-down-mono")
         
         titleLabel.textColor = .black
         titleLabel.font = UIFont.systemFont(ofSize: 17.0, weight: .medium)

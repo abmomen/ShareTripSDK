@@ -13,7 +13,7 @@ public class PlaceholderView: UIView {
     
     private var shouldSetupConstraints = true
     
-    let placeholderImageView = UIImageView(image: UIImage(named: "placeholder-mono"))
+    let placeholderImageView = UIImageView(image: UIImage.image(name: "placeholder-mono"))
 
    //MARK:- initWithCode to init view from xib or storyboard
     required init?(coder aDecoder: NSCoder) {

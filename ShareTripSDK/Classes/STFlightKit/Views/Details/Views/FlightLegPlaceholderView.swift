@@ -18,7 +18,7 @@ class FlightLegPlaceholderView: UIView {
     */
     
     class func instanceFromNib() -> FlightLegPlaceholderView {
-        let bundle = Bundle(for: FlightLegPlaceholderView.self)
+        let bundle = ShareTripSDK.bundle
         return UINib(nibName: "FlightLegPlaceholderView", bundle: bundle).instantiate(withOwner: nil, options: nil)[0] as! FlightLegPlaceholderView
     }
     

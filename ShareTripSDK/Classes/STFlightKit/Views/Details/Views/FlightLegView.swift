@@ -22,7 +22,7 @@ class FlightLegView: UIView, NibBased {
     @IBOutlet weak var durationLabel: UILabel!
 
     class func instanceFromNib() -> FlightLegView {
-        let bundle = Bundle(for: FlightLegView.self)
+        let bundle = ShareTripSDK.bundle
         return UINib(nibName: "FlightLegView", bundle: bundle).instantiate(withOwner: nil, options: nil)[0] as! FlightLegView
     }
     
