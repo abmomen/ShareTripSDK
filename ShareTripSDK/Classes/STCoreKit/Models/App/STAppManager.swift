@@ -258,7 +258,7 @@ public class STAppManager {
     }
 
     public class func getCountryList() -> [Country] {
-        if let url = Bundle.main.url(forResource:  "Countries", withExtension: "json") {
+        if let url = ShareTripSDK.bundle.url(forResource:  "Countries", withExtension: "json") {
             do {
                 let data = try Data(contentsOf: url)
                 let decoder = JSONDecoder()

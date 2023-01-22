@@ -9,6 +9,7 @@
 import UIKit
 import ShareTripSDK
 import FirebaseCore
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -24,6 +25,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             accessToken: "$2b$10$pv.ZAnzyuSTD7GIMm/yHL.hdPTFQgUDN2rfXPnQXh67e4JsKJ0Fl.",
             loginType: .email
         )
+        // Enable IQKeyboardManager
+        IQKeyboardManager.shared.enable = true
+        
         window?.rootViewController = navigationController //MyBLHomeVC.instantiate()
         window?.makeKeyAndVisible()
         
