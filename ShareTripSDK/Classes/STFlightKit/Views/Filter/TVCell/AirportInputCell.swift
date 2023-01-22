@@ -67,7 +67,7 @@ class AirportInputCell: UITableViewCell {
         }
 
         topDotsImageView.isHidden = !inputData.dotShown
-        inputTypeImageView.image = UIImage.image(name: inputData.inputTypeImage)
+        inputTypeImageView.image = UIImage(named: inputData.inputTypeImage)
         
         if let inputValue = inputData.firstInputValue {
             firstInputButton.setTitle(inputValue, for: .normal)

@@ -29,7 +29,7 @@ public extension UITextField {
     }
     
     func setRightImageView(imageLink: String, tintColor: UIColor, frame: CGRect? = nil){
-        let imageView = UIImageView(image: UIImage.image(name: imageLink))
+        let imageView = UIImageView(image: UIImage(named: imageLink))
         
         if let frame = frame {
             imageView.frame = frame

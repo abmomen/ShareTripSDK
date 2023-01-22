@@ -13,7 +13,7 @@ public class SingleItemView: UIView {
     public let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.tintColor = UIColor.init(hex: 0x43A046)
-        imageView.image = UIImage.image(name: "done-mono")
+        imageView.image = UIImage(named: "done-mono")
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()

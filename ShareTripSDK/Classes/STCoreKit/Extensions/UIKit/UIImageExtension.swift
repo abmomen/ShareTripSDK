@@ -22,13 +22,13 @@ public extension UIImage {
         return imageColored
     }
     
-    static func image(name: String) -> UIImage? {
-        if #available(iOS 13.0, *) {
-            return UIImage(named: name, in: ShareTripSDK.bundle, with: .none)
-        } else {
-            return UIImage(named: name, in: ShareTripSDK.bundle, compatibleWith: .none)
-        }
-    }
+//    static func image(name: String) -> UIImage? {
+//        if #available(iOS 13.0, *) {
+//            return UIImage(named: name, in: ShareTripSDK.bundle, with: .none)
+//        } else {
+//            return UIImage(named: name, in: ShareTripSDK.bundle, compatibleWith: .none)
+//        }
+//    }
     
 }
 

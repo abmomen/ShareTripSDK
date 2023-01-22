@@ -57,7 +57,7 @@ public class SearchBar: UISearchBar {
             //Clear Button
             if #available(iOS 11.0, *) {
                 if let clearButton = searchTF.value(forKey: "_clearButton") as? UIButton {
-                    clearButton.setImage(UIImage.image(name: "close-circle-mono")?.tint(with: .white), for: .normal)
+                    clearButton.setImage(UIImage(named: "close-circle-mono")?.tint(with: .white), for: .normal)
                     clearButton.tintColor = .white
                 }
             } else {

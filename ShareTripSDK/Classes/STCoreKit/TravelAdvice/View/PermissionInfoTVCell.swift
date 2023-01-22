@@ -42,17 +42,17 @@ class PermissionInfoTVCell: UITableViewCell {
         destinationNameLabel.text = "Destination: \(travelAdviceVM.getDestinationDetailsData().countryName)"
 
         if travelAdviceVM.getDestinationDetailsData().riskLevel == travelPermission.permitted.rawValue {
-            permissionImageView.image = UIImage.image(name: "done-mono")?.tint(with: UIColor(hex: 0x43a046))
+            permissionImageView.image = UIImage(named: "done-mono")?.tint(with: UIColor(hex: 0x43a046))
             permissionLabel.textColor = UIColor(hex: 0x43a046)
             permissionInfoContainerView.backgroundColor =  UIColor(hex: 0xf4f9f4)
             permissionLabel.text = "Risk Level: \(travelPermission.permitted.rawValue.capitalizingFirstLetter())"
         } else if travelAdviceVM.getDestinationDetailsData().riskLevel == travelPermission.prohibited.rawValue {
-            permissionImageView.image = UIImage.image(name: "done-mono")?.tint(with: UIColor.red)
+            permissionImageView.image = UIImage(named: "done-mono")?.tint(with: UIColor.red)
             permissionLabel.textColor = UIColor.red
             permissionInfoContainerView.backgroundColor =  UIColor(hex: 0xfff3f3)
             permissionLabel.text = "Risk Level: \(travelPermission.prohibited.rawValue.capitalizingFirstLetter())"
         } else {
-            permissionImageView.image = UIImage.image(name: "done-mono")?.tint(with: UIColor.orange)
+            permissionImageView.image = UIImage(named: "done-mono")?.tint(with: UIColor.orange)
             permissionLabel.textColor = UIColor.orange
             permissionInfoContainerView.backgroundColor =  UIColor(hex: 0xfefaf3)
             permissionLabel.text = "Risk Level: \(travelPermission.moderate.rawValue.capitalizingFirstLetter())"

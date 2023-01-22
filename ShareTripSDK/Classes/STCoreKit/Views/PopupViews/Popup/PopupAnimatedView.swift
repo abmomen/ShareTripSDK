@@ -39,7 +39,7 @@ public class PopupAnimatedView: UIView {
     
     let closeButton: UIButton = {
         let button = UIButton()
-        button.setImage(UIImage.image(name: "close-mono"), for: .normal)
+        button.setImage(UIImage(named: "close-mono"), for: .normal)
         button.tintColor = .white
         button.translatesAutoresizingMaskIntoConstraints = false
         return button

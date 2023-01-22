@@ -14,7 +14,7 @@ public class PaymentGatewayCell: UICollectionViewCell {
     let paymentGatewayImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.backgroundColor = UIColor.white
-        imageView.image = UIImage.image(name: "Profile")
+        imageView.image = UIImage(named: "Profile")
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
@@ -55,7 +55,7 @@ public class PaymentGatewayCell: UICollectionViewCell {
     
     public func configure(imageLink: String) {
         let url = URL(string: imageLink)
-        let placeholder = UIImage.image(name: "placeholder-mono")
+        let placeholder = UIImage(named: "placeholder-mono")
         
         paymentGatewayImageView.kf.indicatorType = .activity
         paymentGatewayImageView.kf.setImage(with: url, placeholder: placeholder)

@@ -52,7 +52,7 @@ public class ErrorView: UIView {
     private lazy var imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
-        imageView.image = UIImage.image(name: "no-internet")
+        imageView.image = UIImage(named: "no-internet")
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
@@ -101,7 +101,7 @@ public class ErrorView: UIView {
         addSubview(button)
         
         if let imageName = imageName {
-            imageView.image = UIImage.image(name: imageName)
+            imageView.image = UIImage(named: imageName)
         } else { return }
         
         if let buttonTitle = buttonTitle {

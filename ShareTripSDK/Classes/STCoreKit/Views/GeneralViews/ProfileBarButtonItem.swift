@@ -16,7 +16,7 @@ public class ProfileBarButtonItem: NSObject {
         let showStatus = status != nil
         let hasAction = action != nil
         let barView = ProfileBarView(showStatus: showStatus, hasAction: hasAction)
-        let placeholder = UIImage.image(name: "avator-mono")
+        let placeholder = UIImage(named: "avator-mono")
         
         if let imageUrlStr = image {
             let url = URL(string: imageUrlStr)
@@ -63,7 +63,7 @@ public class ProfileBarView: UIView {
         let imageView = UIImageView()
         imageView.tintColor = UIColor.white
         imageView.contentMode = UIViewContentMode.scaleAspectFill
-        imageView.image = UIImage.image(name: "avator-mono")
+        imageView.image = UIImage(named: "avator-mono")
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.layer.cornerRadius = 10.0
         imageView.clipsToBounds = true
@@ -145,7 +145,7 @@ public class StatusLabelView: UIView {
     
     let starImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage.image(name: "star-mono")
+        imageView.image = UIImage(named: "star-mono")
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()

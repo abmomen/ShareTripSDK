@@ -22,7 +22,7 @@ public class OfflineVC: UIViewController {
     private lazy var noInternetImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
-        imageView.image = UIImage.image(name: "no-internet")
+        imageView.image = UIImage(named: "no-internet")
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()

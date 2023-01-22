@@ -206,12 +206,12 @@ public class AuthVC: UIViewController {
     
     private func handleEyeIconButtonPress(_ textField: UITextField, _ button: UIButton ) {
         if textField.isSecureTextEntry {
-            if let image = UIImage.image(name: "eye-slash") {
+            if let image = UIImage(named: "eye-slash") {
                 button.setImage(image, for: .normal)
             }
 
         } else {
-            if let image = UIImage.image(name: "eye") {
+            if let image = UIImage(named: "eye") {
                 button.setImage(image, for: .normal)
             }
         }

@@ -69,7 +69,7 @@ public class PaymentConfirmationVC: UIViewController {
         }
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(
-            image: UIImage.image(name: "home-mono"),
+            image: UIImage(named: "home-mono"),
             style: UIBarButtonItem.Style.plain,
             target: self, action: #selector(homeButtonTapped(_:))
         )
@@ -88,13 +88,13 @@ public class PaymentConfirmationVC: UIViewController {
         switch paymentConfirmationData.confirmationType {
         case .success:
             statusImageViewContainer.backgroundColor = UIColor.midGreen
-            statusImageView.image = UIImage.image(name: "done-mono")
+            statusImageView.image = UIImage(named: "done-mono")
             retryButton.setTitle("Home", for: .normal)
             statusTitleLabel.text = "Booking Succeed!"
             statusDetailsLabel.text = "Congratulations. Thank you for\nthe booking"
         case .failed:
             statusImageViewContainer.backgroundColor = UIColor.orangeyRed
-            statusImageView.image = UIImage.image(name: "close-mono")
+            statusImageView.image = UIImage(named: "close-mono")
             retryButton.setTitle("Home", for: .normal)
             statusTitleLabel.text =  "Booking Declined!"
             statusDetailsLabel.text = "Don't worry. Please enter all your\nvalid data and try again."

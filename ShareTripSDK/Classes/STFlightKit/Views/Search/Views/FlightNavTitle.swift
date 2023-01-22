@@ -93,7 +93,7 @@ class FlightNavTitleView: UIView {
         
         let font = UIFont.systemFont(ofSize: 17, weight: .semibold)
 
-        let image = UIImage.image(name: imageStr)!.tint(with: .white)!
+        let image = UIImage(named: imageStr)!.tint(with: .white)!
         let rect = CGRect(x: 0, y: ((font.capHeight) - image.size.height).rounded() / 2, width: image.size.width, height: image.size.height)
         let imageAttachment = NSTextAttachment()
         imageAttachment.image = image
@@ -141,7 +141,7 @@ class FlightNavTitle {
             imageStr = "multi-city-mono"
         }
         
-        let image = UIImage.image(name: imageStr)!.tint(with: .white)!
+        let image = UIImage(named: imageStr)!.tint(with: .white)!
         let rect = CGRect(x: 0, y: ((font.capHeight) - image.size.height).rounded() / 2, width: image.size.width, height: image.size.height)
         let imageAttachment = NSTextAttachment()
         imageAttachment.image = image

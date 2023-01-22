@@ -37,8 +37,10 @@ Pod::Spec.new do |s|
     s.source_files = 'ShareTripSDK/Classes/**/*.{swift}'
     
     s.resource_bundles = {
-        'ShareTripSDK' => ['ShareTripSDK/**/*.{storyboard,xib,xcassets}']
+        'ShareTripSDK' => ['ShareTripSDK/**/*.{storyboard,xib}']
     }
+    
+    s.resources = 'ShareTripSDK/**/*.{xcassets}'
     
     #s.resources = "ShareTripSDK/**/*.{storyboard,xib,xcassets}"
     

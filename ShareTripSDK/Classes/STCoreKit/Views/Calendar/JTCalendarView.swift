@@ -68,12 +68,12 @@ public class JTCalendarView: UIView, NibBased {
     public func configure(firstDateData: JTCalendarDateViewData,
                    secondDateData: JTCalendarDateViewData? = nil) {
         
-        firstImageView.image = UIImage.image(name: firstDateData.imageStr)
+        firstImageView.image = UIImage(named: firstDateData.imageStr)
         firstTitleLabel.text = firstDateData.title
         
         if let secondDateData = secondDateData {
             secondDateView.isHidden = false
-            secondImageView.image = UIImage.image(name: secondDateData.imageStr)
+            secondImageView.image = UIImage(named: secondDateData.imageStr)
             secondTitleLabel.text = secondDateData.title
         } else {
             secondDateView.isHidden = true

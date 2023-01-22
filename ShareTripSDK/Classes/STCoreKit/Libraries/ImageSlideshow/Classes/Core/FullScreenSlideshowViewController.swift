@@ -64,7 +64,7 @@ open class FullScreenSlideshowViewController: UIViewController {
         // close button configuration
         // MARK: - Updated By Mehedi
         closeButton.tintColor = .white
-        closeButton.setImage(UIImage.image(name: "close-mono"), for: UIControlState())
+        closeButton.setImage(UIImage(named: "close-mono"), for: UIControlState())
         closeButton.addTarget(self, action: #selector(FullScreenSlideshowViewController.close), for: UIControlEvents.touchUpInside)
         view.addSubview(closeButton)
     }
