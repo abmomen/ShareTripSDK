@@ -14,6 +14,7 @@
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		CCEEA496297CFF8B00E7C7E7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CCEEA495297CFF8B00E7C7E7 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		BD31A5ECF826A262FCAD40C7 /* Pods-ShareTripSDK_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareTripSDK_Tests.release.xcconfig"; path = "Target Support Files/Pods-ShareTripSDK_Tests/Pods-ShareTripSDK_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		C32A94F506111328BD162E24 /* Pods_ShareTripSDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShareTripSDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C72C95571DFD7CC2DAFC03DE /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		CCEEA495297CFF8B00E7C7E7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D0480F3ECDDC19EA05CA8CA5 /* Pods-ShareTripSDK_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareTripSDK_Example.release.xcconfig"; path = "Target Support Files/Pods-ShareTripSDK_Example/Pods-ShareTripSDK_Example.release.xcconfig"; sourceTree = "<group>"; };
 		E8CB265444ED907A67EA7DE1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,6 +103,7 @@
 		607FACD21AFB9204008FA782 /* Example for ShareTripSDK */ = {
 			isa = PBXGroup;
 			children = (
+				CCEEA495297CFF8B00E7C7E7 /* GoogleService-Info.plist */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
@@ -250,6 +253,7 @@
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
+				CCEEA496297CFF8B00E7C7E7 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,8 +318,28 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ShareTripSDK_Example/Pods-ShareTripSDK_Example-resources.sh",
+				"${PODS_ROOT}/../../ShareTripSDK/Assets/FlightAssets.xcassets/airplane-icon.imageset/Contents.json",
+				"${PODS_ROOT}/../../ShareTripSDK/Assets/FlightAssets.xcassets/arrow-down-mono.imageset/Contents.json",
+				"${PODS_ROOT}/../../ShareTripSDK/Assets/FlightAssets.xcassets/baggage-mono.imageset/Contents.json",
+				"${PODS_ROOT}/../../ShareTripSDK/Assets/FlightAssets.xcassets/Contents.json",
+				"${PODS_ROOT}/../../ShareTripSDK/Assets/FlightAssets.xcassets/deals-special-mono.imageset/Contents.json",
+				"${PODS_ROOT}/../../ShareTripSDK/Assets/FlightAssets.xcassets/done-mono.imageset/Contents.json",
+				"${PODS_ROOT}/../../ShareTripSDK/Assets/FlightAssets.xcassets/eye-slash.imageset/Contents.json",
+				"${PODS_ROOT}/../../ShareTripSDK/Assets/FlightAssets.xcassets/eye.imageset/Contents.json",
+				"${PODS_ROOT}/../../ShareTripSDK/Assets/FlightAssets.xcassets/fav-logo-mono.imageset/Contents.json",
+				"${PODS_ROOT}/../../ShareTripSDK/Assets/FlightAssets.xcassets/gender-mono.imageset/Contents.json",
+				"${PODS_ROOT}/../../ShareTripSDK/Assets/FlightAssets.xcassets/hotel-icon.imageset/Contents.json",
+				"${PODS_ROOT}/../../ShareTripSDK/Assets/FlightAssets.xcassets/image-mono.imageset/Contents.json",
+				"${PODS_ROOT}/../../ShareTripSDK/Assets/FlightAssets.xcassets/info-mono.imageset/Contents.json",
+				"${PODS_ROOT}/../../ShareTripSDK/Assets/FlightAssets.xcassets/phone-mono.imageset/Contents.json",
+				"${PODS_ROOT}/../../ShareTripSDK/Assets/FlightAssets.xcassets/plane-right.imageset/Contents.json",
+				"${PODS_ROOT}/../../ShareTripSDK/Assets/FlightAssets.xcassets/refundable-color.imageset/Contents.json",
+				"${PODS_ROOT}/../../ShareTripSDK/Assets/FlightAssets.xcassets/round-trip.imageset/Contents.json",
+				"${PODS_ROOT}/../../ShareTripSDK/Assets/FlightAssets.xcassets/seat-mono.imageset/Contents.json",
+				"${PODS_ROOT}/../../ShareTripSDK/Assets/FlightAssets.xcassets/visa-icon.imageset/Contents.json",
 				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/MyBL.storyboardc",
 				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/AllServicesButtonCell.nib",
+				"${PODS_ROOT}/../../ShareTripSDK/Classes/ResourceFiles/Countries.json",
 				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/LoadingVC.nib",
 				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/PaymentConfirmationVC.nib",
 				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/CouponSuggestionView.nib",
@@ -367,6 +391,8 @@
 				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/SingleLineInfoCardCell.nib",
 				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/SwitchCell.nib",
 				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/FlightBooking.storyboardc",
+				"${PODS_ROOT}/../../ShareTripSDK/Classes/STFlightKit/Resources/BaggageResponse.json",
+				"${PODS_ROOT}/../../ShareTripSDK/Classes/STFlightKit/Resources/Covid19Test.json",
 				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/Base.lproj/Flight.storyboardc",
 				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/BaggageInfoTVCell.nib",
 				"${BUILT_PRODUCTS_DIR}/ShareTripSDK/ShareTripSDK.framework/BaggageSelectionCell.nib",
@@ -407,8 +433,10 @@
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Contents.json",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MyBL.storyboardc",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AllServicesButtonCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Countries.json",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/LoadingVC.nib",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/PaymentConfirmationVC.nib",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CouponSuggestionView.nib",
@@ -460,6 +488,8 @@
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SingleLineInfoCardCell.nib",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SwitchCell.nib",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FlightBooking.storyboardc",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BaggageResponse.json",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Covid19Test.json",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Flight.storyboardc",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BaggageInfoTVCell.nib",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BaggageSelectionCell.nib",
@@ -778,7 +808,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = net.sharetrip.ios.flight.example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
@@ -795,7 +825,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = net.sharetrip.ios.flight.example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;

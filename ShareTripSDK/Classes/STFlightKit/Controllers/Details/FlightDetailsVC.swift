@@ -37,7 +37,7 @@ class FlightDetailsVC: UIViewController {
         return manager
     }()
     
-    //MARK:- ViewController's Life Cycle
+    //MARK: - ViewController's Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupPaymentGateways()

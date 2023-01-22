@@ -35,7 +35,7 @@ Pod::Spec.new do |s|
     s.ios.deployment_target = '11.0'
     
     s.source_files = 'ShareTripSDK/Classes/**/*.{swift}'
-    s.resources = "ShareTripSDK/**/*.{png,jpeg,jpg,storyboard,xib,xcassets}"
+    s.resources = "ShareTripSDK/**/*.{png,jpeg,jpg,storyboard,xib,xcassets,json}"
     #s.resource_bundles = { 'STResources' => ['ShareTripSDK/**/*.{xcassets}'] }
     
     s.dependency 'JWT'

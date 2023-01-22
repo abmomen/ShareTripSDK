@@ -14,6 +14,7 @@ public class MyBLHomeVC: UIViewController {
     public override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.backgroundColor = .offWhite
         tableView.registerNibCell(AllServicesButtonCell.self)
     }
 

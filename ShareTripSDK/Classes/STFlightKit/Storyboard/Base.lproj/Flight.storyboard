@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -13,7 +13,7 @@
         <!--Navigation Controller-->
         <scene sceneID="a7m-YP-niK">
             <objects>
-                <navigationController storyboardIdentifier="NavigationController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qv9-b2-6qg" customClass="NavigationController" customModule="STFlightKit" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NavigationController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qv9-b2-6qg" customClass="NavigationController" customModule="ShareTripSDK" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="SS3-yS-a9w">
                         <rect key="frame" x="0.0" y="48" width="414" height="44"/>
@@ -35,7 +35,7 @@
         <!--Flights-->
         <scene sceneID="6rb-Bw-jTl">
             <objects>
-                <viewController storyboardIdentifier="FlightSearchVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zxa-6f-3DU" customClass="FlightSearchVC" customModule="STFlightKit" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FlightSearchVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zxa-6f-3DU" customClass="FlightSearchVC" customModule="ShareTripSDK" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HWV-8d-AFS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="804"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -73,7 +73,7 @@
         <!--Airport SearchVC-->
         <scene sceneID="wgg-zp-Uac">
             <objects>
-                <viewController storyboardIdentifier="AirportSearchVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="X8M-1l-EK3" customClass="AirportSearchVC" customModule="STFlightKit" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AirportSearchVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="X8M-1l-EK3" customClass="AirportSearchVC" customModule="ShareTripSDK" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="STI-Jn-edZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="804"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -125,7 +125,7 @@
         <!--Flight ListVC-->
         <scene sceneID="DhY-Lu-9fx">
             <objects>
-                <viewController storyboardIdentifier="FlightListVC" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="M2t-YT-Ev4" customClass="FlightListVC" customModule="STFlightKit" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FlightListVC" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="M2t-YT-Ev4" customClass="FlightListVC" customModule="ShareTripSDK" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="q6x-N2-cgA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="804"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -159,13 +159,13 @@
                                             <constraint firstItem="Zs5-TY-dgg" firstAttribute="top" secondItem="jk4-9y-c9d" secondAttribute="top" id="fV7-Qg-Oth"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nzl-Zh-QnF" customClass="FlightSortingButtonGroup" customModule="STFlightKit" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nzl-Zh-QnF" customClass="FlightSortingButtonGroup" customModule="ShareTripSDK" customModuleProvider="target">
                                         <rect key="frame" x="16" y="52" width="382" height="34"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="4zF-sl-RHP">
                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="27"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EXk-7t-EnB" userLabel="Earliest Button" customClass="FlightSortingButton" customModule="STFlightKit" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EXk-7t-EnB" userLabel="Earliest Button" customClass="FlightSortingButton" customModule="ShareTripSDK" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="126" height="27"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                         <state key="normal" title="EARLIEST">
@@ -175,7 +175,7 @@
                                                             <action selector="onSortingButtonTapped:" destination="nzl-Zh-QnF" eventType="touchUpInside" id="5RR-vx-sj1"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ieb-5u-aD1" customClass="FlightSortingButton" customModule="STFlightKit" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ieb-5u-aD1" customClass="FlightSortingButton" customModule="ShareTripSDK" customModuleProvider="target">
                                                         <rect key="frame" x="128" y="0.0" width="126" height="27"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                         <state key="normal" title="CHEAPEST">
@@ -185,7 +185,7 @@
                                                             <action selector="onSortingButtonTapped:" destination="nzl-Zh-QnF" eventType="touchUpInside" id="EcN-YM-Ybh"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0t2-AX-sDF" customClass="FlightSortingButton" customModule="STFlightKit" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0t2-AX-sDF" customClass="FlightSortingButton" customModule="ShareTripSDK" customModuleProvider="target">
                                                         <rect key="frame" x="256" y="0.0" width="126" height="27"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                         <state key="normal" title="FASTEST">
@@ -307,7 +307,7 @@
         <!--Flight DetailVC-->
         <scene sceneID="Fph-Vd-3bU">
             <objects>
-                <viewController storyboardIdentifier="FlightDetailVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uhV-Ff-QZL" customClass="FlightDetailVC" customModule="STFlightKit" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FlightDetailVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uhV-Ff-QZL" customClass="FlightDetailVC" customModule="ShareTripSDK" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rhB-as-wBT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="804"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -347,7 +347,7 @@
         <!--Traveller ClassVC-->
         <scene sceneID="pLg-vW-HwR">
             <objects>
-                <viewController storyboardIdentifier="TravellerClassVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cef-Ft-Bvq" customClass="TravellerClassVC" customModule="STFlightKit" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TravellerClassVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cef-Ft-Bvq" customClass="TravellerClassVC" customModule="ShareTripSDK" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="z9A-Wh-MbY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -396,7 +396,7 @@
         <!--Flight Price BreakdownVC-->
         <scene sceneID="CaJ-OD-6oy">
             <objects>
-                <viewController storyboardIdentifier="FlightPriceBreakdownVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qQk-Vw-Skt" customClass="FlightPriceBreakdownVC" customModule="STFlightKit" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FlightPriceBreakdownVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qQk-Vw-Skt" customClass="FlightPriceBreakdownVC" customModule="ShareTripSDK" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ybu-uz-nwY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -497,7 +497,7 @@
         <!--Fare Rule And PolicyVC-->
         <scene sceneID="kG2-kw-8Ra">
             <objects>
-                <viewController storyboardIdentifier="FareRuleAndPolicyVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rLW-Hu-OD4" customClass="FareRuleAndPolicyVC" customModule="STFlightKit" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FareRuleAndPolicyVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rLW-Hu-OD4" customClass="FareRuleAndPolicyVC" customModule="ShareTripSDK" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rsf-fr-XeG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -545,7 +545,7 @@
         <!--Flight Passenger ListVC-->
         <scene sceneID="pRa-Xa-AIl">
             <objects>
-                <viewController storyboardIdentifier="FlightPassengerListVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LDg-rD-ZV1" customClass="FlightPassengerListVC" customModule="STFlightKit" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FlightPassengerListVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LDg-rD-ZV1" customClass="FlightPassengerListVC" customModule="ShareTripSDK" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mzs-iy-J6C">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -597,7 +597,7 @@
         <!--Flight DetailsVC-->
         <scene sceneID="Zeh-LV-9pu">
             <objects>
-                <viewController storyboardIdentifier="FlightDetailsVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ay2-ji-reU" customClass="FlightDetailsVC" customModule="STFlightKit" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FlightDetailsVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ay2-ji-reU" customClass="FlightDetailsVC" customModule="ShareTripSDK" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BDP-53-i1o">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -640,7 +640,7 @@
         <!--Flight SummaryVC-->
         <scene sceneID="2dg-VR-lDL">
             <objects>
-                <viewController storyboardIdentifier="FlightSummaryVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="EGc-hI-uFI" customClass="FlightSummaryVC" customModule="STFlightKit" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FlightSummaryVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="EGc-hI-uFI" customClass="FlightSummaryVC" customModule="ShareTripSDK" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cWa-q6-cBa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
