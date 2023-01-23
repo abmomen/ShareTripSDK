@@ -133,7 +133,7 @@ public enum UserInfoRowType: CaseIterable {
         case .dob:
             return "calander-mono"
         case .email:
-            return "inbox-mono"
+            return "email-mono"
         case .mobile:
             return "phone-mono"
         case .nationality:

@@ -9,11 +9,11 @@
 import UIKit
 
 public class EditableContactCell: UITableViewCell {
-    @IBOutlet weak var imgView: UIImageView!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var subTitleLabel: UILabel!
-    @IBOutlet weak var editView: UIView!
-    @IBOutlet weak var editTextField: UITextField!
+    @IBOutlet private weak var imgView: UIImageView!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var subTitleLabel: UILabel!
+    @IBOutlet private weak var editView: UIView!
+    @IBOutlet private weak var editTextField: UITextField!
 
     private var cellIndexPath: IndexPath!
     private var callbackClosure: ((IndexPath, String?) -> Void)?

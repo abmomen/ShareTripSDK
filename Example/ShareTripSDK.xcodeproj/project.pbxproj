@@ -435,7 +435,6 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ShareTripSDK_Example/Pods-ShareTripSDK_Example-resources.sh",
 				"${PODS_ROOT}/../../ShareTripSDK/Assets/FlightAssets.xcassets",
-				"${PODS_ROOT}/../../ShareTripSDK/Classes/STCoreKit/CoreAssets.xcassets",
 				"${PODS_CONFIGURATION_BUILD_DIR}/ShareTripSDK/ShareTripSDK.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
