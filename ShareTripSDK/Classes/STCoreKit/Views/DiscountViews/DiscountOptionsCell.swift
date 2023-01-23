@@ -12,6 +12,7 @@ public class DiscountOptionsCell: UITableViewCell {
     
     @IBOutlet private weak var subContainerView: UIView!
     @IBOutlet private weak var discountOptionsHolder: UIStackView!
+    @IBOutlet private weak var discountImageView: UIImageView!
     
     private let showLoginCard = !STAppManager.shared.isUserLoggedIn
     
@@ -28,6 +29,7 @@ public class DiscountOptionsCell: UITableViewCell {
     public override func awakeFromNib() {
         super.awakeFromNib()
         selectionStyle = .none
+        discountImageView.image = UIImage(named: "discount-mono")
     }
     
     public override func setSelected(_ selected: Bool, animated: Bool) {

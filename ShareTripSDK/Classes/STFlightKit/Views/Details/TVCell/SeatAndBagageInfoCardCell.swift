@@ -9,12 +9,17 @@
 import UIKit
 
 class SeatAndBagageInfoCardCell: UITableViewCell {
-    @IBOutlet weak var seatLabel: UILabel!
-    @IBOutlet weak var weightLabel: UILabel!
+    @IBOutlet private weak var seatLabel: UILabel!
+    @IBOutlet private weak var weightLabel: UILabel!
 
+    @IBOutlet private weak var seatsImageView: UIImageView!
+    @IBOutlet private weak var baggageImageView: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         selectionStyle = .none
+        seatsImageView.image = UIImage(named: "seat-mono")
+        baggageImageView.image = UIImage(named: "baggage-mono")
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

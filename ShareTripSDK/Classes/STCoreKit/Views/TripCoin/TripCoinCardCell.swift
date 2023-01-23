@@ -10,12 +10,14 @@ import UIKit
 
 public class TripCoinCardCell: UITableViewCell {
     
+    @IBOutlet private weak var tcImageView: UIImageView!
     @IBOutlet private weak var earnTripcoinLabel: UILabel!
     @IBOutlet private weak var redeemTripcoinLabel: UILabel!
     
     public override func awakeFromNib() {
         super.awakeFromNib()
         selectionStyle = .none
+        tcImageView.image = UIImage(named: "tripcoin-color")
     }
     
     public override func setSelected(_ selected: Bool, animated: Bool) {

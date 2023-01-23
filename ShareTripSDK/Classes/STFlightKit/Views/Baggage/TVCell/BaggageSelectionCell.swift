@@ -15,11 +15,12 @@ protocol BaggageSelectionCellDelegate: AnyObject {
 }
 
 class BaggageSelectionCell: UITableViewCell {
-    @IBOutlet weak private var containerView: UIView!
-    @IBOutlet weak private var totalChargeLabel: UILabel!
-    @IBOutlet weak private var currencyImageView: UIImageView!
-    @IBOutlet weak private var stackView: UIStackView!
-    @IBOutlet weak private var arrowIndicatorButton: UIButton!
+    @IBOutlet private weak var containerView: UIView!
+    @IBOutlet private weak var totalChargeLabel: UILabel!
+    @IBOutlet private weak var currencyImageView: UIImageView!
+    @IBOutlet private weak var stackView: UIStackView!
+    @IBOutlet private weak var arrowIndicatorButton: UIButton!
+    @IBOutlet private weak var baggageImageView: UIImageView!
     
     private var viewModel: BaggageViewModel?
     private var flightViewModel: FlightDetailsViewModel?
@@ -31,6 +32,7 @@ class BaggageSelectionCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         initialSetupView()
+        baggageImageView.image = UIImage(named: "baggage-mono")
     }
     
     func configure(viewModel: BaggageViewModel?, flightViewModel: FlightDetailsViewModel?, baggageResponseType: FlightDetailsVC.BaggageResponseType, indexPath: IndexPath?, delegate: BaggageSelectionCellDelegate?) {
