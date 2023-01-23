@@ -15,6 +15,8 @@ public class ExploreDestinationTVCell: UITableViewCell {
     @IBOutlet weak private var subtitleLabel: UILabel!
     @IBOutlet weak private var iconImageView: UIImageView!
 
+    @IBOutlet weak private var goIconImageView: UIImageView!
+    
     private var cellIndexPath: IndexPath!
     private var callbackClosure: ((IndexPath) -> Void)?
 
@@ -42,5 +44,7 @@ public class ExploreDestinationTVCell: UITableViewCell {
 
     private func setup(){
         containerView.layer.cornerRadius = 8.0
+        goIconImageView.image = UIImage(named: "go-mono")
+        goIconImageView.tintColor = .appPrimary
     }
 }

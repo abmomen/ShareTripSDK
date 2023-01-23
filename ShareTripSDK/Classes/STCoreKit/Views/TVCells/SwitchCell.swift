@@ -27,6 +27,7 @@ public class SwitchCell: UITableViewCell {
         // Initialization code
         cellContainerView.layer.cornerRadius = 4.0
         selectionStyle = .none
+        optionSwitch.onTintColor = .appPrimary
     }
 
     public override func setSelected(_ selected: Bool, animated: Bool) {

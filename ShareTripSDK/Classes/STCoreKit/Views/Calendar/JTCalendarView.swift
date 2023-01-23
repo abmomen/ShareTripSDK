@@ -47,6 +47,10 @@ public class JTCalendarView: UIView, NibBased {
     public override func awakeFromNib() {
         super.awakeFromNib()
         setupUI()
+        firstImageView.tintColor = .appPrimary
+        firstDateLabel.textColor = .appPrimary
+        secondImageView.tintColor = .appPrimary
+        secondDateLabel.textColor = .appPrimary
     }
     
     //MARK:- SetupUI

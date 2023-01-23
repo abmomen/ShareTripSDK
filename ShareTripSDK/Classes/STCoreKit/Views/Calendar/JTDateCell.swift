@@ -14,6 +14,7 @@ public class JTDateCell: JTACDayCell {
     @IBOutlet private weak var leftView: UIView!
     @IBOutlet private weak var rightView: UIView!
     @IBOutlet private weak var selectedView: UIView!
+    
     @IBOutlet private weak var dateLabel: UILabel!
     @IBOutlet private weak var todayLabel: UILabel!
     
@@ -21,6 +22,10 @@ public class JTDateCell: JTACDayCell {
     
     public override func awakeFromNib() {
         super.awakeFromNib()
+        selectedView.backgroundColor = .appPrimary
+        leftView.backgroundColor = UIColor.appPrimary.withAlphaComponent(0.30)
+        rightView.backgroundColor = UIColor.appPrimary.withAlphaComponent(0.30)
+        
     }
     
     public func configure(cellState: CellState, valid: Bool, selectedPosition: SelectionRangePosition) {

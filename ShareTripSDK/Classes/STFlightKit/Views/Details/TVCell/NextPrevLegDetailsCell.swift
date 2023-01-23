@@ -15,11 +15,13 @@ protocol NextPrevLegDetailsCellDelegate: AnyObject {
 
 class NextPrevLegDetailsCell: UITableViewCell {
     
-    @IBOutlet weak var prevButton: UIButton!
-    @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet private weak var prevButton: UIButton!
+    @IBOutlet private weak var nextButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        prevButton.setTitleColor(.appPrimary, for: .normal)
+        nextButton.setTitleColor(.appPrimary, for: .normal)
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -55,8 +57,5 @@ class NextPrevLegDetailsCell: UITableViewCell {
         
         prevButton.isHidden = isFirstLeg
         nextButton.isHidden = isLastLeg
-        
-        prevButton.tintColor = .appPrimary
-        nextButton.tintColor = .appPrimary
     }
 }

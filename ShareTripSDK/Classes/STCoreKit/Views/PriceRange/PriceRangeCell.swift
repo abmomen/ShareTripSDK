@@ -31,6 +31,8 @@ public class PriceRangeCell: UITableViewCell {
     
     public func setupView(){
         rangeSeekSlider.delegate = self
+        rangeSeekSlider.handleColor = .appPrimary
+        rangeSeekSlider.colorBetweenHandles = .appPrimary
     }
     
     public func configure(priceRange: FilterPriceRange){
