@@ -43,6 +43,10 @@ public class PaymentGatewaysView: UIView, NibBased {
     @IBOutlet private weak var pageControllView: UIView!
     @IBOutlet private weak var pageControllViewHLC: NSLayoutConstraint!
     
+    //ImageViews
+    @IBOutlet private weak var paymentImageView: UIImageView!
+    @IBOutlet private weak var cardImageView: UIImageView!
+    
     private var viewModel: PaymentGatewaysViewModel!
     private var defaultSelectedIndexPath = IndexPath(row: 0, section: 0)
     private var initialSetupPerformed: Bool = false
@@ -124,6 +128,9 @@ public class PaymentGatewaysView: UIView, NibBased {
         cardPrefixTextField.inputAccessoryView = toolbar
         cardPrefixTextField.setRightImageView(imageLink: "arrow-down-mono", tintColor: UIColor.blueGray)
         cardPrefixView.isHidden = true
+     
+        paymentImageView.image = UIImage(named: "payment-mono")
+        cardImageView.image = UIImage(named: "card-mono")
     }
     
     // MARK: - Utils

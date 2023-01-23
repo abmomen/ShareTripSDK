@@ -640,7 +640,7 @@
         <!--Flight SummaryVC-->
         <scene sceneID="2dg-VR-lDL">
             <objects>
-                <viewController storyboardIdentifier="FlightSummaryVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="EGc-hI-uFI" customClass="FlightSummaryVC" customModule="ShareTripSDK" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FlightSummaryVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="EGc-hI-uFI" customClass="FlightSummaryVC" customModule="ShareTripSDK" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cWa-q6-cBa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -953,6 +953,7 @@ Discount Offer</string>
                     <connections>
                         <outlet property="checkbox" destination="Tp0-s3-mGQ" id="B2N-nV-Kxa"/>
                         <outlet property="discountHeaderLabelContainter" destination="zJj-ZI-dpa" id="TGo-2t-bKp"/>
+                        <outlet property="discountImageView" destination="Jhl-GE-zV8" id="ItA-og-eBu"/>
                         <outlet property="discountViewArrow" destination="PzA-UV-cGl" id="lfD-OC-GHG"/>
                         <outlet property="discountViewContainer" destination="1Q6-R6-QR6" id="fpq-4Y-zzT"/>
                         <outlet property="discountViewHeaderLabel" destination="JaK-jV-ixe" id="k3j-xz-EWh"/>
@@ -962,6 +963,7 @@ Discount Offer</string>
                         <outlet property="legViewPersonLabel" destination="pAq-M6-b2I" id="fqS-Ru-NWZ"/>
                         <outlet property="legViewTitleLabel" destination="trN-zF-RFX" id="qws-6h-aMA"/>
                         <outlet property="paymentGatewayViewHolder" destination="zam-y9-fec" id="lxX-6t-yX8"/>
+                        <outlet property="planeRightImageView" destination="XyR-3b-uhe" id="hEy-A4-AHb"/>
                         <outlet property="termsAndConditionsLabel" destination="oSp-iZ-vIn" id="dbx-ZO-R40"/>
                     </connections>
                 </viewController>

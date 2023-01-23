@@ -27,6 +27,11 @@ class FlightSummaryVC: UIViewController {
     @IBOutlet weak var checkbox: GDCheckbox!
     @IBOutlet weak var termsAndConditionsLabel: UILabel!
     
+    //IconImageViews
+    @IBOutlet weak var planeRightImageView: UIImageView!
+    @IBOutlet weak var discountImageView: UIImageView!
+    
+    
     private var discountOptionViews = [DiscountOptionCollapsibleView]()
     
     // MARK: - Private Properties
@@ -103,6 +108,9 @@ class FlightSummaryVC: UIViewController {
         updatePriceTableView()
         analytics.log(FlightEvent.initalCheckoutFlight())
         setupNavigationItems(withTitle: "Booking Summary")
+        
+        planeRightImageView.image = UIImage(named: "plane-right")
+        discountImageView.image = UIImage(named: "discount-mono")
     }
     
     private func setupCheckbox() {
