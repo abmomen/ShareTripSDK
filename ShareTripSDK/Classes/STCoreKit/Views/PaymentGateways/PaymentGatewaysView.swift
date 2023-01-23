@@ -131,6 +131,9 @@ public class PaymentGatewaysView: UIView, NibBased {
      
         paymentImageView.image = UIImage(named: "payment-mono")
         cardImageView.image = UIImage(named: "card-mono")
+     
+        paymentImageView.tintColor = .appPrimary
+        cardImageView.tintColor = .appPrimary
     }
     
     // MARK: - Utils

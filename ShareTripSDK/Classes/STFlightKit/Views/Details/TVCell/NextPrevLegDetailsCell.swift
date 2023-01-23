@@ -14,32 +14,31 @@ protocol NextPrevLegDetailsCellDelegate: AnyObject {
 }
 
 class NextPrevLegDetailsCell: UITableViewCell {
-
+    
     @IBOutlet weak var prevButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
-
+    
     @IBAction func prevButtonTapped(_ sender: Any) {
         delegate?.prevButtonTapped(for: legId)
     }
-
+    
     @IBAction func nextButtonTapped(_ sender: Any) {
         delegate?.nextButtonTapped(for: legId)
     }
-
-
-
+    
     private var legId: Int = -1
-    private weak var delegate: NextPrevLegDetailsCellDelegate?
     private var isFirstLeg: Bool = false
     private var isLastLeg: Bool = false
+    private weak var delegate: NextPrevLegDetailsCellDelegate?
+    
     func configure(legId: Int,
                    prevButtonTitle: String,
                    nextButtonTitle: String,
@@ -50,11 +49,14 @@ class NextPrevLegDetailsCell: UITableViewCell {
         self.isFirstLeg = isFirstLeg
         self.isLastLeg = isLastLeg
         self.delegate = delegate
-
+        
         prevButton.setTitle(prevButtonTitle, for: .normal)
         nextButton.setTitle(nextButtonTitle, for: .normal)
-
+        
         prevButton.isHidden = isFirstLeg
         nextButton.isHidden = isLastLeg
+        
+        prevButton.tintColor = .appPrimary
+        nextButton.tintColor = .appPrimary
     }
 }

@@ -31,10 +31,27 @@ class FlightSegmentCardCell: UITableViewCell {
     @IBOutlet weak var technicalStoppageView: UIView!
     @IBOutlet weak var technicalStoppageLabel: UILabel!
     @IBOutlet weak var transitTimeView: UIView!
-
+    
+    //ImageViews
+    @IBOutlet weak var planeRightImageView: UIImageView!
+    @IBOutlet weak var departureImageView: UIImageView!
+    @IBOutlet weak var seatImageView: UIImageView!
+    @IBOutlet weak var flightNumberImageView: UIImageView!
+    @IBOutlet weak var clockImageView: UIImageView!
+    @IBOutlet weak var arrivalImageView: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         segmentContainerView.layer.cornerRadius = 4.0
+        planeRightImageView.image = UIImage(named: "plane-right")
+        departureImageView.image = UIImage(named: "departure-mono")
+        seatImageView.image = UIImage(named: "seat-mono")
+        flightNumberImageView.image = UIImage(named: "plane-right")
+        clockImageView.image = UIImage(named: "time-mono")
+        arrivalImageView.image = UIImage(named: "arrival-mono")
+        
+        titleLabel.textColor = .appPrimary
+        planeRightImageView.tintColor = .appPrimary
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

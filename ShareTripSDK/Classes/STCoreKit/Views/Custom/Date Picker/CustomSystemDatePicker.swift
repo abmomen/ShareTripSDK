@@ -52,7 +52,7 @@ class DoneCancelToolbar: UIToolbar {
         cancelButton.tintColor = UIColor(hex: 0x030303, alpha: 1.0)
         let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneButtonTapped(_:)))
-        doneButton.tintColor = UIColor(hex: 0x030303, alpha: 1.0)
+        doneButton.tintColor = .appPrimary
         items = [cancelButton, flexSpace, doneButton]
     }
     
