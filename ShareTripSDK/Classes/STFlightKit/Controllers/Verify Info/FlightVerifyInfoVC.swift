@@ -130,7 +130,7 @@ class FlightVerifyInfoVC: UIViewController {
 
     private lazy var continueButton: UIButton = {
         let button = UIButton()
-        button.backgroundColor = .clearBlue
+        button.backgroundColor = .appPrimary
         button.setTitle("CONTINUE", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 14.0, weight: .bold)
@@ -228,14 +228,14 @@ class FlightVerifyInfoVC: UIViewController {
     private func setupContinueButtonStatus() {
         if editingMode {
             continueButton.isEnabled = false
-            continueButton.backgroundColor = UIColor(redInt: 94, greenInt: 157, blueInt: 255)
+            continueButton.alpha = 0.50
         } else {
             if checked {
                 continueButton.isEnabled = true
-                continueButton.backgroundColor = UIColor.clearBlue
+                continueButton.alpha = 1.0
             } else {
                 continueButton.isEnabled = false
-                continueButton.backgroundColor = UIColor(redInt: 94, greenInt: 157, blueInt: 255)
+                continueButton.alpha = 0.50
             }
         }
     }

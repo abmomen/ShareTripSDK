@@ -29,6 +29,7 @@ public class DiscountOptionsCell: UITableViewCell {
     public override func awakeFromNib() {
         super.awakeFromNib()
         selectionStyle = .none
+        discountImageView.tintColor = .appPrimary
         discountImageView.image = UIImage(named: "discount-mono")
     }
     

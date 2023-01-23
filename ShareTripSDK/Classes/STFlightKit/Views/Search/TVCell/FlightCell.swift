@@ -15,10 +15,10 @@ class FlightCell: UITableViewCell {
     @IBOutlet weak var dealsTagLabel: UILabel!
     @IBOutlet weak var dealsTagTopLC: NSLayoutConstraint!
     @IBOutlet weak var dealsTagHeightLC: NSLayoutConstraint!
-
+    
     @IBOutlet weak var placeholderContainer: UIView!
     @IBOutlet weak var placeholderStackView: UIStackView!
-
+    
     @IBOutlet weak var cellCointainerView: UIView!
     @IBOutlet weak var totalPriceLabel: UILabel!
     @IBOutlet weak var discountView: UIView!
@@ -29,14 +29,24 @@ class FlightCell: UITableViewCell {
     @IBOutlet weak var flightLegStackView: UIStackView!
     
     @IBOutlet weak var earnPointLabel: UILabel!
-//    @IBOutlet weak var sharePointLabel: UILabel!
-
+    //    @IBOutlet weak var sharePointLabel: UILabel!
+    
     @IBOutlet weak var technicalStoppageView: UIView!
     @IBOutlet weak var refundableStatusLabel: UILabel!
-
+    
+    //ImageViews
+    @IBOutlet weak var refundableImageView: UIImageView!
+    @IBOutlet weak var tripCoinColorImageView: UIImageView!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         setupView()
+        totalPriceLabel.textColor = .appPrimary
+        discountPriceLabel.textColor = .appPrimary
+        
+        refundableImageView.image = UIImage(named: "tripcoin-color")
+        tripCoinColorImageView.image = UIImage(named: "refundable-color")
     }
     
     private func setupView(){
@@ -59,7 +69,7 @@ class FlightCell: UITableViewCell {
     }
     
     func setAsSelectedOrHighlighted(_ selectedOrHighlighted: Bool, animated: Bool) {
-
+        
         let action: () -> Void = { [weak self] in
             // Set animatable properties
             self?.cellCointainerView.backgroundColor = selectedOrHighlighted ? .paleGray: .white
@@ -77,30 +87,30 @@ class FlightCell: UITableViewCell {
     static func getCellHeight(hasDealTag: Bool, legCount: Int = 1, hasTechincalStoppage: Bool) -> CGFloat {
         // 8 + 14 + 40 + 10 + flight leg * legCount  + 8 + 20 + 8
         var height = 58.0 + FlightCell.flightLegViewHeight * CGFloat(legCount) +
-            (hasTechincalStoppage ? 52 : 0)
+        (hasTechincalStoppage ? 52 : 0)
         if hasDealTag {
             height += 26
         }
         return height
     }
-
+    
     private func showDealTag(dealType: FlightDealType) {
         dealsTag.isHidden = false
         dealsTagLabel.text = dealType.title
         dealsTagTopLC.constant = 0
-
+        
         if dealType == .preferred {
-            dealsTag.backgroundColor = .blueBlue
+            dealsTag.backgroundColor = .appPrimary
         } else if dealType == .best {
             dealsTag.backgroundColor = .dealsRed
         }
     }
-
+    
     private func hideDealTag() {
         dealsTag.isHidden = true
         dealsTagTopLC.constant = -dealsTagHeightLC.constant
     }
-
+    
     func configure(with viewModel: FlightRow?, legCount: Int){
         
         if let viewModel = viewModel {
@@ -114,11 +124,11 @@ class FlightCell: UITableViewCell {
             discountLabel.layer.masksToBounds = true
             
             if let discountPercentage = viewModel.discountPercentage,
-                let discountPriceText = viewModel.discountPriceText, discountPercentage > 0 {
+               let discountPriceText = viewModel.discountPriceText, discountPercentage > 0 {
                 totalPriceLabel.isHidden = false
                 totalPriceLabel.attributedText = "\(viewModel.currency) \(viewModel.totalPriceText)".strikeThrough()
                 discountPriceLabel.text = "\(viewModel.currency) \(discountPriceText)"
-
+                
             } else {
                 totalPriceLabel.isHidden = true
                 discountLabel.text = ""
@@ -137,26 +147,26 @@ class FlightCell: UITableViewCell {
                     flightLegStackView.addArrangedSubview(flightLegView)
                 }
             }
-
+            
             technicalStoppageView.isHidden = !viewModel.hasTechnicalStoppage
             
             //setup tripcoin
             earnPointLabel.text = viewModel.earnPointText
-//            sharePointLabel.text = viewModel.sharePointText
+            //            sharePointLabel.text = viewModel.sharePointText
             
             //selectionStyle = .default
-
+            
             refundableStatusLabel.text = viewModel.isRefundable
-
+            
             if let dealType = viewModel.dealType,
-                dealType == .preferred || dealType == .best  {
+               dealType == .preferred || dealType == .best  {
                 showDealTag(dealType: dealType)
             } else {
                 hideDealTag()
             }
-
+            
         } else {
-        
+            
             setupPlaceholder(legCount: legCount)
             placeholderContainer.isHidden = false
             cellCointainerView.isHidden = true
@@ -186,7 +196,7 @@ class FlightCell: UITableViewCell {
     }
     
     //MARK:- Placeholder
-
+    
     func getPlaceholderViewsForAnimate() -> [UIView] {
         let obj: [UIView] = placeholderContainer.subviewsRecursive()
         return obj.filter({ (obj) -> Bool in
@@ -195,10 +205,10 @@ class FlightCell: UITableViewCell {
     }
     
     func setupPlaceholder(legCount: Int) {
-
+        
         //setup flight leg placeholder view
         if placeholderStackView.subviews.count != legCount {
-                placeholderStackView.subviews.forEach { view in
+            placeholderStackView.subviews.forEach { view in
                 view.removeFromSuperview()
             }
             
@@ -217,7 +227,7 @@ class FlightCell: UITableViewCell {
             view.layer.cornerRadius = view.layer.frame.size.height/2
         }
     }
-
+    
     func startAnimation() {
         
         let animageViews = getPlaceholderViewsForAnimate()

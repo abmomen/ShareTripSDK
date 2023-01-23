@@ -31,6 +31,7 @@ public class EarnTripcoinView: UIStackView, NibBased {
     public var subTitle: String = "" {
         didSet {
             subtitleLabel.text = subTitle
+            checkbox.containerFillColor = .appPrimary
         }
     }
 }

@@ -115,6 +115,7 @@
                     <navigationItem key="navigationItem" id="vCM-G7-ikc"/>
                     <connections>
                         <outlet property="placeSearchBar" destination="S39-pb-Plo" id="Gsv-Wc-aGV"/>
+                        <outlet property="searchBarContainerView" destination="74S-vv-sdJ" id="zgN-fm-6Kt"/>
                         <outlet property="searchPlaceTableView" destination="lbe-8X-615" id="LEc-gc-iHE"/>
                     </connections>
                 </viewController>
@@ -403,13 +404,13 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="khr-aw-Kjm">
                                 <rect key="frame" x="247.5" y="78" width="150.5" height="44"/>
-                                <color key="backgroundColor" red="0.1647058824" green="0.54901960780000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.3411764706" blue="0.85098039219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="XiP-kM-dW4"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="a0t-OL-HHh"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="tintColor" red="0.1647058824" green="0.54901960780000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Book Now">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>

@@ -27,6 +27,10 @@ public class RedeemTripcoinView: UIStackView, NibBased {
     
     public override func awakeFromNib() {
         super.awakeFromNib()
+        checkbox.containerFillColor = .appPrimary
+        slider.minimumTrackTintColor = .appPrimary
+        slider.thumbTintColor = .appPrimary
+        
         slider.addTarget(self, action: #selector(sliderValueChanged(_:event:)), for: .valueChanged)
     }
     

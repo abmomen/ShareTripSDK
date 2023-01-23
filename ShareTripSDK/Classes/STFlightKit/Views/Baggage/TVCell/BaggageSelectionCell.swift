@@ -32,6 +32,7 @@ class BaggageSelectionCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         initialSetupView()
+        baggageImageView.tintColor = .appPrimary
         baggageImageView.image = UIImage(named: "baggage-mono")
     }
     

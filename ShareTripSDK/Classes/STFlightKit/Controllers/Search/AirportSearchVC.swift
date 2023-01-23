@@ -17,6 +17,7 @@ protocol AirportSearchDelegate: AnyObject {
 
 class AirportSearchVC: UIViewController {
     
+    @IBOutlet weak var searchBarContainerView: UIView!
     @IBOutlet weak private var placeSearchBar: SearchBar!
     @IBOutlet weak private var searchPlaceTableView: UITableView!
     
@@ -48,6 +49,7 @@ class AirportSearchVC: UIViewController {
         placeSearchBar.returnKeyType = .done
         searchPlaceTableView.delegate = self
         searchPlaceTableView.dataSource = self
+        searchBarContainerView.backgroundColor = .appPrimary
 
         searchPlaceTableView.registerNibCell(AirportCell.self)
         searchPlaceTableView.registerHeaderFooter(CustomHeaderView.self)

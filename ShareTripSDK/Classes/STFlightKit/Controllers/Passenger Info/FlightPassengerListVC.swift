@@ -45,6 +45,7 @@ class FlightPassengerListVC: UIViewController {
     private func setupUI() {
         title = "Checkout"
         tableView.tableFooterView = UIView()
+        continueButton.backgroundColor = .appPrimary
         tableView.registerConfigurableCellDataContainer(SingleInfoCell.self)
     }
     

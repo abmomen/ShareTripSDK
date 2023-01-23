@@ -60,6 +60,9 @@ public class UseCouponView: UIStackView, NibBased {
     private var couponSuggestionViews = [CouponSuggestionView?]()
     
     private func setupView() {
+        applyButton.backgroundColor = .appPrimary
+        checkbox.containerFillColor = .appPrimary
+        
         setupAllCouponsView()
         callback.needsReload()
     }

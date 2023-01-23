@@ -23,7 +23,7 @@ public class RightButtonHeaderView: UITableViewHeaderFooterView {
         let button = UIButton()
         button.setTitle("EDIT", for: .normal)
         button.contentHorizontalAlignment = .trailing
-        button.setTitleColor(UIColor(hex: 0x1882ff), for: .normal)
+        button.setTitleColor(.appPrimary, for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 14.0, weight: .bold)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button

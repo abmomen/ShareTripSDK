@@ -109,6 +109,11 @@ class FlightSummaryVC: UIViewController {
         analytics.log(FlightEvent.initalCheckoutFlight())
         setupNavigationItems(withTitle: "Booking Summary")
         
+        legViewArrow.tintColor = .appPrimary
+        discountImageView.tintColor = .appPrimary
+        discountViewArrow.tintColor = .appPrimary
+        planeRightImageView.tintColor = .appPrimary
+        
         planeRightImageView.image = UIImage(named: "plane-right")
         discountImageView.image = UIImage(named: "discount-mono")
     }

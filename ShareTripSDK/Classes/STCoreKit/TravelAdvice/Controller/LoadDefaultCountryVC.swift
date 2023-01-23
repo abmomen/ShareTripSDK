@@ -13,6 +13,7 @@ public protocol SelectedCountryVCDelegate: AnyObject {
 }
 
 public class LoadDefaultCountryVC: UIViewController {
+    @IBOutlet weak private var searchBarContainerView: UIView!
     @IBOutlet weak private var searchBar: SearchBar!
     @IBOutlet weak private var countryListTV: UITableView!
 
@@ -41,7 +42,7 @@ public class LoadDefaultCountryVC: UIViewController {
         searchBar.returnKeyType = .done
         countryList = STAppManager.getCountryList()
         checkCountryListLoaded()
-
+        searchBarContainerView.backgroundColor = .appPrimary
     }
 
     private func checkCountryListLoaded() {

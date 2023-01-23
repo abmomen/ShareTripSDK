@@ -46,6 +46,7 @@ class AirportInputCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         swapButton.setImage(UIImage(named: "round-trip"), for: .normal)
+        swapButton.backgroundColor = .appPrimary
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

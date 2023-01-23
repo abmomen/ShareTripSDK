@@ -143,6 +143,8 @@ class FlightListVC: UIViewController {
     }
     
     func setFilterButtonStatus() {
+        filterButton.setTitleColor(.appPrimary, for: .normal)
+        
         if flightListViewModel.flightFilter == nil {
             filterButton.isEnabled = false
             filterButton.alpha = 0.6

@@ -24,10 +24,17 @@ class FlightLegCardCell: UITableViewCell {
 
     @IBOutlet weak var hiddenStoppageView: UIView!
     
+    
+    @IBOutlet weak var seeDetailsLabel: UILabel!
+    @IBOutlet weak var arrowRightImageView: UIImageView!
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
         selectionStyle = .none
+        seeDetailsLabel.textColor = .appPrimary
+        arrowRightImageView.tintColor = .appPrimary
+        arrowRightImageView.image = UIImage(named: "arrow-right-mono")
     }
 
     override func setHighlighted(_ highlighted: Bool, animated: Bool) {

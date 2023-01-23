@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -12,13 +12,13 @@
         <!--Safe Destination SearchVC-->
         <scene sceneID="SRj-h8-rmk">
             <objects>
-                <viewController storyboardIdentifier="SafeDestinationSearchVC" id="Lkk-EY-Dx8" customClass="SafeDestinationSearchVC" customModule="ShareTrip" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SafeDestinationSearchVC" id="Lkk-EY-Dx8" customClass="SafeDestinationSearchVC" customModule="ShareTripSDK" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hCI-GQ-CY1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ggb-al-fG9">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="48" width="414" height="814"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Lkk-EY-Dx8" id="TkL-xn-drq"/>
@@ -46,15 +46,15 @@
         <!--Load Default CountryVC-->
         <scene sceneID="uk6-kD-UsE">
             <objects>
-                <viewController storyboardIdentifier="LoadDefaultCountryVC" id="YEF-is-bQL" customClass="LoadDefaultCountryVC" customModule="ShareTrip" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoadDefaultCountryVC" id="YEF-is-bQL" customClass="LoadDefaultCountryVC" customModule="ShareTripSDK" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BLh-EA-sgv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wzh-aE-czb">
-                                <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                                <rect key="frame" x="0.0" y="48" width="414" height="56"/>
                                 <subviews>
-                                    <searchBar contentMode="redraw" placeholder="Destination Country" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Oq-7n-uWw" customClass="SearchBar" customModule="ShareTrip" customModuleProvider="target">
+                                    <searchBar contentMode="redraw" placeholder="Destination Country" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Oq-7n-uWw" customClass="SearchBar" customModule="ShareTripSDK" customModuleProvider="target">
                                         <rect key="frame" x="8" y="4" width="398" height="48"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </searchBar>
@@ -69,7 +69,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="95T-36-cRz">
-                                <rect key="frame" x="0.0" y="100" width="414" height="796"/>
+                                <rect key="frame" x="0.0" y="104" width="414" height="792"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
@@ -89,6 +89,7 @@
                     <connections>
                         <outlet property="countryListTV" destination="95T-36-cRz" id="9R9-hi-rtB"/>
                         <outlet property="searchBar" destination="4Oq-7n-uWw" id="EOZ-a0-y4O"/>
+                        <outlet property="searchBarContainerView" destination="wzh-aE-czb" id="02R-Fu-wNL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UIp-bP-fdd" userLabel="First Responder" sceneMemberID="firstResponder"/>

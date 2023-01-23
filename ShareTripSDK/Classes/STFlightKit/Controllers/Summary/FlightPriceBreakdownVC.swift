@@ -40,20 +40,25 @@ class FlightPriceBreakdownVC: UIViewController {
     //MARK: - Helpers
     func setupScene() {
         
-        pricaTableView.registerHeaderFooter(LeftRightInfoHeaderView.self)
-        pricaTableView.registerCell(PriceInfoFareCell.self)
-        pricaTableView.registerCell(HorizontalLineCell.self)
+        
+        
         pricaTableView.registerCell(TotalFareCell.self)
         pricaTableView.registerCell(LeftRightInfoCell.self)
+        pricaTableView.registerCell(PriceInfoFareCell.self)
+        pricaTableView.registerCell(HorizontalLineCell.self)
         pricaTableView.registerCell(LeftRightPriceInfoCell.self)
-        pricaTableView.tableFooterView = UIView()
-        pricaTableView.tableHeaderView = UIView()
+        pricaTableView.registerHeaderFooter(LeftRightInfoHeaderView.self)
+        
         pricaTableView.separatorStyle = .none
         pricaTableView.allowsSelection = false
-        
-        pricaTableView.dataSource = self
+        pricaTableView.tableFooterView = UIView()
+        pricaTableView.tableHeaderView = UIView()
+    
         pricaTableView.delegate = self
+        pricaTableView.dataSource = self
         bookingButton.setBorder(cornerRadius: 4.0)
+        bookingButton.backgroundColor = .appPrimary
+        bookingButton.layer.borderColor = UIColor.appPrimary.cgColor
         bookingButton.setTitle(buttonTitle, for: .normal)
         
         setupTotalPaybleLabel()

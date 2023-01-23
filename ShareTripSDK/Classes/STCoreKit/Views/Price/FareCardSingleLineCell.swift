@@ -22,6 +22,10 @@ public class FareCardSingleLineCell: UITableViewCell {
         discountLabel.isHidden = true
         priceImageView.layer.cornerRadius = priceImageView.frame.size.width/2
         priceImageView.image = UIImage(named: "bdt-mono")
+    
+        priceImageView.tintColor = .appPrimary
+        originPriceLabel.textColor = .appPrimary
+        discountPariceLabel.textColor = .appPrimary
     }
     
     public override func setSelected(_ selected: Bool, animated: Bool) {
