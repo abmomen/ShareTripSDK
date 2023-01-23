@@ -382,7 +382,7 @@ extension FlightPassengerInfoVC: UITableViewDelegate, UITableViewDataSource {
             
             if let dateSelectionCell = cell as? SDDateSelectionCell {
                 dateSelectionCell.callback.didSelectedDate = {[weak self] date in
-                    self?.viewModel.didSelectDoB(date)
+                    self?.viewModel.didSelectDate(for: indexPath, date)
                 }
             }
             

@@ -1200,16 +1200,22 @@ public extension FlightPassengerInfoViewModel {
         switch rowType {
         case .givenName:
             passengerInfo.givenName = text
+            
         case .surName:
             passengerInfo.surName = text
+            
         case .mobile:
             passengerInfo.mobile = text
+            
         case .email:
             passengerInfo.email = text
+            
         case .passportNumber:
             passengerInfo.passportNumber = text
+            
         case .frequentFlyerNumber:
             passengerInfo.frequentFlyerNumber = text
+            
         default:
             break
         }
@@ -1221,12 +1227,8 @@ public extension FlightPassengerInfoViewModel {
 //MARK:- TextSelectionDelegate
 public extension FlightPassengerInfoViewModel {
     func didSelectText(for indexPath: IndexPath?, text: String?, selectedRow: Int) {
-        guard let indexPath = indexPath else {
-            return
-        }
-        
-        STLog.info("Text changed to:\(String(describing: text)) for \(String(describing: indexPath))")
-        
+        guard let indexPath = indexPath else { return }
+                
         let rowType = sections[indexPath.section][indexPath.row]
         switch rowType {
         case .quickPick:
@@ -1242,8 +1244,21 @@ public extension FlightPassengerInfoViewModel {
 }
 
 public extension FlightPassengerInfoViewModel {
-    func didSelectDoB(_ dob: Date?) {
-        passengerInfo.dob = dob
+    func didSelectDate(for indexPath: IndexPath?, _ date: Date?) {
+        guard let indexPath = indexPath, let date = date else { return }
+        
+        let rowType = sections[indexPath.section][indexPath.row]
+        switch rowType {
+        case .dob:
+            passengerInfo.dob = date
+            
+        case .passportExpiryDate:
+            passengerInfo.passportExpiryDate = date
+            
+        default:
+            break
+        }
+        
         viewDelegate?.onAddUpdateStatusChanged(viewModel: self)
     }
 }
@@ -1254,9 +1269,7 @@ public extension FlightPassengerInfoViewModel {
         guard let indexPath = indexPath else {
             return
         }
-        
-        STLog.info("Gender changed to:\(String(describing: selectedGender)) for \(String(describing: indexPath))")
-        
+                
         let rowType = sections[indexPath.section][indexPath.row]
         if rowType == .gender {
             passengerInfo.gender = selectedGender
