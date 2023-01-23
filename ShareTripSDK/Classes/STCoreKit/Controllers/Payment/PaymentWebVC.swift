@@ -262,7 +262,7 @@ extension PaymentWebVC: WKNavigationDelegate {
         
         if let urlStr = navigationAction.request.url?.absoluteString {
             if urlStr == successUrl || urlStr == Constants.PaymentConstants.successUrl {
-                let paymentConfirmationVC = PaymentConfirmationVC(nibName: "PaymentConfirmationVC", bundle: nil)
+                let paymentConfirmationVC = PaymentConfirmationVC.instantiate()
                 let data = PaymentConfirmationData(
                     confirmationType: .success,
                     serviceType: serviceType,
@@ -275,7 +275,7 @@ extension PaymentWebVC: WKNavigationDelegate {
                 navigationController?.pushViewController(paymentConfirmationVC, animated: true)
                 
             } else if urlStr == failureUrl || urlStr == Constants.PaymentConstants.failedUrl {
-                let paymentConfirmationVC = PaymentConfirmationVC(nibName: "PaymentConfirmationVC", bundle: nil)
+                let paymentConfirmationVC = PaymentConfirmationVC.instantiate()
                 let data = PaymentConfirmationData(
                     confirmationType: .failed,
                     serviceType: serviceType,

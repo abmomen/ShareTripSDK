@@ -23,6 +23,7 @@ public class PaymentConfirmationVC: UIViewController {
     @IBOutlet private weak var redeemTripCoinLabel: UILabel!
     @IBOutlet private weak var shareTripCoinLabel: UILabel!
     @IBOutlet private weak var retryButton: UIButton!
+    @IBOutlet private weak var tripcoinImageView: UIImageView!
     
     public var paymentConfirmationData: PaymentConfirmationData!
     
@@ -63,7 +64,8 @@ public class PaymentConfirmationVC: UIViewController {
     //MARK:- SetupViews
     private func setupViews(){
         title = "Confirmation"
-        
+        retryButton.backgroundColor = .appPrimary
+        tripcoinImageView.image = UIImage(named: "tripcoin-color")
         if let totalPoints = STAppManager.shared.userAccount?.totalPoints {
             navigationItem.rightBarButtonItem = TripCoinBarButtonItem.createWithText(totalPoints.withCommas())
         }
@@ -156,5 +158,11 @@ public class PaymentConfirmationVC: UIViewController {
                 break
             }
         }
+    }
+}
+
+extension PaymentConfirmationVC: StoryboardBased {
+    public static var storyboardName: String {
+        return "Flight"
     }
 }

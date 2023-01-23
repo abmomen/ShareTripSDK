@@ -559,7 +559,7 @@ extension FlightSummaryVC {
     
     private func showPaymentConfirmationView(confirmationType: PaymentConfirmationType, statusTitle: String, statusDetail: String ) {
         let bundle = Bundle(for: PaymentConfirmationVC.self)
-        let paymentConfirmationVC = PaymentConfirmationVC(nibName: "PaymentConfirmationVC", bundle: bundle)
+        let paymentConfirmationVC = PaymentConfirmationVC.instantiate()
         let flightData = flightDetailsViewModel.flightRequiedData
         let data = PaymentConfirmationData(
             confirmationType: confirmationType,

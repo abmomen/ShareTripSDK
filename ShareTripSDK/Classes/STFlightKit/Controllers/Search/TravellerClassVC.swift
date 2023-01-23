@@ -14,6 +14,7 @@ protocol TravellerClassVCDelegate: AnyObject {
 }
 
 class TravellerClassVC: UIViewController {
+    @IBOutlet weak var doneButton: UIButton!
     @IBOutlet private weak var theTableView: UITableView!
     
     var travellerClassViewModel: TravellerClassViewModel!
@@ -36,6 +37,9 @@ class TravellerClassVC: UIViewController {
     // MARK: - Setup views
     private func setupViews() {
         self.title = "Passengers & Class"
+        view.backgroundColor = .appPrimary
+        doneButton.backgroundColor = .appPrimary
+        
         theTableView.registerHeaderFooter(LeftRightInfoHeaderView.self)
         theTableView.registerNibCell(TravelerCell.self)
         theTableView.registerCell(UITableViewCell.self)
