@@ -39,7 +39,7 @@ class FlightFilterVC: UIViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("FILTER SEARCH", for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 17.0, weight: .semibold)
-        button.backgroundColor = .clearBlue
+        button.backgroundColor = .appPrimary
         button.addTarget(self, action: #selector(filterSearchbuttonTapped(_:)), for: .touchUpInside)
         return button
     }()

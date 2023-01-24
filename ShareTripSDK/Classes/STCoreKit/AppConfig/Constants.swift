@@ -8,21 +8,6 @@
 import UIKit
 
 struct Constants {
-    
-    static var sdkColorTheme: SDKColorThemes = .sharetrip
-    
-    static var primaryColor: UIColor {
-        return sdkColorTheme == .sharetrip ? stPrimaryColor : blPrimaryColor
-    }
-    
-    private static var stPrimaryColor: UIColor {
-        return UIColor(red: 24.0 / 255.0, green: 130.0 / 255.0, blue: 1.0, alpha: 1.0)
-    }
-    
-    private static var blPrimaryColor: UIColor {
-        return UIColor(red: 28/255.0, green: 175/255.0, blue: 104/255.0, alpha: 1.0)
-    }
-    
     struct DevelopmentServer {
         static let baseURL = App.infoForKey("BaseURL") ?? "https://api.sharetrip.net/api/v1"
         static let stAccess = "362AC8ED9FABC0EFFEA1B8494DC6AC0D5E24CFA7"

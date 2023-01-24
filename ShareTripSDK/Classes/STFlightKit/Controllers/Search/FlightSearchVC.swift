@@ -116,7 +116,7 @@ class FlightSearchVC: UIViewController {
         searchTableView.registerNibCell(SingleInputTitleCell.self)
         searchTableView.registerNibCell(ExploreDestinationTVCell.self)
         
-        searchTableView.addTopBackgroundView(viewColor: .clearBlue)
+        searchTableView.addTopBackgroundView(viewColor: .appPrimary)
     }
     
     private var searchingDateOffset: Int {

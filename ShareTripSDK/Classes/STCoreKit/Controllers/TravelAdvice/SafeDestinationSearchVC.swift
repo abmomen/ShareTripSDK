@@ -133,7 +133,7 @@ extension SafeDestinationSearchVC: UITableViewDelegate, UITableViewDataSource {
         travelAdviceTV.estimatedRowHeight = 44.0
         travelAdviceTV.tableFooterView = UIView()
         travelAdviceTV.separatorStyle = .none
-        travelAdviceTV.addTopBackgroundView(viewColor: .clearBlue)
+        travelAdviceTV.addTopBackgroundView(viewColor: .appPrimary)
         travelAdviceTV.registerNibCell(SingleInputTitleCell.self)
         travelAdviceTV.registerCell(SingleButtonCell.self)
         travelAdviceTV.registerNibCell(PermissionInfoTVCell.self)

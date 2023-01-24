@@ -95,7 +95,7 @@ class JTCalendarView: UIView, NibBased {
     
     public func setApplyButtonStatus(_ enabled: Bool) {
         applyButton.isEnabled = enabled
-        applyButton.backgroundColor = enabled ? .clearBlue : UIColor.clearBlue.withAlphaComponent(0.7)
+        applyButton.backgroundColor = enabled ? .appPrimary : UIColor.appPrimary.withAlphaComponent(0.7)
     }
     
     public func setDateText(firstDate: Date,  secondDate: Date? = nil) {

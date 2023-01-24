@@ -39,7 +39,7 @@ class ScheduleFilterCell: UITableViewCell {
     lazy var checkmarkImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "done-mono")
-        imageView.tintColor = UIColor.clearBlue
+        imageView.tintColor = UIColor.appPrimary
         imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView

@@ -52,7 +52,7 @@ class TravellerClassVC: UIViewController {
         var frame = theTableView.bounds
         frame.origin.y = -frame.size.height
         let blueView = UIView(frame: frame)
-        blueView.backgroundColor = .clearBlue
+        blueView.backgroundColor = .appPrimary
         theTableView.addSubview(blueView)
         
         navigationItem.leftBarButtonItems = BackButton.createWithText(

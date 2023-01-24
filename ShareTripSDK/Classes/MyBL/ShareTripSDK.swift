@@ -11,19 +11,18 @@ import IQKeyboardManagerSwift
 
 public final class ShareTripSDK {
     private static var accessToken = ""
+    public static var theme: SDKColorThemes = .sharetrip
     
     public static func configure(_ accessToken: String) {
         FirebaseApp.configure()
         self.accessToken = accessToken
-        Constants.sdkColorTheme = .banglalink
+        self.theme = .banglalink
         IQKeyboardManager.shared.enable = true
         STUserSession.current.authToken = AuthToken(accessToken: accessToken, loginType: .phone)
-        
-        
     }
 }
 
-enum SDKColorThemes {
+public enum SDKColorThemes {
     case sharetrip
     case banglalink
 }

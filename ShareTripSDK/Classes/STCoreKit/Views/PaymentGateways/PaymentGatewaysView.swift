@@ -57,8 +57,8 @@ class PaymentGatewaysView: UIView, NibBased {
     private let pageControl: UIPageControl = {
         let pageControl = UIPageControl()
         pageControl.translatesAutoresizingMaskIntoConstraints = false
-        pageControl.currentPageIndicatorTintColor = .clearBlue
-        pageControl.pageIndicatorTintColor = UIColor.clearBlue.withAlphaComponent(0.32)
+        pageControl.currentPageIndicatorTintColor = .appPrimary
+        pageControl.pageIndicatorTintColor = UIColor.appPrimary.withAlphaComponent(0.32)
         return pageControl
     }()
     

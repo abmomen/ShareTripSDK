@@ -57,7 +57,7 @@ class FlightFilterCardView: UIView {
         let button = UIButton()
         button.setTitle("Deselect All".capitalized, for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: .semibold)
-        button.setTitleColor(.clearBlue, for: .normal)
+        button.setTitleColor(.appPrimary, for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.backgroundColor = .clear
         button.addTarget(self, action: #selector(selectAllButtonTapped(_:)), for: .touchUpInside)
@@ -86,7 +86,7 @@ class FlightFilterCardView: UIView {
         button.setTitle("APPLY", for: .normal)
         button.titleLabel?.textColor = .white
         button.titleLabel?.font = .systemFont(ofSize: 17.0, weight: .semibold)
-        button.backgroundColor = UIColor.clearBlue
+        button.backgroundColor = UIColor.appPrimary
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: #selector(self.doneButtonTapped(_:)), for: .touchUpInside)
         return button
@@ -215,7 +215,7 @@ class FlightFilterCardView: UIView {
             selectAllButton.setTitleColor(UIColor.greyishBrown, for: .normal)
         } else {
             selectAllButton.setTitle("SELECT ALL", for: .normal)
-            selectAllButton.setTitleColor(UIColor.clearBlue, for: .normal)
+            selectAllButton.setTitleColor(UIColor.appPrimary, for: .normal)
         }
     }
     

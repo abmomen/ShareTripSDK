@@ -30,9 +30,13 @@ public extension UIColor {
     // MARK:- App Template
     // MARK: App Primary Colors
     static var appPrimary: UIColor {
-        //clearBlue
-        //return UIColor(hex: 0x1882ff)
-        return Constants.primaryColor
+        switch ShareTripSDK.theme {
+        case .sharetrip:
+            return .appPrimary
+            
+        case .banglalink:
+            return blPrimaryColor
+        }
     }
     
     static var appPrimaryLight: UIColor {
@@ -46,6 +50,10 @@ public extension UIColor {
         //return UIColor(hex: 0x245dd8)
         // #colorLiteral(red: 0.03921568627, green: 0.4784313725, blue: 0.9921568627, alpha: 1)
         return UIColor.blueBlue
+    }
+    
+    private static var blPrimaryColor: UIColor {
+        return UIColor(red: 28/255.0, green: 175/255.0, blue: 104/255.0, alpha: 1.0)
     }
     
     @nonobjc class var clearBlue: UIColor {

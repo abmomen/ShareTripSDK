@@ -72,7 +72,7 @@ enum FlightBookingHistoryCellTypes {
     var backgroundColor: UIColor {
         switch self {
         case .retryBooking, .resendVoucher, .void, .cancelBooking, .refund:
-            return .clearBlue
+            return .appPrimary
         default:
             return .clear
         }

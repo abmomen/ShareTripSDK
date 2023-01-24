@@ -33,7 +33,7 @@ class FlightSortingButton: UIButton {
 
     func select() {
         active = true
-        backgroundColor = .clearBlue
+        backgroundColor = .appPrimary
         layer.borderWidth = 0
         setTitleColor(.white, for: .normal)
     }
