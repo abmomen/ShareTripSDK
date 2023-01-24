@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Enable IQKeyboardManager
         IQKeyboardManager.shared.enable = true
         
-        window?.rootViewController = navigationController //MyBLHomeVC.instantiate()
+        window?.rootViewController = MyBLHomeVC.instantiate() //navigationController
         window?.makeKeyAndVisible()
         
         FirebaseApp.configure()
