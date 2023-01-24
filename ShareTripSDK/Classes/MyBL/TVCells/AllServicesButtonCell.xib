@@ -21,21 +21,21 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aI7-kc-Rpz">
                         <rect key="frame" x="16" y="16" width="419" height="166"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="UUT-oz-av4">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="UUT-oz-av4">
                                 <rect key="frame" x="16" y="16" width="387" height="134"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HwI-Vt-abu">
                                         <rect key="frame" x="0.0" y="0.0" width="118.33333333333333" height="134"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="75i-5z-Uob">
-                                                <rect key="frame" x="0.0" y="0.0" width="118.33333333333333" height="134"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="75i-5z-Uob">
+                                                <rect key="frame" x="0.0" y="16" width="118.33333333333333" height="102"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="airplane-icon" translatesAutoresizingMaskIntoConstraints="NO" id="eDf-wC-nXH">
-                                                        <rect key="frame" x="39.333333333333329" y="0.0" width="40" height="67"/>
+                                                        <rect key="frame" x="39.333333333333329" y="0.0" width="40" height="40"/>
                                                         <color key="tintColor" systemColor="systemGreenColor"/>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flight" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oG1-Au-yYn">
-                                                        <rect key="frame" x="41.333333333333329" y="67" width="36" height="67"/>
+                                                        <rect key="frame" x="41.333333333333329" y="85" width="36" height="17"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -54,9 +54,9 @@
                                         <constraints>
                                             <constraint firstItem="yZA-Lq-9xk" firstAttribute="leading" secondItem="HwI-Vt-abu" secondAttribute="leading" id="1ec-uU-gd2"/>
                                             <constraint firstAttribute="bottom" secondItem="yZA-Lq-9xk" secondAttribute="bottom" id="8Qu-Ji-5yn"/>
-                                            <constraint firstItem="75i-5z-Uob" firstAttribute="top" secondItem="HwI-Vt-abu" secondAttribute="top" id="FMC-ss-5qo"/>
+                                            <constraint firstItem="75i-5z-Uob" firstAttribute="top" secondItem="HwI-Vt-abu" secondAttribute="top" constant="16" id="FMC-ss-5qo"/>
                                             <constraint firstAttribute="trailing" secondItem="yZA-Lq-9xk" secondAttribute="trailing" id="HgV-Dg-UB4"/>
-                                            <constraint firstAttribute="bottom" secondItem="75i-5z-Uob" secondAttribute="bottom" id="MA1-1Q-7Uq"/>
+                                            <constraint firstAttribute="bottom" secondItem="75i-5z-Uob" secondAttribute="bottom" constant="16" id="MA1-1Q-7Uq"/>
                                             <constraint firstItem="yZA-Lq-9xk" firstAttribute="top" secondItem="HwI-Vt-abu" secondAttribute="top" id="cMz-0p-BeI"/>
                                             <constraint firstItem="75i-5z-Uob" firstAttribute="leading" secondItem="HwI-Vt-abu" secondAttribute="leading" id="m67-aC-UdF"/>
                                             <constraint firstAttribute="trailing" secondItem="75i-5z-Uob" secondAttribute="trailing" id="pxS-ca-9Gd"/>
@@ -65,15 +65,15 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l6W-Tg-Tgc">
                                         <rect key="frame" x="134.33333333333334" y="0.0" width="118.33333333333334" height="134"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="K9j-IH-TnI">
-                                                <rect key="frame" x="0.0" y="0.0" width="118.33333333333333" height="134"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="K9j-IH-TnI">
+                                                <rect key="frame" x="0.0" y="16" width="118.33333333333333" height="102"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hotel-icon" translatesAutoresizingMaskIntoConstraints="NO" id="xgD-tz-MGm">
-                                                        <rect key="frame" x="39.333333333333314" y="0.0" width="40" height="67"/>
+                                                        <rect key="frame" x="39.333333333333314" y="0.0" width="40" height="40"/>
                                                         <color key="tintColor" systemColor="systemGreenColor"/>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hotels" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qDE-iZ-MEN">
-                                                        <rect key="frame" x="38.333333333333314" y="67" width="41.666666666666657" height="67"/>
+                                                        <rect key="frame" x="38.333333333333314" y="85" width="41.666666666666657" height="17"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -92,8 +92,8 @@
                                         <constraints>
                                             <constraint firstItem="tS9-tg-iah" firstAttribute="leading" secondItem="l6W-Tg-Tgc" secondAttribute="leading" id="2Y0-d7-Wfn"/>
                                             <constraint firstAttribute="trailing" secondItem="tS9-tg-iah" secondAttribute="trailing" id="3bD-ep-YsT"/>
-                                            <constraint firstItem="K9j-IH-TnI" firstAttribute="top" secondItem="l6W-Tg-Tgc" secondAttribute="top" id="6X2-kK-SNc"/>
-                                            <constraint firstAttribute="bottom" secondItem="K9j-IH-TnI" secondAttribute="bottom" id="Dkh-Wr-K5i"/>
+                                            <constraint firstItem="K9j-IH-TnI" firstAttribute="top" secondItem="l6W-Tg-Tgc" secondAttribute="top" constant="16" id="6X2-kK-SNc"/>
+                                            <constraint firstAttribute="bottom" secondItem="K9j-IH-TnI" secondAttribute="bottom" constant="16" id="Dkh-Wr-K5i"/>
                                             <constraint firstAttribute="trailing" secondItem="K9j-IH-TnI" secondAttribute="trailing" id="KOL-S5-gyQ"/>
                                             <constraint firstAttribute="bottom" secondItem="tS9-tg-iah" secondAttribute="bottom" id="b78-j8-3Iu"/>
                                             <constraint firstItem="K9j-IH-TnI" firstAttribute="leading" secondItem="l6W-Tg-Tgc" secondAttribute="leading" id="twD-hs-voZ"/>
@@ -103,15 +103,15 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lvf-QI-dg6">
                                         <rect key="frame" x="268.66666666666669" y="0.0" width="118.33333333333331" height="134"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="SJg-mX-EAm">
-                                                <rect key="frame" x="0.0" y="0.0" width="118.33333333333333" height="134"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="SJg-mX-EAm">
+                                                <rect key="frame" x="0.0" y="16" width="118.33333333333333" height="102"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="visa-icon" translatesAutoresizingMaskIntoConstraints="NO" id="tWO-lz-WRN">
-                                                        <rect key="frame" x="43.333333333333314" y="0.0" width="32" height="67"/>
+                                                        <rect key="frame" x="43.333333333333314" y="0.0" width="32" height="32"/>
                                                         <color key="tintColor" systemColor="systemGreenColor"/>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Visa" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ets-nU-sHm">
-                                                        <rect key="frame" x="45.333333333333314" y="67" width="27.666666666666671" height="67"/>
+                                                        <rect key="frame" x="45.333333333333314" y="85" width="27.666666666666671" height="17"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -131,8 +131,8 @@
                                             <constraint firstAttribute="trailing" secondItem="SJg-mX-EAm" secondAttribute="trailing" id="3Mh-VM-J0x"/>
                                             <constraint firstItem="SJg-mX-EAm" firstAttribute="leading" secondItem="Lvf-QI-dg6" secondAttribute="leading" id="6if-BU-7AJ"/>
                                             <constraint firstAttribute="trailing" secondItem="iVu-JD-d9P" secondAttribute="trailing" id="D4J-dK-8BO"/>
-                                            <constraint firstItem="SJg-mX-EAm" firstAttribute="top" secondItem="Lvf-QI-dg6" secondAttribute="top" id="LRP-kn-hvC"/>
-                                            <constraint firstAttribute="bottom" secondItem="SJg-mX-EAm" secondAttribute="bottom" id="P10-dp-Shn"/>
+                                            <constraint firstItem="SJg-mX-EAm" firstAttribute="top" secondItem="Lvf-QI-dg6" secondAttribute="top" constant="16" id="LRP-kn-hvC"/>
+                                            <constraint firstAttribute="bottom" secondItem="SJg-mX-EAm" secondAttribute="bottom" constant="16" id="P10-dp-Shn"/>
                                             <constraint firstItem="iVu-JD-d9P" firstAttribute="leading" secondItem="Lvf-QI-dg6" secondAttribute="leading" id="aTC-ix-Qqj"/>
                                             <constraint firstAttribute="bottom" secondItem="iVu-JD-d9P" secondAttribute="bottom" id="kyM-XX-0yh"/>
                                             <constraint firstItem="iVu-JD-d9P" firstAttribute="top" secondItem="Lvf-QI-dg6" secondAttribute="top" id="oKw-uy-YRG"/>
@@ -163,7 +163,10 @@
                 <outlet property="containerView" destination="aI7-kc-Rpz" id="BTq-7c-1Sp"/>
                 <outlet property="flightContainerView" destination="HwI-Vt-abu" id="dcf-qp-Pc3"/>
                 <outlet property="hotelContainerView" destination="l6W-Tg-Tgc" id="HG8-SJ-TYL"/>
+                <outlet property="hotelImageView" destination="xgD-tz-MGm" id="2pZ-k4-y8w"/>
+                <outlet property="planeImageView" destination="eDf-wC-nXH" id="MkD-Ix-bkq"/>
                 <outlet property="visaContainerView" destination="Lvf-QI-dg6" id="MGd-Sn-KfB"/>
+                <outlet property="visaImageView" destination="tWO-lz-WRN" id="4aM-CR-viI"/>
             </connections>
             <point key="canvasLocation" x="222.13740458015266" y="3.5211267605633805"/>
         </tableViewCell>

@@ -14,6 +14,7 @@ public class MyBLHomeVC: UIViewController {
     public override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.title = "Tickets"
         tableView.backgroundColor = .offWhite
         tableView.registerNibCell(AllServicesButtonCell.self)
     }
@@ -27,11 +28,23 @@ extension MyBLHomeVC: UITableViewDelegate, UITableViewDataSource {
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as AllServicesButtonCell
+        cell.didTapFlight = {[weak self] in
+            self?.navigationController?.pushViewController(FlightSearchVC.instantiate(), animated: true)
+        }
+        
+        cell.didTapHotel = {[weak self] in
+            self?.showAlert(message: "Coming Soon...")
+        }
+        
+        cell.didTapVisa = {[weak self] in
+            self?.showAlert(message: "Coming Soon...")
+        }
+        
         return cell
     }
     
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 130
+        return 150
     }
 }
 

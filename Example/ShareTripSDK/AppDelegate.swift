@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        let navigationController = NavigationController(rootViewController: FlightSearchVC.instantiate())
+        let navigationController = NavigationController(rootViewController: MyBLHomeVC.instantiate())
         
         STUserSession.current.authToken = AuthToken(
             accessToken: "$2b$10$pv.ZAnzyuSTD7GIMm/yHL.hdPTFQgUDN2rfXPnQXh67e4JsKJ0Fl.",
@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Enable IQKeyboardManager
         IQKeyboardManager.shared.enable = true
         
-        window?.rootViewController = MyBLHomeVC.instantiate() //navigationController
+        window?.rootViewController =  navigationController
         window?.makeKeyAndVisible()
         
         FirebaseApp.configure()
