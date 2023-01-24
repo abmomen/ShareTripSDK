@@ -52,7 +52,6 @@ class FlightTravellerInfoVC: UITableViewController {
         tableView.registerNibCell(InfoDetailCell.self)
         tableView.registerNibCell(PassportVisaCell.self)
         tableView.registerNibCell(EditableContactCell.self)
-        tableView.registerHeaderFooter(CustomHeaderView.self)
 
         title = "Traveller(s) Details"
         if let totalPoints = STAppManager.shared.userAccount?.totalPoints {
@@ -156,7 +155,7 @@ extension FlightTravellerInfoVC {
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let header = tableView.dequeueReusableHeaderFooterView() as CustomHeaderView
+        let header = CustomHeaderView(frame: .zero)
         header.customLabel.font = .systemFont(ofSize: 16.0)
         header.customLabel.textColor = .black
         if section != travellerInfo.count {

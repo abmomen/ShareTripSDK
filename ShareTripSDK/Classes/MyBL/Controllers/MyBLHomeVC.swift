@@ -18,6 +18,7 @@ public class MyBLHomeVC: UIViewController {
         
         navigationItem.title = "Tickets"
         tableView.backgroundColor = .offWhite
+        tableView.registerNibCell(DealCardCell.self)
         tableView.registerNibCell(AllServicesButtonCell.self)
         
         handleCallbacks()
@@ -25,12 +26,15 @@ public class MyBLHomeVC: UIViewController {
     
     private func handleCallbacks() {
         viewModel.fetchDeals()
+        tableView.startActivityIndicator()
         
         viewModel.callbacks.didSuccess = {[weak self] in
+            self?.tableView.stopActivityIndicator()
             self?.tableView.reloadData()
         }
         
         viewModel.callbacks.didFailed = {[weak self] error in
+            self?.tableView.stopActivityIndicator()
             self?.tableView.reloadData()
             self?.showMessage(error, type: .error)
         }
@@ -73,9 +77,36 @@ extension MyBLHomeVC: UITableViewDelegate, UITableViewDataSource {
             }
             
             return cell
-    
+        
+        case .deals:
+            let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as DealCardCell
+            cell.configure(dealsAndUpdates: viewModel.deals[indexPath.row])
+            return cell
+            
         default:
             return UITableViewCell()
+        }
+    }
+    
+    public func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        switch viewModel.secions[section] {
+        case .deals:
+            let headerView = CustomHeaderView(frame: .zero)
+            headerView.customLabel.text = "Deals & Updates"
+            return headerView
+        
+        default:
+            return UIView()
+        }
+    }
+    
+    public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        switch viewModel.secions[section] {
+        case .deals:
+            return 44
+        
+        default:
+            return .leastNonzeroMagnitude
         }
     }
     
@@ -83,9 +114,12 @@ extension MyBLHomeVC: UITableViewDelegate, UITableViewDataSource {
         switch viewModel.secions[indexPath.section] {
         case .features:
             return 150
-    
+        
+        case .deals:
+            return 120
+            
         default:
-            return 44
+            return .leastNonzeroMagnitude
         }
     }
 }

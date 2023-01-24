@@ -13,7 +13,7 @@ private struct FetchDealsEndPoint: EndPoint {
 
 
 enum DealsAPIClient: GenericAPIClient {
-    static func fetchDeals(completion: @escaping (Result<Response<NotifierDeals?>, NetworkError>) -> Void) {
+    static func fetchDeals(completion: @escaping (Result<Response<DealResponse?>, NetworkError>) -> Void) {
         let endPoint = FetchDealsEndPoint()
         startRequest(with: endPoint, completion: completion)
     }

@@ -52,7 +52,6 @@ class AirportSearchVC: UIViewController {
         searchBarContainerView.backgroundColor = .appPrimary
 
         searchPlaceTableView.registerNibCell(AirportCell.self)
-        searchPlaceTableView.registerHeaderFooter(CustomHeaderView.self)
         searchPlaceTableView.tableFooterView = UIView()
         
         searchPlaceTableView.separatorStyle = .singleLine
@@ -138,7 +137,7 @@ extension AirportSearchVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let title = lastSearchedKeyword == nil ? "Popular Airports" : "Searched Airports"
         let font = UIFont.systemFont(ofSize: 14, weight: .medium)
-        let header = tableView.dequeueReusableHeaderFooterView() as CustomHeaderView
+        let header = CustomHeaderView(frame: .zero)
         header.config(title: title, textFont: font, textColor: UIColor.charcoalGray)
         header.customLabel.addCharacterSpacing(kernValue: 1.88)
         return header

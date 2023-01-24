@@ -1,5 +1,5 @@
 //
-//  Deal.swift
+//  Deals.swift
 //  ShareTripSDK
 //
 //  Created by ST-iOS on 1/24/23.
@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct NotifierDeals: Codable {
-    let data: [NotifierDealList]
+struct DealResponse: Codable {
+    let data: [NotifierDeal]
 }
 
-struct NotifierDealList: Codable {
+struct NotifierDeal: Codable {
     let comment, description, imageUrl: String?
     let platform: [Platform]?
     let publishDate, trigerBy, title: String?

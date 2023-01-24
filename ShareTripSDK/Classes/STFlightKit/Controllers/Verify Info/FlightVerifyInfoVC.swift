@@ -187,7 +187,6 @@ class FlightVerifyInfoVC: UIViewController {
     }
     
     private func setupTableView(){
-        tableView.registerHeaderFooter(CustomHeaderView.self)
         tableView.registerHeaderFooter(RightButtonHeaderView.self)
         tableView.registerNibCell(NameCell.self)
         tableView.registerNibCell(InfoDetailCell.self)
@@ -452,7 +451,7 @@ extension FlightVerifyInfoVC: UITableViewDelegate, UITableViewDataSource {
                 title = title + "Infant \(section - adultCount - childCount + 1)"
             }
 
-            let header = tableView.dequeueReusableHeaderFooterView() as CustomHeaderView
+            let header = CustomHeaderView(frame: .zero)
             header.customLabel.font = .systemFont(ofSize: 16.0)
             header.customLabel.textColor = .black
             header.customLabel.text = title

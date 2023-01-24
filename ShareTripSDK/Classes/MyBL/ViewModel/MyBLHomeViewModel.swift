@@ -24,9 +24,9 @@ extension MyBLHomeViewModel {
 
 class MyBLHomeViewModel {
     
-    let secions: [Sections] = [.features, .adds,.deals]
+    let secions: [Sections] = [.features, .deals]
     
-    private(set) var deals: [NotifierDealList] = []
+    private(set) var deals: [NotifierDeal] = []
     
     var callbacks = Callbacks()
     

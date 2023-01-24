@@ -6,19 +6,21 @@
 //
 import UIKit
 
-public class CustomHeaderView: UITableViewHeaderFooterView {
+public class CustomHeaderView: UIView {
 
     public let customLabel = UILabel()
     
-    override public init(reuseIdentifier: String?) {
-        super.init(reuseIdentifier: reuseIdentifier)
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
+        addSubview(customLabel)
+        
         customLabel.font = UIFont.systemFont(ofSize: 15.0, weight: .medium)
         customLabel.textColor = .black
         customLabel.translatesAutoresizingMaskIntoConstraints = false
-        self.contentView.addSubview(customLabel)
-        customLabel.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
-        customLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
-        customLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20.0).isActive = true
+        
+        customLabel.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        customLabel.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        customLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20.0).isActive = true
         customLabel.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width - 40.0).isActive = true
     }
     
@@ -26,7 +28,7 @@ public class CustomHeaderView: UITableViewHeaderFooterView {
         customLabel.text = title
         customLabel.font = textFont
         customLabel.textColor = textColor
-        contentView.backgroundColor = backgroundColor
+        self.backgroundColor = backgroundColor
     }
     
     required init?(coder aDecoder: NSCoder) {
