@@ -12,6 +12,8 @@ public class CustomHeaderView: UIView {
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
+        backgroundColor = .clear
+        
         addSubview(customLabel)
         
         customLabel.font = UIFont.systemFont(ofSize: 15.0, weight: .medium)
@@ -24,11 +26,10 @@ public class CustomHeaderView: UIView {
         customLabel.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width - 40.0).isActive = true
     }
     
-    public func config(title: String, textFont: UIFont, textColor: UIColor, backgroundColor: UIColor = .white) {
+    public func config(title: String, textFont: UIFont, textColor: UIColor) {
         customLabel.text = title
         customLabel.font = textFont
         customLabel.textColor = textColor
-        self.backgroundColor = backgroundColor
     }
     
     required init?(coder aDecoder: NSCoder) {

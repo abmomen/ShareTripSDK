@@ -92,7 +92,11 @@ extension MyBLHomeVC: UITableViewDelegate, UITableViewDataSource {
         switch viewModel.secions[section] {
         case .deals:
             let headerView = CustomHeaderView(frame: .zero)
-            headerView.customLabel.text = "Deals & Updates"
+            headerView.config(
+                title: "Deals & Updates",
+                textFont: .systemFont(ofSize: 16, weight: .medium),
+                textColor: .black
+            )
             return headerView
         
         default:
@@ -116,7 +120,7 @@ extension MyBLHomeVC: UITableViewDelegate, UITableViewDataSource {
             return 150
         
         case .deals:
-            return 120
+            return 125
             
         default:
             return .leastNonzeroMagnitude
