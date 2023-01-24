@@ -107,7 +107,6 @@ extension MyBLHomeVC: UITableViewDelegate, UITableViewDataSource {
     public func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if indexPath.row == viewModel.deals.count - 2 {
             viewModel.fetchDeals()
-            tableView.startActivityIndicator()
         }
     }
     
