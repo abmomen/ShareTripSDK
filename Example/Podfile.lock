@@ -869,37 +869,7 @@ PODS:
   - SwiftyJSON (5.0.1)
 
 DEPENDENCIES:
-  - Alamofire
-  - Base64
-  - BlueCryptor
-  - BlueECC
-  - BlueRSA
-  - Bolts-Swift
-  - FBSDKCoreKit
-  - FBSDKLoginKit
-  - FBSDKShareKit
-  - FirebaseAnalytics
-  - FirebaseAuth
-  - FirebaseCoreDiagnostics
-  - FirebaseCrashlytics
-  - FirebaseDynamicLinks
-  - FirebaseFirestore
-  - FirebaseMessaging
-  - FirebaseRemoteConfig
-  - FloatingPanel
-  - GoogleSignIn
-  - ImageSlideshow
-  - IQKeyboardManagerSwift
-  - JTAppleCalendar
-  - JWT
-  - Kingfisher
-  - Koloda
-  - lottie-ios
-  - PKHUD
   - ShareTripSDK (from `../`)
-  - Socket.IO-Client-Swift
-  - SwiftKeychainWrapper
-  - SwiftyJSON
 
 SPEC REPOS:
   trunk:
@@ -1015,6 +985,6 @@ SPEC CHECKSUMS:
   SwiftKeychainWrapper: 807ba1d63c33a7d0613288512399cd1eda1e470c
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
 
-PODFILE CHECKSUM: 8a1fca70a685bf24a19cfc893dcbd3efbdf0512a
+PODFILE CHECKSUM: 23946a98e5804c5e4c2f1025ce12dab4a5c8fa07
 
 COCOAPODS: 1.11.3
