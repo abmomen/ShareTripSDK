@@ -104,6 +104,23 @@ extension MyBLHomeVC: UITableViewDelegate, UITableViewDataSource {
         }
     }
     
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        switch viewModel.secions[indexPath.section] {
+        case .deals:
+            let deal = viewModel.deals[indexPath.row]
+            let dealDetailsViewModel = DealDetailsViewModel(deal: deal)
+            let dealDetailVC = DealDetailVC(viewModel: dealDetailsViewModel)
+            dealDetailVC.hidesBottomBarWhenPushed = true
+            navigationController?.pushViewController(dealDetailVC, animated: true)
+        
+        default:
+            break
+        }
+    
+    }
+    
     public func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if indexPath.row == viewModel.deals.count - 2 {
             viewModel.fetchDeals()
