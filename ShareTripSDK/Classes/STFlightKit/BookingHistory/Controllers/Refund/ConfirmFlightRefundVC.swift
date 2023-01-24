@@ -10,7 +10,7 @@ import UIKit
 import PKHUD
 
 
-class ConfirmFlightRefundVC: UIViewController {
+class ConfirmFlightRefundVC: ViewController {
     
     @IBOutlet private weak var confimButton: UIButton! {
         didSet {

@@ -9,7 +9,7 @@
 import UIKit
 
 
-class FlightListVC: UIViewController {
+class FlightListVC: ViewController {
     
     @IBOutlet private weak var topBarView: UIView!
     @IBOutlet private weak var availableFlightLabel: UILabel!

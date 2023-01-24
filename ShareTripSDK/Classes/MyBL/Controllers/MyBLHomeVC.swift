@@ -7,7 +7,7 @@
 
 import UIKit
 
-public class MyBLHomeVC: UIViewController {
+public class MyBLHomeVC: ViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -17,6 +17,7 @@ public class MyBLHomeVC: UIViewController {
         super.viewDidLoad()
         
         navigationItem.title = "Tickets"
+        view.backgroundColor = .appPrimary
         tableView.backgroundColor = .offWhite
         tableView.registerNibCell(DealCardCell.self)
         tableView.registerNibCell(AllServicesButtonCell.self)

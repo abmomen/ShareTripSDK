@@ -93,7 +93,7 @@ enum FlightContactInfoRowType: Int, CaseIterable {
     }
 }
 
-class FlightVerifyInfoVC: UIViewController {
+class FlightVerifyInfoVC: ViewController {
     //MARK: Private properties
     private var flightBookingData: FlightBookigData
     private var firstInfo: PassengerInfo?

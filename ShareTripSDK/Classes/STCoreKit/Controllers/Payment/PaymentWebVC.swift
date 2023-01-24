@@ -25,7 +25,7 @@ public extension PaymentWebVC {
     }
 }
 
-public class PaymentWebVC: UIViewController {
+public class PaymentWebVC: ViewController {
     // The observation object for the progress of the web view (we only receive notifications until it is deallocated).
     private var estimatedProgressObserver: NSKeyValueObservation?
     private var notificationScedules = [DateComponents]()

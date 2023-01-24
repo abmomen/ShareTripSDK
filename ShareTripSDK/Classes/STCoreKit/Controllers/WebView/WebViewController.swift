@@ -41,7 +41,7 @@ public class StaticHtmlDataProvider: WebViewDataSource {
     }
 }
 
-public class WebViewController: UIViewController {
+public class WebViewController: ViewController {
     
     public let webView = WKWebView()
     

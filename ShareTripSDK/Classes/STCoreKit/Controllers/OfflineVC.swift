@@ -7,7 +7,7 @@
 
 import UIKit
 
-public class OfflineVC: UIViewController {
+public class OfflineVC: ViewController {
     
     //MARK:- Initializer
     public init() {

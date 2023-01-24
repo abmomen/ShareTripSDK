@@ -14,7 +14,7 @@ protocol FlightPassengerListCoordinatorDelegate: AnyObject {
     func continueToBooking()
 }
 
-class FlightPassengerListVC: UIViewController {
+class FlightPassengerListVC: ViewController {
     
     // MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!

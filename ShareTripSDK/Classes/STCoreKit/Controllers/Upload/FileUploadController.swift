@@ -12,11 +12,11 @@ import Photos
 public class FileUploadController {
     
     // MARK: - Dependency
-    private var topViewController: UIViewController
+    private var topViewController: ViewController
     private var imagePicker: UIImagePickerController
     
     // MARK: - Initializers
-    public init(topViewController: UIViewController, imagePicker: UIImagePickerController) {
+    public init(topViewController: ViewController, imagePicker: UIImagePickerController) {
         self.topViewController = topViewController
         self.imagePicker = imagePicker
     }

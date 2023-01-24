@@ -10,7 +10,7 @@ import UIKit
 import PKHUD
 import FirebaseRemoteConfig
 
-class SafeDestinationSearchVC: UIViewController {
+class SafeDestinationSearchVC: ViewController {
 
     @IBOutlet weak var travelAdviceTV: UITableView!
     private let row: [SearchDestinationCellInfo] = [.destination, .searchButton, .advice]

@@ -10,7 +10,7 @@ import UIKit
 import PKHUD
 
 
-class VoidQuotationDetailsVC: UIViewController {
+class VoidQuotationDetailsVC: ViewController {
     @IBOutlet private weak var nextButton: UIButton! {
         didSet {
             nextButton.layer.cornerRadius = 8

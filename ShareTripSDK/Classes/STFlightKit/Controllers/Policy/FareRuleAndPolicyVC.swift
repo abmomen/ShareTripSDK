@@ -15,7 +15,7 @@ enum FareRuleTypes {
     case readRules
 }
 
-class FareRuleAndPolicyVC: UIViewController {
+class FareRuleAndPolicyVC: ViewController {
     
     @IBOutlet weak private var segmentedController: UISegmentedControl!
     @IBOutlet weak private var fareRulesTV: UITableView!

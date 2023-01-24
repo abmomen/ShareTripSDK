@@ -12,7 +12,7 @@ public protocol SelectedCountryVCDelegate: AnyObject {
     func userSelectedCountry(selectedCountry: Country)
 }
 
-class LoadDefaultCountryVC: UIViewController {
+class LoadDefaultCountryVC: ViewController {
 
     @IBOutlet weak private var searchBarContainerView: UIView!
     @IBOutlet weak private var searchBar: SearchBar!

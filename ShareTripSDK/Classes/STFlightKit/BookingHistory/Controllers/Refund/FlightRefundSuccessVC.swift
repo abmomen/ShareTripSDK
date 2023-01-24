@@ -9,7 +9,7 @@
 import UIKit
 
 
-class FlightRefundSuccessVC: UIViewController {
+class FlightRefundSuccessVC: ViewController {
 
     @IBOutlet private weak var backButton: UIButton! {
         didSet {

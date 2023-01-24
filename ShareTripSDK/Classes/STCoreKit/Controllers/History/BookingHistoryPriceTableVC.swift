@@ -15,7 +15,7 @@ public struct HistoryConvenienceFee {
     }
 }
 
-public class BookingHistoryPriceTableVC: UIViewController {
+public class BookingHistoryPriceTableVC: ViewController {
     private lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .grouped)
         tableView.delegate = self

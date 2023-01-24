@@ -10,7 +10,7 @@ import UIKit
 import PKHUD
 
 
-class FlightConfirmVoidVC: UIViewController {
+class FlightConfirmVoidVC: ViewController {
     
     @IBOutlet private weak var confimButton: UIButton! {
         didSet {

@@ -9,7 +9,7 @@
 import UIKit
 
 
-class BaggageHistoryDetailsVC: UIViewController {
+class BaggageHistoryDetailsVC: ViewController {
 
     private lazy var tableView: UITableView = {
         let tableView = UITableView(frame: CGRect(), style: .plain)

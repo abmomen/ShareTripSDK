@@ -62,7 +62,7 @@ class MainEntryViewModel {
     
     
     // MARK: - SignIn With Facebook
-    func signInWithFacebook(vc: UIViewController) {
+    func signInWithFacebook(vc: ViewController) {
         let loginManager = LoginManager()
         loginManager.logIn(permissions: ["email","public_profile"], from: vc, handler: { [weak self] result, error in
             guard let result = result else {
@@ -86,7 +86,7 @@ class MainEntryViewModel {
     }
     
     // MARK: - SignIn With Google
-    func signInWthGoogle(vc: UIViewController) {
+    func signInWthGoogle(vc: ViewController) {
         let clientId = Constants.App.googleClientID
         //let signInConfig = GIDConfiguration.init(clientID: clientId)
         GIDSignIn.sharedInstance.signIn(withPresenting: vc) { (signInResult, error) in
@@ -187,7 +187,7 @@ class MainEntryViewModel {
     }
     
     // MARK: - SignUp With Email & Password
-    func signUpWithEmailAndPassword(vc: UIViewController, fields: RegisterInputFields) {
+    func signUpWithEmailAndPassword(vc: ViewController, fields: RegisterInputFields) {
         guard !fields.email.isReallyEmpty else {
             self.callback.didFailedSignUpWithEmailAndPassword("Please enter email address")
             return }
@@ -237,7 +237,7 @@ class MainEntryViewModel {
         registerWithEmailAndPasswordAPICall(vc: vc, params: params)
     }
     
-    private func registerWithEmailAndPasswordAPICall(vc: UIViewController, params: [String: Any]) {
+    private func registerWithEmailAndPasswordAPICall(vc: ViewController, params: [String: Any]) {
         self.isLoading.value = true
         DefaultAPIClient().signup(params: params) { [weak self] result in
             switch result {

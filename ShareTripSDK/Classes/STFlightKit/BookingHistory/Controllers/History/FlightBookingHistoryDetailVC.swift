@@ -11,7 +11,7 @@ import PKHUD
 import MessageUI
 
 
-class FlightBookingHistoryDetailVC: UIViewController {
+class FlightBookingHistoryDetailVC: ViewController {
     private var cancellationAlertView: CancellationAlertView?
     private let viewModel: FlightBookingHistoryDetailViewModel
     

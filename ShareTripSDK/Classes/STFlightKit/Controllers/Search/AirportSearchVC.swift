@@ -15,7 +15,7 @@ protocol AirportSearchDelegate: AnyObject {
     func userDidSelectedAirport(_ airport: Airport, cellIndex: IndexPath)
 }
 
-class AirportSearchVC: UIViewController {
+class AirportSearchVC: ViewController {
     
     @IBOutlet weak var searchBarContainerView: UIView!
     @IBOutlet weak private var placeSearchBar: SearchBar!

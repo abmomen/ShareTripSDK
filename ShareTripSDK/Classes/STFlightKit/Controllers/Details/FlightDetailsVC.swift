@@ -11,7 +11,7 @@ import PKHUD
 
 import FloatingPanel
 
-class FlightDetailsVC: UIViewController {
+class FlightDetailsVC: ViewController {
     
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var bottomSafeAreaView: UIView!

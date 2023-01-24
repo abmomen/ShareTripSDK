@@ -14,7 +14,7 @@ protocol FlightFilterVCDelegate: AnyObject {
     func searchFilterButtonDidTapped(filteredData: FlightFilterData)
 }
 
-class FlightFilterVC: UIViewController {
+class FlightFilterVC: ViewController {
     
     //MARK: - Private Properties
     private var selectedFilterType: FlightFilterType?

@@ -10,7 +10,7 @@ import UIKit
 import PKHUD
 
 
-class RefundablePassengersSelectionVC: UIViewController {
+class RefundablePassengersSelectionVC: ViewController {
     @IBOutlet weak var tableView: UITableView! {
         didSet {
             tableView.delegate = self

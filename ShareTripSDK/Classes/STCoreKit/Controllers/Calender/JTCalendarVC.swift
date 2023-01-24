@@ -32,7 +32,7 @@ protocol JTCalendarViewModelProvider {
     func positionTypeForDate(_ date: Date, cellSate: CellState) -> SelectionRangePosition
 }
 
-class JTCalendarVC: UIViewController, JTACMonthViewDataSource, JTACMonthViewDelegate {
+class JTCalendarVC: ViewController, JTACMonthViewDataSource, JTACMonthViewDelegate {
     
     var calendarView: JTCalendarView!
     var calendar: JTACMonthView { calendarView.calendar }

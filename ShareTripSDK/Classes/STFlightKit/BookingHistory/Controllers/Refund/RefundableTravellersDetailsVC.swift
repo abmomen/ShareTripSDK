@@ -9,7 +9,7 @@
 import UIKit
 
 
-class RefundableTravellersDetailsVC: UIViewController {
+class RefundableTravellersDetailsVC: ViewController {
     
     @IBOutlet private weak var tableView: UITableView! {
         didSet {

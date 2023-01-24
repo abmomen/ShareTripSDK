@@ -21,7 +21,7 @@ protocol FlightPassengerInfoVCDelegate: AnyObject {
     func passengerInfoInputDidFinish(viewController: FlightPassengerInfoVC)
 }
 
-class FlightPassengerInfoVC: UIViewController {
+class FlightPassengerInfoVC: ViewController {
 
     lazy var tableView: UITableView = {
         let tableView = UITableView()

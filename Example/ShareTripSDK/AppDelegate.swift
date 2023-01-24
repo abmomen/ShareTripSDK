@@ -18,11 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         
-        let accessToken = "$2b$10$pv.ZAnzyuSTD7GIMm/yHL.hdPTFQgUDN2rfXPnQXh67e4JsKJ0Fl."
-        ShareTripSDK.configure(accessToken)
-        let navigationController = NavigationController(rootViewController: MyBLHomeVC.instantiate())
+        ShareTripSDK.configure("$2b$10$pv.ZAnzyuSTD7GIMm/yHL.hdPTFQgUDN2rfXPnQXh67e4JsKJ0Fl.")
+        window?.rootViewController =  UINavigationController(rootViewController: MyBLHomeVC.instantiate())
         
-        window?.rootViewController =  navigationController
         window?.makeKeyAndVisible()
         
         return true

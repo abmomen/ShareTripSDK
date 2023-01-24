@@ -9,7 +9,7 @@
 import UIKit
 import PKHUD
 
-public class PaymentConfirmationVC: UIViewController {
+public class PaymentConfirmationVC: ViewController {
     
     //MARK:- IBOutlets
     @IBOutlet private weak var statusImageViewContainer: UIView!

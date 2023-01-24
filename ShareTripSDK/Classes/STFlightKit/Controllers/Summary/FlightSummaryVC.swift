@@ -11,7 +11,7 @@ import FloatingPanel
 import PKHUD
 
 
-class FlightSummaryVC: UIViewController {
+class FlightSummaryVC: ViewController {
     @IBOutlet weak var legViewTitleLabel: UILabel!
     @IBOutlet weak var legViewDateLabel: UILabel!
     @IBOutlet weak var legViewPersonLabel: UILabel!

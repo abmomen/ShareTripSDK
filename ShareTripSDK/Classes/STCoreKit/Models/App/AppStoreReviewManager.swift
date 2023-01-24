@@ -13,7 +13,7 @@ public enum AppStoreReviewManager {
     public static let productURL = URL(string: "https://itunes.apple.com/app/id\(Constants.App.appId)")!
     public static let minimumReviewWorthyActionCount = 5
     
-    public static func requestReviewIfAppropriate(host: UIViewController?, force: Bool = false) {
+    public static func requestReviewIfAppropriate(host: ViewController?, force: Bool = false) {
         let defaults = UserDefaults.standard
         let bundle = Bundle.main
         
@@ -97,7 +97,7 @@ public enum AppStoreReviewManager {
         UIApplication.shared.open(writeReviewURL, options: [:], completionHandler: nil)
     }
     
-    private func share(host: UIViewController?) {
+    private func share(host: ViewController?) {
         let activityViewController = UIActivityViewController(activityItems: [AppStoreReviewManager.productURL],
                                                               applicationActivities: nil)
         host?.present(activityViewController, animated: true, completion: nil)

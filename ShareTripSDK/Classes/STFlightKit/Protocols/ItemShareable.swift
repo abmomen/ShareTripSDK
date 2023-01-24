@@ -12,7 +12,7 @@ public protocol ItemShareable {
     func share(for serviceType: ServiceType)
 }
 
-public extension ItemShareable where Self: UIViewController {
+public extension ItemShareable where Self: ViewController {
     func share(for serviceType: ServiceType) {
         FlightAPIClient().getShareLink(for: serviceType) {[weak self] result in
             switch result {

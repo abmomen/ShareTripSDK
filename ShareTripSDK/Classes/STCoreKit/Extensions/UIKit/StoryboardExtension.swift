@@ -61,7 +61,7 @@ public extension StoryboardBased where Self: UIViewController {
     }
     
     /// This method instantiate a UIViewController from UIStoryboard
-    /// - Returns: UIViewController
+    /// - Returns: ViewController
     static func instantiate() -> Self  {
         let storyboard = UIStoryboard(name: storyboardName , bundle: ShareTripSDK.bundle)
         guard let viewController = storyboard.instantiateViewController(withIdentifier: storyboardIdentifier) as? Self else {

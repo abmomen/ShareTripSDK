@@ -9,7 +9,7 @@
 import UIKit
 
 
-class FlightPriceBreakdownVC: UIViewController {
+class FlightPriceBreakdownVC: ViewController {
     
     @IBOutlet weak var pricaTableView: UITableView!
     @IBOutlet weak var totalPayableLabel: UILabel!

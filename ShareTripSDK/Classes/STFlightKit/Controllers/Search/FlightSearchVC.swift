@@ -14,7 +14,7 @@ protocol FlightSearchVCDelegate: AnyObject {
     func updatedFlightSearchViewModel(_ viewModel: FlightSearchViewModel)
 }
 
-class FlightSearchVC: UIViewController {
+class FlightSearchVC: ViewController {
     //MARK: - IBOutlets
     @IBOutlet weak private var searchTableView: UITableView!
     

@@ -21,7 +21,7 @@ public struct LoadingData {
     }
 }
 
-public class LoadingVC: UIViewController {
+public class LoadingVC: ViewController {
     
     @IBOutlet weak var loadingAnimationView: LottieAnimationView!
     @IBOutlet weak var titleLabel: UILabel!

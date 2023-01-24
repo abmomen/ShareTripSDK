@@ -10,7 +10,7 @@ import UIKit
 import WebKit
 
 
-class FareRulesAndPolicyVC: UIViewController {
+class FareRulesAndPolicyVC: ViewController {
 
     //MARK: - Instance variables
     private var readRulesHeight: CGFloat = 0.0

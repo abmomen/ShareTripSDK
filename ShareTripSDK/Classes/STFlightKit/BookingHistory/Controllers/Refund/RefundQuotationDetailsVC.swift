@@ -10,7 +10,7 @@ import UIKit
 import PKHUD
 
 
-class RefundQuotationDetailsVC: UIViewController {
+class RefundQuotationDetailsVC: ViewController {
     @IBOutlet weak var tableView: UITableView! {
         didSet {
             tableView.delegate = self

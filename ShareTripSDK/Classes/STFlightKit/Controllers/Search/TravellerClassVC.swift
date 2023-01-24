@@ -13,7 +13,7 @@ protocol TravellerClassVCDelegate: AnyObject {
     func travellerInfoChanged()
 }
 
-class TravellerClassVC: UIViewController {
+class TravellerClassVC: ViewController {
     @IBOutlet weak var doneButton: UIButton!
     @IBOutlet private weak var theTableView: UITableView!
     
