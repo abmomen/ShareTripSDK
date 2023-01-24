@@ -8,7 +8,7 @@
 import UIKit
 import Alamofire
 
-public protocol APIClient {
+protocol APIClient {
     func performRequest<T:Decodable>(
         route: APIEndpoint,
         decoder: JSONDecoder,
@@ -20,7 +20,7 @@ public protocol APIClient {
         completion:@escaping (AFResult<T>)->Void) -> UploadRequest
 }
 
-public extension APIClient {
+extension APIClient {
     private func logResponse<T: Decodable>(_ response: DataResponse<T, AFError>) {
 #if (DEBUG || PRODUCTION)
         STLog.info("")

@@ -8,17 +8,17 @@
 
 import Alamofire
 
-public enum FirebaseRouter: APIEndpoint {
+enum FirebaseRouter: APIEndpoint {
     case tnc
     case faq
     case dealsAndUpdateFromNotifier(params: Parameters?)
     case updateFirebaseToken(bodyData: Data)
     case fetchAvailabelCoupons(service: ServiceType)
     
-    public var baseUrl: String { return "https://sharetrip-96054.firebaseio.com" }
-    public var notifierBaseUrl: String { return "https://notifier.sharetrip.net/api/v1"}
+    var baseUrl: String { return "https://sharetrip-96054.firebaseio.com" }
+    var notifierBaseUrl: String { return "https://notifier.sharetrip.net/api/v1"}
     
-    public var path: String {
+    var path: String {
         switch self {
         case .tnc:
             return baseUrl + "/flight_admin/toc.json"
@@ -33,7 +33,7 @@ public enum FirebaseRouter: APIEndpoint {
         }
     }
     
-    public var parameters: Parameters? {
+    var parameters: Parameters? {
         switch self {
         case .fetchAvailabelCoupons(let service):
             var params = [String: Any]()
@@ -46,7 +46,7 @@ public enum FirebaseRouter: APIEndpoint {
         }
     }
     
-    public var method: Alamofire.HTTPMethod {
+    var method: Alamofire.HTTPMethod {
         switch self {
         case .updateFirebaseToken:
             return .post
@@ -55,7 +55,7 @@ public enum FirebaseRouter: APIEndpoint {
         }
     }
     
-    public var bodyData: Data? {
+    var bodyData: Data? {
         switch self {
         case .updateFirebaseToken(let data):
             return data
@@ -64,11 +64,11 @@ public enum FirebaseRouter: APIEndpoint {
         }
     }
     
-    public var contentType: ContentType? {
+    var contentType: ContentType? {
         return .json
     }
     
-    public func asURLRequest() throws -> URLRequest {
+    func asURLRequest() throws -> URLRequest {
         var httpBody: Data?
         if let bodyData = bodyData {
             httpBody = bodyData
@@ -87,7 +87,7 @@ public enum FirebaseRouter: APIEndpoint {
     }
 
     /// Default  implementation, you can always provide your own
-    public func asURL() throws -> URL {
+    func asURL() throws -> URL {
         return URL(string: path)!
     }
 }

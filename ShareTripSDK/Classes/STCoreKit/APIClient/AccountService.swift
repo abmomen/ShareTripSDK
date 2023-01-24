@@ -7,18 +7,18 @@
 
 import Alamofire
 
-public protocol AccountService {
+protocol AccountService {
     func updateProfile(params: Parameters, completion: @escaping (STUserAccount?)->Void)
     func addQuickPick(params: Parameters, completion: @escaping (STUserAccount?)->Void)
     func fetchUserInfo(completion: @escaping (STUserAccount?) -> Void)
     func uploadImageFile(imageData: Data, onSuccess: @escaping (String) -> Void, onFailure: @escaping (String) -> Void) -> UploadRequest
 }
 
-public class AccountServiceDefault: AccountService {
+class AccountServiceDefault: AccountService {
     
-    public init() { }
+    init() { }
     
-    public func fetchUserInfo(completion: @escaping (STUserAccount?) -> Void) {
+    func fetchUserInfo(completion: @escaping (STUserAccount?) -> Void) {
         DefaultAPIClient().getUserInfo { (result) in
             switch result {
             case .success(let response):
@@ -37,7 +37,7 @@ public class AccountServiceDefault: AccountService {
         }
     }
     
-    public func updateProfile(params: Parameters, completion: @escaping (STUserAccount?)->Void) {
+    func updateProfile(params: Parameters, completion: @escaping (STUserAccount?)->Void) {
         DefaultAPIClient().updateProfile(params: params) { (result) in
             switch result {
             case .success(let response):
@@ -56,7 +56,7 @@ public class AccountServiceDefault: AccountService {
         }
     }
     
-    public func addQuickPick(params: Parameters, completion: @escaping (STUserAccount?)->Void) {
+    func addQuickPick(params: Parameters, completion: @escaping (STUserAccount?)->Void) {
         DefaultAPIClient().addQuickPick(params: params) { [weak self] (result) in
             switch result {
             case .success(let response):
@@ -76,7 +76,7 @@ public class AccountServiceDefault: AccountService {
         }
     }
     
-    public func uploadImageFile(imageData: Data, onSuccess: @escaping (String) -> Void, onFailure: @escaping (String) -> Void) -> UploadRequest {
+    func uploadImageFile(imageData: Data, onSuccess: @escaping (String) -> Void, onFailure: @escaping (String) -> Void) -> UploadRequest {
         let uploadRequest = DefaultAPIClient().uploadImage(imageData: imageData) { [weak self] result in
             switch result {
             case .success(let response):

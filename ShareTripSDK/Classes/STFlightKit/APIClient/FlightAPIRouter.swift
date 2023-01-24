@@ -8,7 +8,7 @@
 import Alamofire
 
 
-public enum FlightAPIRouter: APIEndpoint {
+enum FlightAPIRouter: APIEndpoint {
     case airportSearch(name: String)
     case flightSearch(params: Parameters)
     case flightDetails(request: FlightDetailsRequest)
@@ -33,7 +33,7 @@ public enum FlightAPIRouter: APIEndpoint {
     case flightBookingVoucher(bookingCode: String)
     
     // MARK: - HTTPMethod
-    public var method: Alamofire.HTTPMethod {
+    var method: Alamofire.HTTPMethod {
         switch self {
         case .airportSearch, .flightSearch, .flightRules, .uploadFlightDoc, .loadFlightPriceIndicator, .flightRetryBooking:
             return .get
@@ -53,7 +53,7 @@ public enum FlightAPIRouter: APIEndpoint {
     }
     
     // MARK:- Path
-    public var path: String {
+    var path: String {
         switch self {
         
         //Flight
@@ -107,7 +107,7 @@ public enum FlightAPIRouter: APIEndpoint {
     }
     
     // MARK: - Parameters
-    public var parameters: Parameters? {
+    var parameters: Parameters? {
         switch self {
         
         //Flight
@@ -147,7 +147,7 @@ public enum FlightAPIRouter: APIEndpoint {
     }
     
     // MARK: - Image Data Tuples
-    public var imageDataTuple: (String, Data)? {
+    var imageDataTuple: (String, Data)? {
         switch self {
         default:
             return nil
@@ -155,7 +155,7 @@ public enum FlightAPIRouter: APIEndpoint {
     }
     
     // MARK: - bodyData
-    public var bodyData: Data? {
+    var bodyData: Data? {
         switch self {
         case .revalidateFligt(let data), .flightBooking(let data):
             return data
@@ -165,7 +165,7 @@ public enum FlightAPIRouter: APIEndpoint {
     }
     
     //MARK: ContentType
-    public var contentType: ContentType? {
+    var contentType: ContentType? {
         switch self {
         default:
             return .json

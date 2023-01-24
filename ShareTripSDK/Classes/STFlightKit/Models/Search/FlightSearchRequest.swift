@@ -9,18 +9,18 @@ import UIKit
 import Alamofire
 
 
-public struct FlightSearchRequest {
-    public let flightRouteType: FlightRouteType
-    public let flightClass: FlightClass
-    public let adult: Int
-    public let child: Int
-    public let childDobs: [String]
-    public let infant: Int
-    public let origins: [String]
-    public let destinations: [String]
-    public let departDates: [Date]
+struct FlightSearchRequest {
+    let flightRouteType: FlightRouteType
+    let flightClass: FlightClass
+    let adult: Int
+    let child: Int
+    let childDobs: [String]
+    let infant: Int
+    let origins: [String]
+    let destinations: [String]
+    let departDates: [Date]
     
-    public init?(
+    init?(
         routeType: FlightRouteType,
         flightClass: FlightClass,
         adult: Int,
@@ -52,7 +52,7 @@ public struct FlightSearchRequest {
     }
 
     //MARK:- Parameters
-    public func getParameters() -> Parameters {
+    func getParameters() -> Parameters {
         var queryParams: Parameters = [
             Constants.APIParameterKey.tripType: flightRouteType.rawValue,
             Constants.APIParameterKey.flightClass: flightClass.rawValue,

@@ -7,7 +7,7 @@
 
 import Alamofire
 
-public enum APIRouter: APIEndpoint {
+enum APIRouter: APIEndpoint {
     case updateAvater(imageData: Data)
     case appVersion
     
@@ -22,7 +22,7 @@ public enum APIRouter: APIEndpoint {
     case paymentGateway(params: Parameters)
     
     // MARK: - HTTPMethod
-    public var method: Alamofire.HTTPMethod {
+    var method: Alamofire.HTTPMethod {
         switch self {
         case .updateAvater:
             return .post
@@ -48,7 +48,7 @@ public enum APIRouter: APIEndpoint {
     }
     
     // MARK:- Path
-    public var path: String {
+    var path: String {
         switch self {
         case .updateAvater:
             return "/user/update-avatar"
@@ -74,7 +74,7 @@ public enum APIRouter: APIEndpoint {
     }
     
     // MARK: - Parameters
-    public var parameters: Parameters? {
+    var parameters: Parameters? {
         switch self {
         case .updateAvater:
             return nil
@@ -99,7 +99,7 @@ public enum APIRouter: APIEndpoint {
         }
     }
     
-    public var imageDataTuple: (String, Data)? {
+    var imageDataTuple: (String, Data)? {
         switch self {
         case .updateAvater(let data):
             return (Constants.APIParameterKey.uploadFile, data)
@@ -113,7 +113,7 @@ public enum APIRouter: APIEndpoint {
     }
     
     // MARK: - bodyData
-    public var bodyData: Data? {
+    var bodyData: Data? {
         switch self {
         default:
             return nil
@@ -121,7 +121,7 @@ public enum APIRouter: APIEndpoint {
     }
     
     //MARK: ContentType
-    public var contentType: ContentType? {
+    var contentType: ContentType? {
         switch self {
         case .updateAvater, .uploadFile, .uploadVisaFile:
             return nil

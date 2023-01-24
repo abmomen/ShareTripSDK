@@ -8,13 +8,13 @@
 
 import Alamofire
 
-public protocol FlightListViewModelDelegate: AnyObject {
+protocol FlightListViewModelDelegate: AnyObject {
     func onFetchCompleted(with newIndexPathsToReload: [IndexPath]?)
     func onFetchFailed(with reason: String)
     func onResetRequest()
 }
 
-public final class FlightListViewModel {
+final class FlightListViewModel {
     private weak var delegate: FlightListViewModelDelegate?
     private var currentPage = 0
     private var fetchDataRequest: DataRequest?
@@ -32,7 +32,7 @@ public final class FlightListViewModel {
         return response?.totalRecords ?? 0
     }
     
-    public var hasMore: Bool {
+    var hasMore: Bool {
         if firstSearch {
             return true
         }
@@ -51,12 +51,12 @@ public final class FlightListViewModel {
     
     //MARK:- Initialization
     
-    public init(request: FlightSearchRequest, delegate: FlightListViewModelDelegate) {
+    init(request: FlightSearchRequest, delegate: FlightListViewModelDelegate) {
         self.request = request
         self.delegate = delegate
     }
     
-    public func resetRequestModel() {
+    func resetRequestModel() {
         fetchDataRequest?.cancel()
         fetchDataRequest = nil
         currentPage = 0
@@ -69,18 +69,18 @@ public final class FlightListViewModel {
 
     //MARK:- Flight
     
-    public var availableFlightCountText: String {
+    var availableFlightCountText: String {
         let availableFlightCount = hasMore ? total : currentCount
         let countText = availableFlightCount == 0 ? "No" : String(availableFlightCount)
         let flightText = "Flight".getPlural(count: availableFlightCount)
         return "\(countText) \(flightText) Available"
     }
     
-    public var currentCount: Int {
+    var currentCount: Int {
         return flights.count
     }
     
-    public var rowCount: Int {
+    var rowCount: Int {
         if firstSearch {
             return 10
         } else if hasMore {
@@ -90,19 +90,19 @@ public final class FlightListViewModel {
         }
     }
     
-    public func getFilterDeal() -> FlightSortingOptions {
+    func getFilterDeal() -> FlightSortingOptions {
         guard let filterDeal = response?.filterDeal else { return .unknown }
         return filterDeal
     }
     
-    public func flight(at index: Int) -> Flight? {
+    func flight(at index: Int) -> Flight? {
         guard index < flights.count else {
             return nil
         }
         return flights[index]
     }
     
-    public func rowViewModel(at index: Int) -> FlightRow? {
+    func rowViewModel(at index: Int) -> FlightRow? {
         
         guard index < flights.count else { return nil }
         
@@ -138,11 +138,11 @@ public final class FlightListViewModel {
         )
     }
     
-    public var flightFilter: FlightFilter? {
+    var flightFilter: FlightFilter? {
         return response?.filters
     }
 
-    public func selectedFlightViewModel(flight: Flight?, searchParams: FlightSearchRequestParmas) -> FlightDetailsViewModel? {
+    func selectedFlightViewModel(flight: Flight?, searchParams: FlightSearchRequestParmas) -> FlightDetailsViewModel? {
         guard let response = response else { return nil }
         guard let flight = flight else { return nil }
 
@@ -163,13 +163,13 @@ public final class FlightListViewModel {
         return FlightDetailsViewModel(flightInfo: flightInfo)
     }
     
-    public func flightFilterViewModelOld(flightClass: FlightClass, flightRouteType: FlightRouteType) -> FlightFilterViewModelOld? {
+    func flightFilterViewModelOld(flightClass: FlightClass, flightRouteType: FlightRouteType) -> FlightFilterViewModelOld? {
         guard let flightFilter = flightFilter else { return nil }
         let data = filteredData ?? FlightFilterData()
         return FlightFilterViewModelOld(filter: flightFilter, filteredData: data, flightClass: flightClass, flightRouteType: flightRouteType)
     }
     
-    public func flightFilterViewModel(flightClass: FlightClass, flightRouteType: FlightRouteType) -> FlightFilterViewModel? {
+    func flightFilterViewModel(flightClass: FlightClass, flightRouteType: FlightRouteType) -> FlightFilterViewModel? {
         guard let flightFilter = flightFilter else { return nil }
         let data = filteredData ?? FlightFilterData()
         return FlightFilterViewModel(filter: flightFilter, filteredData: data, flightClass: flightClass, flightRouteType: flightRouteType, flightCount: total)
@@ -177,14 +177,14 @@ public final class FlightListViewModel {
 
     //MARK: Fetch Flights
     private var firstSearch: Bool = true
-    public func fetchInitialFlights() {
+    func fetchInitialFlights() {
         firstSearch = true
         fetchFlights() { [weak self] _ in
             self?.firstSearch = false
         }
     }
 
-    public func reloadData() {
+    func reloadData() {
         response = nil
         resetRequestModel()
         fetchFlights() { [weak self] _ in
@@ -192,24 +192,24 @@ public final class FlightListViewModel {
         }
     }
     
-    public func fetchNextFlights() {
+    func fetchNextFlights() {
          fetchFlights()
     }
     
-    public func onSarchRequestChange() {
+    func onSarchRequestChange() {
         response = nil
         filteredData = nil
         resetRequestModel()
         fetchInitialFlights()
     }
     
-    public func onFilterSearch(for data: FlightFilterData) {
+    func onFilterSearch(for data: FlightFilterData) {
         self.filteredData = data
         resetRequestModel()
         fetchInitialFlights()
     }
     
-    public func onFilterReset() {
+    func onFilterReset() {
         filteredData = nil
         resetRequestModel()
         fetchInitialFlights()

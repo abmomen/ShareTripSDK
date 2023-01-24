@@ -8,18 +8,18 @@
 import Alamofire
 
 
-public typealias FlightInfoTuple = (departure: Airport?, arrival: Airport?, dateRange: ClosedRange<Date>?)
+typealias FlightInfoTuple = (departure: Airport?, arrival: Airport?, dateRange: ClosedRange<Date>?)
 
-public struct FlightSearchRequestParmas {
-    public let adult: Int
-    public let child: Int
-    public let infanct: Int
-    public let depurtureDate: Date
-    public let arrivalDate: Date?
-    public let firstAirportIata: String
-    public let lastAirportIata: String
+struct FlightSearchRequestParmas {
+    let adult: Int
+    let child: Int
+    let infanct: Int
+    let depurtureDate: Date
+    let arrivalDate: Date?
+    let firstAirportIata: String
+    let lastAirportIata: String
     
-    public init(adult: Int, child: Int, infanct: Int, depurtureDate: Date, arrivalDate: Date?, firstAirportIata: String, lastAirportIata: String) {
+    init(adult: Int, child: Int, infanct: Int, depurtureDate: Date, arrivalDate: Date?, firstAirportIata: String, lastAirportIata: String) {
         self.adult = adult
         self.child = child
         self.infanct = infanct
@@ -30,19 +30,19 @@ public struct FlightSearchRequestParmas {
     }
 }
 
-public struct FlightSearchViewModel {
-    public init() { }
+struct FlightSearchViewModel {
+    init() { }
     
-    public let maxRoute = 5
-    public private(set) var flightRouteType: FlightRouteType = .round
-    public private(set) var cellOptions: [FlightSearchCellOption] = [.routeType, .airport, .date, .travellerClass, .searchButton, .explore]
+    let maxRoute = 5
+    private(set) var flightRouteType: FlightRouteType = .round
+    private(set) var cellOptions: [FlightSearchCellOption] = [.routeType, .airport, .date, .travellerClass, .searchButton, .explore]
     private var flightInfos: [FlightInfoTuple] = [ (nil, nil, nil), (nil, nil, nil)]
     
-    public let travellerClassViewModel = TravellerClassViewModel()
+    let travellerClassViewModel = TravellerClassViewModel()
     
-    public var isPromotionAvailable = false
+    var isPromotionAvailable = false
     
-    public var searchButtonEnabled: Bool {
+    var searchButtonEnabled: Bool {
         get {
             
             guard let flightInfo = flightInfos.first, flightInfo.departure != nil,
@@ -67,18 +67,18 @@ public struct FlightSearchViewModel {
         }
     }
     
-    public var flightClass: FlightClass {
+    var flightClass: FlightClass {
         return travellerClassViewModel.flightClass
     }
     
-    public var travellersText: String {
+    var travellersText: String {
         var travellersStr = "\(travellerClassViewModel.totalTravelersCount) Person"
         travellersStr = travellersStr.getPlural(count: travellerClassViewModel.totalTravelersCount)
         travellersStr += (" - " + travellerClassViewModel.flightClass.title)
         return travellersStr
     }
     
-    public var flightSearchRequestParmas: FlightSearchRequestParmas {
+    var flightSearchRequestParmas: FlightSearchRequestParmas {
         FlightSearchRequestParmas(
             adult: travellerClassViewModel.adultCount,
             child: travellerClassViewModel.childCount,
@@ -95,7 +95,7 @@ public struct FlightSearchViewModel {
         return flightRouteType == .multiCity ? (index-1)/2 : 0
     }
     
-    public func navigationTitleViewData(showArrow: Bool = true) -> FlightNavTitleViewData {
+    func navigationTitleViewData(showArrow: Bool = true) -> FlightNavTitleViewData {
         return FlightNavTitleViewData(
             flightRouteType: flightRouteType,
             firstText: firstAirportIata,
@@ -107,7 +107,7 @@ public struct FlightSearchViewModel {
         )
     }
 
-    public func validate() -> Result<Void, AppError> {
+    func validate() -> Result<Void, AppError> {
         if flightRouteType == .multiCity {
             var row = 2
             var prevDate = Date().adjust(.year, offset: -5)
@@ -122,7 +122,7 @@ public struct FlightSearchViewModel {
         return .success(())
     }
     
-    public mutating func updateCellOption(for type: FlightRouteType?) {
+    mutating func updateCellOption(for type: FlightRouteType?) {
 
         if let type = type {
             self.flightRouteType = type
@@ -147,7 +147,7 @@ public struct FlightSearchViewModel {
     
     //MARK:- Parameters
     
-    public func getFlightSearchRequest() -> FlightSearchRequest? {
+    func getFlightSearchRequest() -> FlightSearchRequest? {
         
         switch flightRouteType {
         case .oneWay, .round:
@@ -198,7 +198,7 @@ public struct FlightSearchViewModel {
         }
     }
     
-    public func getFlightSearchParameters() -> Parameters {
+    func getFlightSearchParameters() -> Parameters {
         var queryParams: Parameters = [
             Constants.APIParameterKey.tripType: flightRouteType.rawValue,
             Constants.APIParameterKey.flightClass: travellerClassViewModel.flightClass.rawValue,
@@ -249,7 +249,7 @@ public struct FlightSearchViewModel {
     
     //MARK:- City
     
-    public mutating func addCity(){
+    mutating func addCity(){
         guard flightRouteType == .multiCity else { return }
         guard flightInfos.count < maxRoute else { return }
         let arrival = flightInfos.last?.arrival
@@ -257,7 +257,7 @@ public struct FlightSearchViewModel {
         updateCellOption(for: .none)
     }
     
-    public mutating func removeCity(){
+    mutating func removeCity(){
         guard flightRouteType == .multiCity else { return }
         guard flightInfos.count > 2 else { return }
         flightInfos.removeLast()
@@ -266,19 +266,19 @@ public struct FlightSearchViewModel {
     
     //MARK:- Flight Leg Getter Setter
     
-    public func getFlightInfoTuple(for cellIndex: Int) -> FlightInfoTuple? {
+    func getFlightInfoTuple(for cellIndex: Int) -> FlightInfoTuple? {
         let index: Int = getFlightInfoIndex(for: cellIndex)
         guard flightInfos.count > index else { return nil}
         return flightInfos[index]
     }
     
-    public func getDeparture(for cellIndex: Int) -> Airport? {
+    func getDeparture(for cellIndex: Int) -> Airport? {
         let index: Int = getFlightInfoIndex(for: cellIndex)
         guard flightInfos.count > index else { return nil}
         return flightInfos[index].departure
     }
     
-    public mutating func setDeparture(for cellIndex: Int, value: Airport) {
+    mutating func setDeparture(for cellIndex: Int, value: Airport) {
         let index: Int = getFlightInfoIndex(for: cellIndex)
         guard flightInfos.count > index else { return }
         var flightInfo = flightInfos[index]
@@ -299,13 +299,13 @@ public struct FlightSearchViewModel {
         flightInfos[index] = flightInfo
     }
     
-    public func getArrival(for cellIndex: Int) -> Airport? {
+    func getArrival(for cellIndex: Int) -> Airport? {
         let index: Int = getFlightInfoIndex(for: cellIndex)
         guard flightInfos.count > index else { return nil}
         return flightInfos[index].arrival
     }
     
-    public mutating func setArrival(for cellIndex: Int, value: Airport) {
+    mutating func setArrival(for cellIndex: Int, value: Airport) {
         let index: Int = getFlightInfoIndex(for: cellIndex)
         guard flightInfos.count > index else { return }
         var flightInfo = flightInfos[index]
@@ -324,7 +324,7 @@ public struct FlightSearchViewModel {
         }
     }
 
-    public mutating func swapAirports(for cellIndex: Int) {
+    mutating func swapAirports(for cellIndex: Int) {
         let index: Int = getFlightInfoIndex(for: cellIndex)
         guard flightInfos.count > index else { return }
 
@@ -338,11 +338,11 @@ public struct FlightSearchViewModel {
     
     //MARK:- First Last Info
     
-    public var firstAirportIata: String {
+    var firstAirportIata: String {
         return flightInfos.first?.departure?.iata ?? ""
     }
     
-    public var lastAirportIata: String {
+    var lastAirportIata: String {
         
         if flightRouteType == .multiCity {
             return flightInfos.last?.arrival?.iata ?? ""
@@ -351,11 +351,11 @@ public struct FlightSearchViewModel {
         }
     }
     
-    public var firstDate: Date? {
+    var firstDate: Date? {
         return flightInfos.first?.dateRange?.lowerBound
     }
     
-    public var lastDate: Date? {
+    var lastDate: Date? {
         switch flightRouteType {
         case .round:
             return flightInfos.first?.dateRange?.upperBound
@@ -368,13 +368,13 @@ public struct FlightSearchViewModel {
     
     //MARK:- Date
     
-    public func getDate(for cellIndex: Int) -> Date? {
+    func getDate(for cellIndex: Int) -> Date? {
         let index: Int = getFlightInfoIndex(for: cellIndex)
         guard flightInfos.count > index else { return nil}
         return flightInfos[index].dateRange?.lowerBound
     }
     
-    public mutating func setDate(for cellIndex: Int, value: Date) {
+    mutating func setDate(for cellIndex: Int, value: Date) {
         let index: Int = getFlightInfoIndex(for: cellIndex)
         guard flightInfos.count > index else { return }
         var flightInfo = flightInfos[index]
@@ -385,7 +385,7 @@ public struct FlightSearchViewModel {
         travellerClassViewModel.travelDate = value
     }
 
-    public func getSourceDestCode(for cellIndex: Int) -> (String, String)? {
+    func getSourceDestCode(for cellIndex: Int) -> (String, String)? {
         let index: Int = getFlightInfoIndex(for: cellIndex)
         guard flightInfos.count > index else { return nil }
         if let src = flightInfos[index].departure?.iata, let dest = flightInfos[index].arrival?.iata {
@@ -394,13 +394,13 @@ public struct FlightSearchViewModel {
         return nil
     }
     
-    public func getDateRange(for cellIndex: Int) -> ClosedRange<Date>? {
+    func getDateRange(for cellIndex: Int) -> ClosedRange<Date>? {
         let index: Int = getFlightInfoIndex(for: cellIndex)
         guard flightInfos.count > index else { return nil}
         return flightInfos[index].dateRange
     }
     
-    public mutating func setDateRange(for cellIndex: Int, value: ClosedRange<Date>) {
+    mutating func setDateRange(for cellIndex: Int, value: ClosedRange<Date>) {
         let index: Int = getFlightInfoIndex(for: cellIndex)
         guard flightInfos.count > index else { return }
         var flightInfo = flightInfos[index]
@@ -411,7 +411,7 @@ public struct FlightSearchViewModel {
         travellerClassViewModel.travelDate = value.lowerBound
     }
     
-    public func getformatedDateString(for cellIndex: Int) -> String? {
+    func getformatedDateString(for cellIndex: Int) -> String? {
         let index: Int = getFlightInfoIndex(for: cellIndex)
         guard flightInfos.count > index else { return nil }
         let flightInfo = flightInfos[index]
@@ -435,16 +435,16 @@ public struct FlightSearchViewModel {
     }
 
     //MARK: Extended Properties
-    public var hasMoreRoutes: Bool {
+    var hasMoreRoutes: Bool {
         return flightInfos.count < maxRoute
     }
     
-    public var addedNewRoute: Bool {
+    var addedNewRoute: Bool {
         let routeCount = flightInfos.count
         return routeCount > 2
     }
     
-    public var flightLeg: Int {
+    var flightLeg: Int {
         switch flightRouteType {
         case .oneWay:
             return 1

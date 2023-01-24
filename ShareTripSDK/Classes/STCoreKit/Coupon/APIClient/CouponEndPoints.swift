@@ -9,11 +9,12 @@
 import Alamofire
 
 enum CouponEndPoints: APIEndpoint {
+   
     case validateCoupon(params: Parameters)
     case checkGPStar(GPStarRequest)
     case verifyOTP(GPStarRequest)
     
-    var method: HTTPMethod {
+    var method: Alamofire.HTTPMethod {
         switch self {
         case .validateCoupon, .checkGPStar, .verifyOTP:
             return .post

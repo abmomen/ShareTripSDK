@@ -8,7 +8,7 @@
 import UIKit
 
 
-public protocol FlightPassengerInfoViewModelViewDelegate: AnyObject {
+protocol FlightPassengerInfoViewModelViewDelegate: AnyObject {
     func validationError(for indexPath: IndexPath, message: String, completion: (()->Void)?)
     func onDataChanged(viewModel: FlightPassengerInfoViewModel)
     func onAddUpdateStatusChanged(viewModel: FlightPassengerInfoViewModel)
@@ -20,10 +20,10 @@ public protocol FlightPassengerInfoViewModelViewDelegate: AnyObject {
     func passengerInfoInputDidFinish()
 }
 
-public class FlightPassengerInfoViewModel {
-    public var addressCellIndex = 0
-    public var passengerInfo: PassengerInfo
-    public weak var viewDelegate: FlightPassengerInfoViewModelViewDelegate?
+class FlightPassengerInfoViewModel {
+    var addressCellIndex = 0
+    var passengerInfo: PassengerInfo
+    weak var viewDelegate: FlightPassengerInfoViewModelViewDelegate?
 
     private var accountService: AccountService
     private var isPrimaryPassenger: Bool
@@ -80,9 +80,9 @@ public class FlightPassengerInfoViewModel {
     private var travelInsuranceOrignalData: [TravelInsuranceData] = [TravelInsuranceData]()
     private var travelInsuranceDetails: [TravelInsuranceDetails] = [TravelInsuranceDetails]()
     
-    public var shouldAddUpdatePassenger: Bool = true
+    var shouldAddUpdatePassenger: Bool = true
     
-    public var sections: [[UserInfoRowType]] {
+    var sections: [[UserInfoRowType]] {
         var rows: [UserInfoRowType] = [.quickPick, .givenName, .surName]
         if isSoudiAirline {
             rows.append(.nameInputGuideline)
@@ -127,7 +127,7 @@ public class FlightPassengerInfoViewModel {
     
     // MARK: - Initialzers
     
-    public init(
+    init(
         passengerInfo: PassengerInfo,
         accountService: AccountService,
         isDomesticFlight: Bool,
@@ -155,18 +155,18 @@ public class FlightPassengerInfoViewModel {
     
     // MARK: Protocol conformation
     
-    public var isLoading: Observable<Bool> = Observable(false)
-    public var uploadingFile: Observable<FileType?> = Observable(nil)
+    var isLoading: Observable<Bool> = Observable(false)
+    var uploadingFile: Observable<FileType?> = Observable(nil)
     
-    public var numberOfSection: Int {
+    var numberOfSection: Int {
         return sections.count
     }
     
-    public func numberOfRows(in section: Int) -> Int {
+    func numberOfRows(in section: Int) -> Int {
         return sections[section].count
     }
     
-    public var selectedIndex: Int {
+    var selectedIndex: Int {
         if isDomesticFlight {
             return selectedTravelInsuranceOptionIndex
         } else {
@@ -174,7 +174,7 @@ public class FlightPassengerInfoViewModel {
         }
     }
     
-    public func dataForRow(at indexPath: IndexPath) -> ConfigurableTableViewCellData? {
+    func dataForRow(at indexPath: IndexPath) -> ConfigurableTableViewCellData? {
         let rowType = sections[indexPath.section][indexPath.row]
         let isOptional = FlightPassengerInfoValidator.isOptional(rowType: rowType, isPrimaryPassenger: isPrimaryPassenger, isDomesticFlight: isDomesticFlight, isAttachmentAvailable: self.isAttachmentAvailable)
         switch rowType {
@@ -308,7 +308,7 @@ public class FlightPassengerInfoViewModel {
     }
     
     //MARK:- Meal Preference and WheelChair Functionalities
-    public func getSelectedMealPreferenceIndex() -> Int {
+    func getSelectedMealPreferenceIndex() -> Int {
         if let pref = passengerInfo.mealPreferenceSSR {
             for (idx, ssr) in mealSSRList.enumerated() {
                 if ssr.code == pref {
@@ -319,7 +319,7 @@ public class FlightPassengerInfoViewModel {
         return 0
     }
     
-    public func onSelectMealPreference(index: Int) {
+    func onSelectMealPreference(index: Int) {
         if index == 0 {
             passengerInfo.mealPreferenceSSR = nil
             return
@@ -329,7 +329,7 @@ public class FlightPassengerInfoViewModel {
         
     }
     
-    public func getWheelChairOptions() -> [String] {
+    func getWheelChairOptions() -> [String] {
         var options = ["None"]
         wheelChairSSRList.forEach { ssr in
             options.append(ssr.name)
@@ -337,7 +337,7 @@ public class FlightPassengerInfoViewModel {
         return options
     }
     
-    public func getSelectedWheelChairOptionIndex() -> Int {
+    func getSelectedWheelChairOptionIndex() -> Int {
         if let pref = passengerInfo.wheelChairRequestSSR {
             for (idx, ssr) in wheelChairSSRList.enumerated() {
                 if ssr.code == pref {
@@ -348,7 +348,7 @@ public class FlightPassengerInfoViewModel {
         return 0
     }
     
-    public func onSelectWheelChairPreference(index: Int) {
+    func onSelectWheelChairPreference(index: Int) {
         if index == 0 {
             passengerInfo.wheelChairRequestSSR = nil
             return
@@ -357,7 +357,7 @@ public class FlightPassengerInfoViewModel {
         passengerInfo.wheelChairRequestSSR = wheelChairSSRList[index-1].code
     }
     
-    public func getMealPreferenceOptions() -> [String] {
+    func getMealPreferenceOptions() -> [String] {
         var options = ["None"]
         mealSSRList.forEach { ssr in
             options.append(ssr.name)
@@ -366,7 +366,7 @@ public class FlightPassengerInfoViewModel {
     }
     
     // MARK: - Travel Insurance Functionalities
-    public var travelInsuranceOptions: [String] {
+    var travelInsuranceOptions: [String] {
         var options = [String]()
         for item in 0..<travelInsuranceData.count {
             options.append(travelInsuranceData[item].dispayName ?? "")
@@ -374,7 +374,7 @@ public class FlightPassengerInfoViewModel {
         return options
     }
     
-    public var selectedTravelInsuranceOptionIndex: Int {
+    var selectedTravelInsuranceOptionIndex: Int {
         var defaultSelectedIndex = 0
         for item in 0..<travelInsuranceData.count {
             if travelInsuranceData[item].option?.defaultOption == 1 {
@@ -387,32 +387,32 @@ public class FlightPassengerInfoViewModel {
         return defaultSelectedIndex
     }
     
-    public var gettravelInsuranceDetails : (htmlStr: String, name: String) {
+    var gettravelInsuranceDetails : (htmlStr: String, name: String) {
         return (htmlStr: self.travelInsuranceDetailResponse?.description ?? "", name: self.travelInsuranceDetailResponse?.name ?? "")
     }
     
-    public func travelInsuranceNameTypeInfo(with index: Int, name: String) {
+    func travelInsuranceNameTypeInfo(with index: Int, name: String) {
         if travelInsuranceData.count > 0 {
             travelInsuranceData[index].dispayName = name
         }
     }
     
-    public func onSelectTravelInsurancePreference(index: Int) {
+    func onSelectTravelInsurancePreference(index: Int) {
         passengerInfo.travelInsurance = travelInsuranceData[index].isSelfRisk == 1 ? TravelInsuranceInfo(code: "", optionsCode: "") : TravelInsuranceInfo(code: travelInsuranceData[index].code ?? "", optionsCode: travelInsuranceData[index].option?.code ?? "")
     }
     
-    public func generateTravelInsuranceOptionsRowTypeData(wihSelected row: Int) {
+    func generateTravelInsuranceOptionsRowTypeData(wihSelected row: Int) {
         travelInsuranceOptionsRowTypeData.removeAll()
         for item in 0..<travelInsuranceData.count {
             travelInsuranceOptionsRowTypeData.append(travelInsuranceData[item].cellType)
         }
     }
     
-    public var travelInsuranceOptionsRowData: [TravelInsuranceOptionsRowType] {
+    var travelInsuranceOptionsRowData: [TravelInsuranceOptionsRowType] {
         return travelInsuranceOptionsRowTypeData
     }
     
-    public func getTravelInsuranceSubtitleString(using row: Int) -> String {
+    func getTravelInsuranceSubtitleString(using row: Int) -> String {
         var travelInsuranceSubTitleStr = ""
         if travelInsuranceData.count > 0 {
             travelInsuranceSubTitleStr = travelInsuranceData[row].dispayName ?? ""
@@ -420,7 +420,7 @@ public class FlightPassengerInfoViewModel {
         return travelInsuranceSubTitleStr
     }
     
-    public func getTravelInsurancePriceInfo(withSelected row: Int) -> NSMutableAttributedString {
+    func getTravelInsurancePriceInfo(withSelected row: Int) -> NSMutableAttributedString {
         let travelInsurancePriceStr: NSMutableAttributedString = NSMutableAttributedString()
         if travelInsuranceData.count > 0 {
             let priceString = NSAttributedString(string: (travelInsuranceData[row].option?.price ?? 0).withCommas() + "BDT ", attributes:
@@ -442,7 +442,7 @@ public class FlightPassengerInfoViewModel {
         return travelInsurancePriceStr
     }
     
-    public func generateTravelInsuranceData() {
+    func generateTravelInsuranceData() {
         self.travelInsuranceData.removeAll()
         
         let emptyChargeData = TravelInsuranceData()
@@ -485,7 +485,7 @@ public class FlightPassengerInfoViewModel {
         self.travelInsuranceData.append(emptylearnMoreData)
     }
     
-    public func nameVisibilityStatus(withSelected row: Int) {
+    func nameVisibilityStatus(withSelected row: Int) {
         for index in 0..<travelInsuranceData.count {
             travelInsuranceData[index].isVisibleName = false
         }
@@ -497,7 +497,7 @@ public class FlightPassengerInfoViewModel {
         }
     }
     
-    public func generateTravelInsuranceDetailData() {
+    func generateTravelInsuranceDetailData() {
         self.travelInsuranceDetails.removeAll()
         let totalOptions = self.travelInsuranceDataResponse?.count ?? 0
         
@@ -511,13 +511,13 @@ public class FlightPassengerInfoViewModel {
         }
     }
     
-    public var travelInsuranceDetailsData: [TravelInsuranceDetails] {
+    var travelInsuranceDetailsData: [TravelInsuranceDetails] {
         return self.travelInsuranceDetails
     }
     
     
     //MARK:- Covid19 Test Functionalities
-    public func getCovid19TestOptions() -> [String] {
+    func getCovid19TestOptions() -> [String] {
         var options = [String]()
         for item in 0..<covid19TestData.count {
             options.append(covid19TestData[item].displayName ?? "")
@@ -525,7 +525,7 @@ public class FlightPassengerInfoViewModel {
         return options
     }
     
-    public func getSelectedCovid19TestOptionIndex() -> Int {
+    func getSelectedCovid19TestOptionIndex() -> Int {
         var defaultSelectedIndex = 0
         for item in 0..<covid19TestData.count {
             if covid19TestData[item].isSelfTest == true {
@@ -538,17 +538,17 @@ public class FlightPassengerInfoViewModel {
         return defaultSelectedIndex
     }
     
-    public func getCovid19TestCenterDetails() -> (htmlStr: String, testCenterName: String){
+    func getCovid19TestCenterDetails() -> (htmlStr: String, testCenterName: String){
         return (htmlStr: self.covidTestCenterResponse?.description ?? "", testCenterName: self.covidTestCenterResponse?.name ?? "")
     }
     
-    public func setCovid19TestAddressInfo(with addressStr: String, and index: Int) {
+    func setCovid19TestAddressInfo(with addressStr: String, and index: Int) {
         if covid19TestData.count > 0 {
             covid19TestData[index].testAddress = addressStr
         }
     }
     
-    public func getCovid19TestAddressInfo(with index: Int) -> String {
+    func getCovid19TestAddressInfo(with index: Int) -> String {
         if covid19TestData.count > 0 {
             if covid19TestData[index].isAddressInfoVisible == true && covid19TestData[index].option?.isAddress == true {
                 return covid19TestData[index].testAddress ?? ""
@@ -557,12 +557,12 @@ public class FlightPassengerInfoViewModel {
         return ""
     }
     
-    public func onSelectCovid19TestPreference(index: Int) {
+    func onSelectCovid19TestPreference(index: Int) {
         let covidTestInfo = CovidTestInfo(code: covid19TestData[index].code ?? "", optionsCode: covid19TestData[index].option?.code ?? "", address: "", selfTest: covid19TestData[index].isSelfTest ?? false)
         passengerInfo.covid = covidTestInfo
     }
     
-    public func getPassengerAdditionalRequirements(with row: Int) -> PassengersAdditionalReq {
+    func getPassengerAdditionalRequirements(with row: Int) -> PassengersAdditionalReq {
         var additionalRequirements = PassengersAdditionalReq(
             selectedWheelChairOption: selectedWheelChairOption,
             selectedMealPreferenceOption: selectedMealOption
@@ -595,18 +595,18 @@ public class FlightPassengerInfoViewModel {
         }
     }
     
-    public func generateCovid19TestOptionRows() {
+    func generateCovid19TestOptionRows() {
         covid19TestOptionsRowTypeData.removeAll()
         for item in 0..<covid19TestData.count {
             covid19TestOptionsRowTypeData.append(covid19TestData[item].cellType)
         }
     }
     
-    public var covid19TestOptionsRowTypes: [Covid19TestOptionsRowType] {
+    var covid19TestOptionsRowTypes: [Covid19TestOptionsRowType] {
         return covid19TestOptionsRowTypeData
     }
     
-    public func getCovid19TestSubtitleString(using row: Int) -> String {
+    func getCovid19TestSubtitleString(using row: Int) -> String {
         var covid19TestSubtitleStr = ""
         
         guard row >= 0 && row < covid19TestData.count else { return covid19TestSubtitleStr }
@@ -622,7 +622,7 @@ public class FlightPassengerInfoViewModel {
         return covid19TestSubtitleStr
     }
     
-    public func getCovid19TestPriceInfo(withSelected row: Int) -> NSMutableAttributedString {
+    func getCovid19TestPriceInfo(withSelected row: Int) -> NSMutableAttributedString {
         let covidTestPriceString: NSMutableAttributedString = NSMutableAttributedString()
         if covid19TestData.count > 0 {
             let defaultDisocuntPrice = NSAttributedString(string:"0 BDT", attributes: [NSAttributedString.Key.foregroundColor: UIColor.orange,NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14)])
@@ -653,7 +653,7 @@ public class FlightPassengerInfoViewModel {
         return covidTestPriceString
     }
     
-    public func generateCovid19TestData() {
+    func generateCovid19TestData() {
         self.covid19TestData.removeAll()
         ///Add an empty cell data for amount cell
         let emptyTestChargeData = Covid19TestData(code: "-", name: nil, displayName: nil, isAddressInfoVisible: false, isSelfTest: false, testAddress: "", cellType: .testCharge, option: nil)
@@ -708,7 +708,7 @@ public class FlightPassengerInfoViewModel {
         self.covid19TestData.append(emptyLearnMoreData)
     }
     
-    public func setAddressVisibilityStatus(withSelected row: Int){
+    func setAddressVisibilityStatus(withSelected row: Int){
         for index in 0..<covid19TestData.count{
             covid19TestData[index].isAddressInfoVisible = false
         }
@@ -720,11 +720,11 @@ public class FlightPassengerInfoViewModel {
         }
     }
     
-    public func getAddressVisibilityStatus(withSelected row: Int) -> Bool {
+    func getAddressVisibilityStatus(withSelected row: Int) -> Bool {
         return covid19TestData[row].isAddressInfoVisible ?? false
     }
     
-    public func generateCovidTestCenterDetailsData() {
+    func generateCovidTestCenterDetailsData() {
         self.covid19TestCenterDetails.removeAll()
         let totalOptions = self.covid19TestDataResponse?.count ?? 0
         for option in 0..<totalOptions {
@@ -734,7 +734,7 @@ public class FlightPassengerInfoViewModel {
         }
     }
     
-    public func getCovidTestCenterDetailsData() -> [Covid19TestCenterDetails]{
+    func getCovidTestCenterDetailsData() -> [Covid19TestCenterDetails]{
         return self.covid19TestCenterDetails
     }
     
@@ -868,7 +868,7 @@ public class FlightPassengerInfoViewModel {
     }
 }
 //MARK:- API Calls
-public extension FlightPassengerInfoViewModel {
+extension FlightPassengerInfoViewModel {
     func fetchAdditionalRequirements(onCompletion: @escaping (Bool) -> Void) {
         isLoading.value = true
         fetchSSRCodes()
@@ -995,17 +995,17 @@ public extension FlightPassengerInfoViewModel {
     }
 }
 
-public struct Covid19TestData {
-    public let code: String?
-    public let name: String?
-    public let displayName: String?
-    public var isAddressInfoVisible: Bool?
-    public let isSelfTest: Bool?
-    public var testAddress: String?
-    public let cellType: Covid19TestOptionsRowType
-    public let option: CovidTestOptions?
+struct Covid19TestData {
+    let code: String?
+    let name: String?
+    let displayName: String?
+    var isAddressInfoVisible: Bool?
+    let isSelfTest: Bool?
+    var testAddress: String?
+    let cellType: Covid19TestOptionsRowType
+    let option: CovidTestOptions?
     
-    public init(code: String?, name: String?, displayName: String?, isAddressInfoVisible: Bool? = nil, isSelfTest: Bool?, testAddress: String? = nil, cellType: Covid19TestOptionsRowType, option: CovidTestOptions?) {
+    init(code: String?, name: String?, displayName: String?, isAddressInfoVisible: Bool? = nil, isSelfTest: Bool?, testAddress: String? = nil, cellType: Covid19TestOptionsRowType, option: CovidTestOptions?) {
         self.code = code
         self.name = name
         self.displayName = displayName
@@ -1031,28 +1031,28 @@ public struct Covid19TestData {
     }
 }
 
-public struct Covid19TestCenterDetails {
-    public let name: String?
-    public let imageUrl: String?
-    public let code: String
+struct Covid19TestCenterDetails {
+    let name: String?
+    let imageUrl: String?
+    let code: String
     
-    public init(name: String?, imageUrl: String?, code: String) {
+    init(name: String?, imageUrl: String?, code: String) {
         self.name = name
         self.imageUrl = imageUrl
         self.code = code
     }
 }
 
-public struct TravelInsuranceData {
-    public var code: String?
-    public var name: String?
-    public var dispayName: String?
-    public var isVisibleName: Bool?
-    public var isSelfRisk: Int
-    public var cellType: TravelInsuranceOptionsRowType
-    public var option: TravelInsuranceOption?
+struct TravelInsuranceData {
+    var code: String?
+    var name: String?
+    var dispayName: String?
+    var isVisibleName: Bool?
+    var isSelfRisk: Int
+    var cellType: TravelInsuranceOptionsRowType
+    var option: TravelInsuranceOption?
     
-    public init() {
+    init() {
         self.code = ""
         self.name = ""
         self.dispayName = nil
@@ -1093,12 +1093,12 @@ public struct TravelInsuranceData {
     }
 }
 
-public struct TravelInsuranceDetails {
-    public let name: String?
-    public let imageUrl: String?
-    public let code: String
+struct TravelInsuranceDetails {
+    let name: String?
+    let imageUrl: String?
+    let code: String
     
-    public init(name: String?, imageUrl: String?, code: String) {
+    init(name: String?, imageUrl: String?, code: String) {
         self.name = name
         self.imageUrl = imageUrl
         self.code = code
@@ -1106,7 +1106,7 @@ public struct TravelInsuranceDetails {
 }
 
 //MARK:- Submittion and delegate conformations
-public extension FlightPassengerInfoViewModel {
+extension FlightPassengerInfoViewModel {
     func submit() {
         for section in 0..<sections.count {
             for row in 0..<sections[section].count {
@@ -1188,7 +1188,7 @@ public extension FlightPassengerInfoViewModel {
 }
 
 //MARK:- TextInputDelegate
-public extension FlightPassengerInfoViewModel {
+extension FlightPassengerInfoViewModel {
     func didChangeText(for indexPath: IndexPath?, text: String?) {
         guard let indexPath = indexPath, let text = text else {
             return
@@ -1225,7 +1225,7 @@ public extension FlightPassengerInfoViewModel {
 }
 
 //MARK:- TextSelectionDelegate
-public extension FlightPassengerInfoViewModel {
+extension FlightPassengerInfoViewModel {
     func didSelectText(for indexPath: IndexPath?, text: String?, selectedRow: Int) {
         guard let indexPath = indexPath else { return }
                 
@@ -1243,7 +1243,7 @@ public extension FlightPassengerInfoViewModel {
     }
 }
 
-public extension FlightPassengerInfoViewModel {
+extension FlightPassengerInfoViewModel {
     func didSelectDate(for indexPath: IndexPath?, _ date: Date?) {
         guard let indexPath = indexPath, let date = date else { return }
         
@@ -1264,7 +1264,7 @@ public extension FlightPassengerInfoViewModel {
 }
 
 //MARK:- GenderSelectionDelegate
-public extension FlightPassengerInfoViewModel {
+extension FlightPassengerInfoViewModel {
     func genderSelectionChanged(for indexPath: IndexPath?, selectedGender: GenderType) {
         guard let indexPath = indexPath else {
             return
@@ -1280,7 +1280,7 @@ public extension FlightPassengerInfoViewModel {
 }
 
 //MARK:- InfoUploadCellDelegate
-public extension FlightPassengerInfoViewModel {
+extension FlightPassengerInfoViewModel {
     func uploadButtonTapped(type: FileType, indexPath: IndexPath) {
         let urlStr = type == .passport ? passengerInfo.passportURLStr : passengerInfo.visaURLStr
         if type == .passport {

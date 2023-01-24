@@ -75,7 +75,7 @@ enum RefundVoidEndPoints: APIEndpoint {
         }
     }
     
-    var method: HTTPMethod {
+    var method: Alamofire.HTTPMethod {
         switch self {
         case .refundableCustomers, .refundQuotation, .voidQuotation:
             return .get

@@ -8,9 +8,9 @@
 
 import FirebaseAnalytics
 
-public struct FlightEvent: STAnalyticsEvent {
-    public var name: String
-    public var payload: Payload?
+struct FlightEvent: STAnalyticsEvent {
+    var name: String
+    var payload: Payload?
 
     private static func getSearchEventName(by routeType: FlightRouteType) -> String {
         switch routeType {
@@ -23,7 +23,7 @@ public struct FlightEvent: STAnalyticsEvent {
         }
     }
 
-    public static func search(request: FlightSearchRequest) -> FlightEvent {
+    static func search(request: FlightSearchRequest) -> FlightEvent {
         let name = getSearchEventName(by: request.flightRouteType)
         let payload: Payload = [
             "origins": request.origins,
@@ -37,30 +37,30 @@ public struct FlightEvent: STAnalyticsEvent {
         return FlightEvent(name: name, payload: payload)
     }
 
-    public static func searchBusinessClass() -> FlightEvent {
+    static func searchBusinessClass() -> FlightEvent {
         FlightEvent(name: "Select_Business_Class")
     }
 
-    public static func clickOnPreferredAirline() -> FlightEvent {
+    static func clickOnPreferredAirline() -> FlightEvent {
         FlightEvent(name: "Click_On_Preferred_Airline")
     }
 
-    public static func clickOnBestDeal() -> FlightEvent {
+    static func clickOnBestDeal() -> FlightEvent {
         FlightEvent(name: "Click_On_Flight_Best_Deals")
     }
 
-    public static func clickOnFilter() -> FlightEvent {
+    static func clickOnFilter() -> FlightEvent {
         FlightEvent(name: "Click_On_Flight_Filter")
     }
 
-    public static func aplliedFilter(filterData: FlightFilterData) -> FlightEvent {
+    static func aplliedFilter(filterData: FlightFilterData) -> FlightEvent {
         FlightEvent(
             name: "Apply_Flight_Filter",
             payload: filterData.dictionary as? Payload
         )
     }
 
-    public static func clickOnSort(sortingCriteria: String) -> FlightEvent {
+    static func clickOnSort(sortingCriteria: String) -> FlightEvent {
         FlightEvent(
             name: "Click_On_Flight_Sort",
             payload: [
@@ -69,39 +69,39 @@ public struct FlightEvent: STAnalyticsEvent {
         )
     }
 
-    public static func viewFlightDetails() -> FlightEvent {
+    static func viewFlightDetails() -> FlightEvent {
         FlightEvent(name: "Click_On_Flight_Details")
     }
 
-    public static func clickOnRefundPolicy() -> FlightEvent {
+    static func clickOnRefundPolicy() -> FlightEvent {
         FlightEvent(name: "Click_On_Flight_Ticket_Refund_Policy")
     }
 
-    public static func clickOnAirFareRules() -> FlightEvent {
+    static func clickOnAirFareRules() -> FlightEvent {
         FlightEvent(name: "Click_On_Air_Fare_Rules")
     }
 
-    public static func clickOnBaggageInfo() -> FlightEvent {
+    static func clickOnBaggageInfo() -> FlightEvent {
         FlightEvent(name: "Click_On_Flight_Baggage")
     }
 
-    public static func clickOnRedeemTripcoin() -> FlightEvent {
+    static func clickOnRedeemTripcoin() -> FlightEvent {
         FlightEvent(name: "Click_On_Redeem_TC_In_Flight")
     }
 
-    public static func bookingButtonTapped() -> FlightEvent {
+    static func bookingButtonTapped() -> FlightEvent {
         FlightEvent(name: "Click_On_Flight_BookNow")
     }
 
-    public static func selectPassengerFromQuickPick() -> FlightEvent {
+    static func selectPassengerFromQuickPick() -> FlightEvent {
         FlightEvent(name: "Select_Passenger_from_QuickPick_In_Flight")
     }
 
-    public static func uploadPassport() -> FlightEvent {
+    static func uploadPassport() -> FlightEvent {
         FlightEvent(name: "Upload_Passport_Copy_In_Flight")
     }
     
-    public static func initalCheckoutFlight() -> FlightEvent {
+    static func initalCheckoutFlight() -> FlightEvent {
         FlightEvent(name: "Initial_Checkout_Flight")
     }
 }

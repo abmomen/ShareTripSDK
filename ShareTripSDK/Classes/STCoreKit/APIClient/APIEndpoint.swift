@@ -7,7 +7,7 @@
 
 import Alamofire
 
-public protocol APIEndpoint: URLRequestConvertible, URLConvertible {
+protocol APIEndpoint: URLRequestConvertible, URLConvertible {
     var path: String { get }
     var method: Alamofire.HTTPMethod { get }
     var parameters: Parameters? { get }
@@ -18,7 +18,7 @@ public protocol APIEndpoint: URLRequestConvertible, URLConvertible {
     func asURL() throws -> URL
 }
 
-public extension APIEndpoint {
+extension APIEndpoint {
     /// Default content type, you can always provide your own
     var contentType: ContentType? { .json }
     
@@ -30,7 +30,7 @@ public extension APIEndpoint {
 }
 
 
-public extension APIEndpoint  {
+extension APIEndpoint  {
     // Encode complex key/value objects in URLQueryItem pairs
     private func queryItems(_ key: String, _ value: Any?) -> [URLQueryItem] {
         var result = [] as [URLQueryItem]
