@@ -29,16 +29,21 @@ class MyBLHomeViewModel {
     private(set) var deals: [NotifierDeal] = []
     
     var callbacks = Callbacks()
+    private var offset = 0
+    private let limit = 10
     
     func fetchDeals() {
-        DealsAPIClient.fetchDeals {[weak self] result in
+        if offset != 0 && offset == deals.count { return }
+        self.offset = deals.count
+        
+        DealsAPIClient.fetchDeals(offset: offset, limit: limit) {[weak self] result in
             switch result {
             case .success(let success):
                 guard let response = success.response else {
                     self?.callbacks.didFailed("Response is not available")
                     return
                 }
-                self?.deals = response?.data ?? []
+                self?.deals.append(contentsOf: response?.data ?? [])
                 self?.callbacks.didSuccess()
                 
             case .failure(let failure):
