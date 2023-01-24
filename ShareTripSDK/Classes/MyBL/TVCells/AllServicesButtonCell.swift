@@ -36,8 +36,10 @@ class AllServicesButtonCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        selectionStyle = .none
+        
         containerView.layer.cornerRadius = 16
-
+        
         planeImageView.image = UIImage(named: "airplane-icon")
         hotelImageView.image = UIImage(named: "hotel-icon")
         visaImageView.image = UIImage(named: "visa-icon")
