@@ -18,7 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         
-        
         let accessToken = "$2b$10$pv.ZAnzyuSTD7GIMm/yHL.hdPTFQgUDN2rfXPnQXh67e4JsKJ0Fl."
         ShareTripSDK.configure(accessToken)
         let navigationController = NavigationController(rootViewController: MyBLHomeVC.instantiate())

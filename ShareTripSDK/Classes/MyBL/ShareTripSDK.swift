@@ -13,11 +13,19 @@ public final class ShareTripSDK {
     private static var accessToken = ""
     
     public static func configure(_ accessToken: String) {
-        self.accessToken = accessToken
-        STUserSession.current.authToken = AuthToken(accessToken: accessToken, loginType: .phone)
-        IQKeyboardManager.shared.enable = true
         FirebaseApp.configure()
+        self.accessToken = accessToken
+        Constants.sdkColorTheme = .banglalink
+        IQKeyboardManager.shared.enable = true
+        STUserSession.current.authToken = AuthToken(accessToken: accessToken, loginType: .phone)
+        
+        
     }
+}
+
+enum SDKColorThemes {
+    case sharetrip
+    case banglalink
 }
 
 extension ShareTripSDK {

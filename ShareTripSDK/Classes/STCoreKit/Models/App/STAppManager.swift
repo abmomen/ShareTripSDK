@@ -8,19 +8,19 @@
 import UIKit
 import FirebaseRemoteConfig
 
-public class STAppManager {
-    public static let shared = STAppManager()
+class STAppManager {
+    static let shared = STAppManager()
 
     //declare this property where it won't go out of scope relative to your listener
-    public let reachability: Reachability!
-    public var offlineVC: OfflineVC?
+    let reachability: Reachability!
+    var offlineVC: OfflineVC?
 
     //MARK: Stored Property
-    public var userAccount: STUserAccount?
-    public var popularCity: CityProperty?
-    public var popularCities: [STCity] = []
-    public var popularAirports: [Airport] = []
-    public var isNotificationEnabled = false
+    var userAccount: STUserAccount?
+    var popularCity: CityProperty?
+    var popularCities: [STCity] = []
+    var popularAirports: [Airport] = []
+    var isNotificationEnabled = false
 
     //MARK: Firebase Remote Config
     //let remoteConfig = RemoteConfig.remoteConfig()
@@ -44,7 +44,7 @@ public class STAppManager {
     }
 
 
-    public func setupRemoteConfigDefaults() {
+    func setupRemoteConfigDefaults() {
         RemoteConfig.remoteConfig().setDefaults(fromPlist: "RemoteConfigDefaults")
     }
 
@@ -91,7 +91,7 @@ public class STAppManager {
     private var remoteConfigAppVersion: String?
     private var minimumWaitHourThreshold: Int64?
     private var forceUpdateEnabled: Bool = false
-    public func checkAppVersion() {
+    func checkAppVersion() {
         guard let currentVersionString = Bundle.main.infoDictionary?[Constants.App.bundleShortVersionString] as? String else { return }
         if let latestVersion = remoteConfigAppVersion,
            let waitThreshold = minimumWaitHourThreshold {
@@ -146,7 +146,7 @@ public class STAppManager {
         UIApplication.topViewController?.present(appUpdateAlert!, animated: true, completion: nil)
     }
 
-    public func fetchFlightSearchDayOffset() {
+    func fetchFlightSearchDayOffset() {
         let remoteConfig = RemoteConfig.remoteConfig()
         STAppManager.shared.setupRemoteConfigDefaults()
         remoteConfig.fetch { (status, error) -> Void in
@@ -174,11 +174,11 @@ public class STAppManager {
     }
 
     //MARK: - User
-    public var isUserLoggedIn : Bool {
+    var isUserLoggedIn : Bool {
         return STUserSession.current.isUserLoggedIn()
     }
 
-    public func getUserInfo(completion:@escaping (Response<STUserAccount>?) -> Void) {
+    func getUserInfo(completion:@escaping (Response<STUserAccount>?) -> Void) {
         DefaultAPIClient().getUserInfo { (result) in
             switch result {
             case .success(let response):
@@ -195,7 +195,7 @@ public class STAppManager {
         }
     }
 
-    public func updateUserInfoBy(adding tripCoin: Int, completion:((STUserAccount?) -> Void)? = nil) {
+    func updateUserInfoBy(adding tripCoin: Int, completion:((STUserAccount?) -> Void)? = nil) {
         guard let user = userAccount else {
             completion?(nil)
             return
@@ -205,12 +205,12 @@ public class STAppManager {
         completion?(user)
     }
 
-    public var shareTripCoin: Int {
+    var shareTripCoin: Int {
         return userAccount?.coinSettings?.referCoin ?? 50
     }
 
     //MARK: - Reachability
-    public func startNotifyingReachability() {
+    func startNotifyingReachability() {
         reachability.whenReachable = { reachability in
             if reachability.connection == .wifi {
                 STLog.info("Reachable via WiFi")
@@ -245,7 +245,7 @@ public class STAppManager {
     }
 
     //MARK: - Others
-    public func hasAppAlreadyLaunchedOnce() -> Bool {
+    func hasAppAlreadyLaunchedOnce() -> Bool {
         let defaults = UserDefaults.standard
         if defaults.bool(forKey: Constants.App.hasLaunchedOnce) {
             STLog.info("App already launched")
@@ -257,7 +257,7 @@ public class STAppManager {
         }
     }
 
-    public class func getCountryList() -> [Country] {
+    class func getCountryList() -> [Country] {
         if let url = ShareTripSDK.bundle.url(forResource:  "Countries", withExtension: "json") {
             do {
                 let data = try Data(contentsOf: url)

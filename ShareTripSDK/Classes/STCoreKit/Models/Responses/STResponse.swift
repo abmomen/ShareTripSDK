@@ -7,10 +7,10 @@
 
 import Foundation
 
-public class BaseResponse: Codable {
-    public let code: APIResponseCode
-    public let message: String
-    public let errors: [String]?
+class BaseResponse: Codable {
+    let code: APIResponseCode
+    let message: String
+    let errors: [String]?
     
     private enum CodingKeys: String, CodingKey {
         case code
@@ -18,7 +18,7 @@ public class BaseResponse: Codable {
         case errors
     }
     
-    public required init(from decoder: Decoder) throws {
+    required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.message = try container.decodeIfPresent(String.self, forKey: .message) ?? "Successfull"
         let errors = try? container.decodeIfPresent([String].self, forKey: .errors)
@@ -35,22 +35,22 @@ public class BaseResponse: Codable {
     }
 }
 
-public class Response<T: Decodable>: BaseResponse {
-    public let response: T?
+class Response<T: Decodable>: BaseResponse {
+    let response: T?
     
     private enum CodingKeys: String, CodingKey {
         case response
     }
     
-    public required init(from decoder: Decoder) throws {
+    required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.response = try? container.decodeIfPresent(T.self, forKey: .response)
         try super.init(from: decoder)
     }
 }
 
-public class ResponseList<T: Codable>: BaseResponse {
-    public let response: [T]?
+class ResponseList<T: Codable>: BaseResponse {
+    let response: [T]?
     
     private enum CodingKeys: String, CodingKey {
         case response
@@ -63,19 +63,19 @@ public class ResponseList<T: Codable>: BaseResponse {
     }
 }
 
-public class PackageBookingResponse: Codable {
-    public let url: String
+class PackageBookingResponse: Codable {
+    let url: String
 }
 
-public class FlightBookingResponse: BaseResponse {
-    public var response: String?
-    public var newResponse: BookingUrlResponse?
+class FlightBookingResponse: BaseResponse {
+    var response: String?
+    var newResponse: BookingUrlResponse?
     
     private enum CodingKeys: String, CodingKey {
         case response
     }
     
-    public required init(from decoder: Decoder) throws {
+    required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         if let strResp = try? container.decodeIfPresent(String.self, forKey: .response) {
             self.response = strResp
@@ -87,28 +87,28 @@ public class FlightBookingResponse: BaseResponse {
     }
 }
 
-public struct BookingUrlResponse: Decodable {
-    public let paymentUrl, successUrl, cancelUrl, declineUrl: String?
+struct BookingUrlResponse: Decodable {
+    let paymentUrl, successUrl, cancelUrl, declineUrl: String?
 }
 
-public class UploadFileResponse: Codable {
-    public let path: String
+class UploadFileResponse: Codable {
+    let path: String
 }
 
-public class ShareResponse: BaseResponse {
-    public let response: String
+class ShareResponse: BaseResponse {
+    let response: String
     
     private enum CodingKeys: String, CodingKey {
         case response
     }
     
-    public required init(from decoder: Decoder) throws {
+    required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.response = try container.decodeIfPresent(String.self, forKey: .response) ?? "0"
         try super.init(from: decoder)
     }
     
-    public var earnedCoin: Int {
+    var earnedCoin: Int {
         return Int(response) ?? 0
     }
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class SingleCellShareView: UIView, NibBased {
+class SingleCellShareView: UIView, NibBased {
     
     @IBOutlet private weak var shareLabel: UILabel!
     @IBOutlet private weak var shareButton: UIButton!

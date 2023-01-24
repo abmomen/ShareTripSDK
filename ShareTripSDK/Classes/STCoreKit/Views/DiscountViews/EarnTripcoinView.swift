@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class EarnTripcoinView: UIStackView, NibBased {
+class EarnTripcoinView: UIStackView, NibBased {
     
     @IBOutlet private weak var checkbox: GDCheckbox!
     @IBOutlet private weak var collapsibleContainer: UIView!

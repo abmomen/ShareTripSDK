@@ -32,7 +32,7 @@ public extension UIColor {
     static var appPrimary: UIColor {
         //clearBlue
         //return UIColor(hex: 0x1882ff)
-        return UIColor.clearBlue
+        return Constants.primaryColor
     }
     
     static var appPrimaryLight: UIColor {
@@ -49,8 +49,7 @@ public extension UIColor {
     }
     
     @nonobjc class var clearBlue: UIColor {
-        return UIColor(red: 28/255.0, green: 175/255.0, blue: 104/255.0, alpha: 1)
-        //UIColor(red: 24.0 / 255.0, green: 130.0 / 255.0, blue: 1.0, alpha: 1.0)
+        return UIColor(red: 24.0 / 255.0, green: 130.0 / 255.0, blue: 1.0, alpha: 1.0)
     }
     
     @nonobjc class var skyBlue: UIColor {

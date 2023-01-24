@@ -10,7 +10,7 @@ import UIKit
 import PKHUD
 import AuthenticationServices
 
-public class AuthVC: UIViewController {
+class AuthVC: UIViewController {
     
     @IBOutlet weak private var entryView: UIView!
     @IBOutlet weak private var loginEmailView: UIView!

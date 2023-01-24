@@ -7,7 +7,7 @@
 
 import UIKit
 
-public protocol Validatable {
+protocol Validatable {
     func validate() -> Result<Void, AppError>
 }
 
@@ -19,7 +19,7 @@ public protocol NibBased {
     static func instantiate() -> Self
 }
 
-public extension NibBased where Self: UIView {
+extension NibBased where Self: UIView {
     /// Name of the nib file from which UIView will be instantiated
     /// Must override this property if nib name is different from UIView's name
     static var nibName: String {

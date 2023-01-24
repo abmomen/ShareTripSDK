@@ -8,7 +8,7 @@
 
 import UIKit
 
-public enum paymentGatewayType: String {
+enum paymentGatewayType: String {
     case visa     = "visa"
     case flight   = "flight"
     case hotel    = "hotel"
@@ -17,23 +17,23 @@ public enum paymentGatewayType: String {
     case holiday  = "Package"
 }
 
-public enum paymentGatewayCurrency: String, Codable {
+enum paymentGatewayCurrency: String, Codable {
     case all = "ALL"
     case usd = "USD"
     case bdt = "BDT"
 }
 
-public protocol PaymentGatewaysViewDelegate: AnyObject {
+protocol PaymentGatewaysViewDelegate: AnyObject {
     func onPaymentGatewayFetchingFailed(with error: String)
     func onSelectGateway(paymentGateway: PaymentGateway?, selectedGatewaySeries: GatewaySeries?)
     func onFilterPaymentGateway(allPaymentGateways: [PaymentGateway], dafultPaymentGateway: PaymentGateway?)
 }
 
-public extension PaymentGatewaysViewDelegate {
+extension PaymentGatewaysViewDelegate {
     func onFilterPaymentGateway(dafultDiscountTypePaymentGateway: PaymentGateway) {}
 }
 
-public class PaymentGatewaysView: UIView, NibBased {
+class PaymentGatewaysView: UIView, NibBased {
     
     // MARK: - IBOutlets
     @IBOutlet private weak var paymentGatewayCollectionView: UICollectionView!
@@ -51,7 +51,7 @@ public class PaymentGatewaysView: UIView, NibBased {
     private var defaultSelectedIndexPath = IndexPath(row: 0, section: 0)
     private var initialSetupPerformed: Bool = false
     
-    public weak var delegate: PaymentGatewaysViewDelegate?
+    weak var delegate: PaymentGatewaysViewDelegate?
     
     // MARK: - Private Properties
     private let pageControl: UIPageControl = {
@@ -62,7 +62,7 @@ public class PaymentGatewaysView: UIView, NibBased {
         return pageControl
     }()
     
-    public private(set) var paymentGatewayLoading: Observable<Bool> = Observable(false)
+    private(set) var paymentGatewayLoading: Observable<Bool> = Observable(false)
     private lazy var cardPrefixPicker: DataPickerView =  {
         let pickerView = DataPickerView()
         pickerView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
@@ -95,7 +95,7 @@ public class PaymentGatewaysView: UIView, NibBased {
         return allPaymentGateways.filter(filter)
     }
     
-    public func configure(_ serviceType: PaymentGatewayType, _ currency: String) {
+    func configure(_ serviceType: PaymentGatewayType, _ currency: String) {
         viewModel = PaymentGatewaysViewModel(serviceType, currency)
         viewModel.fetchPaymentGateways()
         handleNetworkResponse()
@@ -113,7 +113,7 @@ public class PaymentGatewaysView: UIView, NibBased {
     }
     
     // MARK: - Life Cycle Methods
-    public override func awakeFromNib() {
+    override func awakeFromNib() {
         super.awakeFromNib()
 
         paymentGatewayCollectionView.registerCell(PaymentGatewayCell.self)
@@ -194,7 +194,7 @@ public class PaymentGatewaysView: UIView, NibBased {
     
     
     //MARK: - Payment getway property and methods
-    public func filterPaymentGateways(filter: @escaping (PaymentGateway) -> Bool) {
+    func filterPaymentGateways(filter: @escaping (PaymentGateway) -> Bool) {
         self.filter = filter
         resetData()
         pageControl.numberOfPages = setPageControllerPages()
@@ -249,11 +249,11 @@ public class PaymentGatewaysView: UIView, NibBased {
 
 //MARK: - UICollectionview DataSource and Delegates
 extension PaymentGatewaysView: UICollectionViewDataSource {
-    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return paymentGateways.count
     }
     
-    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let paymentGateway = paymentGateways[indexPath.row]
         let cell = collectionView.dequeueReusableCell(forIndexPath: indexPath) as PaymentGatewayCell
         cell.configure(imageLink: paymentGateway.logo.small)
@@ -278,7 +278,7 @@ extension PaymentGatewaysView: UICollectionViewDataSource {
 }
 
 extension PaymentGatewaysView: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-    public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let paymentGateway = paymentGateways[indexPath.row]
         cardPrefixTextField.text = nil
         
@@ -307,18 +307,18 @@ extension PaymentGatewaysView: UICollectionViewDelegate, UICollectionViewDelegat
         selectedGateWaySeries = nil
     }
     
-    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: paymentOptionsCellWidth, height: paymentOptionsCellHeight)
     }
 }
 
 //MARK: - PageController Functionality
 extension PaymentGatewaysView {
-    public func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         getVisibleCollectionviewCells()
     }
     
-    public func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         getVisibleCollectionviewCells()
     }
     

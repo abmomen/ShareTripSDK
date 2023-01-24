@@ -115,7 +115,7 @@ public class PassengerInfo {
     }
 }
 
-public extension PassengerInfo {
+extension PassengerInfo {
     func validationState(for rowType: UserInfoRowType, isOptional: Bool) -> ValidationState {
         let result = validateInfo(for: rowType, isOptional: isOptional)
         switch result {

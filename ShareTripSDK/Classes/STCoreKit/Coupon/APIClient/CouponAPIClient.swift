@@ -8,18 +8,18 @@
 
 import Alamofire
 
-public class CouponAPIClient: APIClient {
-    public init() {}
+class CouponAPIClient: APIClient {
+    init() {}
     
-    public func applyCoupon(params: [String: Any], completion: @escaping (AFResult<Response<CouponApplyResponse>>) -> Void) {
+    func applyCoupon(params: [String: Any], completion: @escaping (AFResult<Response<CouponApplyResponse>>) -> Void) {
         performRequest(route: CouponEndPoints.validateCoupon(params: params), completion: completion)
     }
     
-    public func checkGPStar(request: GPStarRequest, completion: @escaping (AFResult<Response<GPStarPhoneCheckResponse>>) -> Void) {
+    func checkGPStar(request: GPStarRequest, completion: @escaping (AFResult<Response<GPStarPhoneCheckResponse>>) -> Void) {
         performRequest(route: CouponEndPoints.checkGPStar(request), completion: completion)
     }
     
-    public func verifyOTP(request: GPStarRequest, completion: @escaping (AFResult<Response<GPStarOTPCheckResponse>>) -> Void) {
+    func verifyOTP(request: GPStarRequest, completion: @escaping (AFResult<Response<GPStarOTPCheckResponse>>) -> Void) {
         performRequest(route: CouponEndPoints.verifyOTP(request), completion: completion)
     }
 }

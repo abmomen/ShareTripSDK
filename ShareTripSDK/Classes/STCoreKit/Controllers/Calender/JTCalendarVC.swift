@@ -9,17 +9,17 @@
 import UIKit
 import JTAppleCalendar
 
-public protocol JTCalendarVCDelegate: AnyObject {
+protocol JTCalendarVCDelegate: AnyObject {
     func dateSelectionChanged(selectedDate: Date, for indexPath: IndexPath?)
     func dateSelectionChanged(firstDate: Date, secondDate: Date, for indexPath: IndexPath?)
 }
 
-public extension JTCalendarVCDelegate {
+extension JTCalendarVCDelegate {
     func dateSelectionChanged(selectedDate: Date, for indexPath: IndexPath?) {}
     func dateSelectionChanged(firstDate: Date, secondDate: Date, for indexPath: IndexPath?) {}
 }
 
-public protocol JTCalendarViewModelProvider {
+protocol JTCalendarViewModelProvider {
     var minAllowableDate: Date? { get }
     var maxAllowableDate: Date? { get }
     var firstDate: Date? { get }
@@ -32,11 +32,12 @@ public protocol JTCalendarViewModelProvider {
     func positionTypeForDate(_ date: Date, cellSate: CellState) -> SelectionRangePosition
 }
 
-open class JTCalendarVC: UIViewController, JTACMonthViewDataSource, JTACMonthViewDelegate {
+class JTCalendarVC: UIViewController, JTACMonthViewDataSource, JTACMonthViewDelegate {
     
-    public var calendarView: JTCalendarView!
-    public var calendar: JTACMonthView { calendarView.calendar }
-    public override func loadView() {
+    var calendarView: JTCalendarView!
+    var calendar: JTACMonthView { calendarView.calendar }
+    
+    override func loadView() {
         super.loadView()
         loadNibs()
     }
@@ -78,7 +79,7 @@ open class JTCalendarVC: UIViewController, JTACMonthViewDataSource, JTACMonthVie
     
     /// Must be called before view did load to function properly
     /// If date selection mode is .single, secondComponent is ignored
-    public func configure(
+    func configure(
         calendarTitle: String? = nil,
         minAllowableDate: Date? = nil,
         maxAllowableDate: Date? = nil,
@@ -99,7 +100,7 @@ open class JTCalendarVC: UIViewController, JTACMonthViewDataSource, JTACMonthVie
         self.indexPath = indexPath
     }
     
-    public func configure(
+    func configure(
         calendarTitle: String? = nil,
         minAllowableDate: Date? = nil,
         maxAllowableDate: Date? = nil,
@@ -120,7 +121,7 @@ open class JTCalendarVC: UIViewController, JTACMonthViewDataSource, JTACMonthVie
         self.indexPath = indexPath
     }
     
-    public var viewModel: JTCalendarViewModelProvider!
+    var viewModel: JTCalendarViewModelProvider!
     open override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -237,7 +238,7 @@ open class JTCalendarVC: UIViewController, JTACMonthViewDataSource, JTACMonthVie
     }
     
     // MARK: - JTACMonthViewDataSource
-    public func configureCalendar(_ calendar: JTACMonthView) -> ConfigurationParameters {
+    func configureCalendar(_ calendar: JTACMonthView) -> ConfigurationParameters {
         let calendarDateRange = viewModel.calendarDateRange
         return ConfigurationParameters(
             startDate: calendarDateRange.startDate,
@@ -249,32 +250,32 @@ open class JTCalendarVC: UIViewController, JTACMonthViewDataSource, JTACMonthVie
     }
     
     // MARK: - JTACMonthViewDelegate
-    public func calendar(_ calendar: JTACMonthView, cellForItemAt date: Date, cellState: CellState, indexPath: IndexPath) -> JTACDayCell {
+    func calendar(_ calendar: JTACMonthView, cellForItemAt date: Date, cellState: CellState, indexPath: IndexPath) -> JTACDayCell {
         let cell = calendar.dequeueReusableJTAppleCell(withReuseIdentifier: "\(JTDateCell.self)", for: indexPath)
         configureCell(cell, cellState: cellState, date: date)
         return cell
     }
     
-    public func calendar(_ calendar: JTACMonthView, willDisplay cell: JTACDayCell, forItemAt date: Date, cellState: CellState, indexPath: IndexPath) {
+    func calendar(_ calendar: JTACMonthView, willDisplay cell: JTACDayCell, forItemAt date: Date, cellState: CellState, indexPath: IndexPath) {
         configureCell(cell, cellState: cellState, date: date)
     }
     
-    public func calendar(_ calendar: JTACMonthView, headerViewForDateRange range: (start: Date, end: Date), at indexPath: IndexPath) -> JTACMonthReusableView {
+    func calendar(_ calendar: JTACMonthView, headerViewForDateRange range: (start: Date, end: Date), at indexPath: IndexPath) -> JTACMonthReusableView {
         let header = calendar.dequeueReusableJTAppleSupplementaryView(withReuseIdentifier: "\(JTCalendarHeader.self)", for: indexPath) as! JTCalendarHeader
         header.configure(startingDateOfTheMonth: range.start)
         return header
     }
     
-    public func calendarSizeForMonths(_ calendar: JTACMonthView?) -> MonthSize? {
+    func calendarSizeForMonths(_ calendar: JTACMonthView?) -> MonthSize? {
         /// Called to retrieve the size to be used for the month headers
         return MonthSize(defaultSize: 70.0)
     }
     
-    public func calendar(_ calendar: JTACMonthView, shouldSelectDate date: Date, cell: JTACDayCell?, cellState: CellState, indexPath: IndexPath) -> Bool {
+    func calendar(_ calendar: JTACMonthView, shouldSelectDate date: Date, cell: JTACDayCell?, cellState: CellState, indexPath: IndexPath) -> Bool {
         return viewModel.isValid(date, cellState: cellState) && cellState.dateBelongsTo == .thisMonth
     }
     
-    public func calendar(_ calendar: JTACMonthView, didSelectDate date: Date, cell: JTACDayCell?, cellState: CellState, indexPath: IndexPath) {
+    func calendar(_ calendar: JTACMonthView, didSelectDate date: Date, cell: JTACDayCell?, cellState: CellState, indexPath: IndexPath) {
         // Never call configure on user initiated selection
         // If required select the same date programatically again
         
@@ -308,7 +309,7 @@ open class JTCalendarVC: UIViewController, JTACMonthViewDataSource, JTACMonthVie
         configureCell(cell, cellState: cellState, date: date)
     }
     
-    public func calendar(_ calendar: JTAppleCalendar.JTACMonthView, shouldDeselectDate date: Date, cell: JTAppleCalendar.JTACDayCell?, cellState: JTAppleCalendar.CellState, indexPath: IndexPath) -> Bool {
+    func calendar(_ calendar: JTAppleCalendar.JTACMonthView, shouldDeselectDate date: Date, cell: JTAppleCalendar.JTACDayCell?, cellState: JTAppleCalendar.CellState, indexPath: IndexPath) -> Bool {
         guard viewModel.isValid(date, cellState: cellState) && cellState.dateBelongsTo == .thisMonth else { return false}
         
         // As we will handle all user initiated selection/deselection from didSelectDate method
@@ -322,7 +323,7 @@ open class JTCalendarVC: UIViewController, JTACMonthViewDataSource, JTACMonthVie
         return true
     }
     
-    public func calendar(_ calendar: JTACMonthView, didDeselectDate date: Date, cell: JTACDayCell?, cellState: CellState, indexPath: IndexPath) {
+    func calendar(_ calendar: JTACMonthView, didDeselectDate date: Date, cell: JTACDayCell?, cellState: CellState, indexPath: IndexPath) {
         if cellState.selectionType == .userInitiated { return }
         configureCell(cell, cellState: cellState, date: date)
     }

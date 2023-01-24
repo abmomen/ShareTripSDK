@@ -10,24 +10,16 @@ import UIKit
 
 import JTAppleCalendar
 
-public class FlightCalendarVC: JTCalendarVC {
-    
-    public init() {
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+class FlightCalendarVC: JTCalendarVC {
     
     private var calendarTopView: FlightCalendarTopView!
     private var calendarTopViewTopLC: NSLayoutConstraint!
     private let calendarTopViewHeight: CGFloat = 98
     
     // MARK: - Configuration Properties
-    public var priceIndicator: FlightPriceIndicatorViewModel?
+    var priceIndicator: FlightPriceIndicatorViewModel?
     
-    public override func loadNibs() {
+    override func loadNibs() {
         let topView = FlightCalendarTopView.instantiate()
         self.calendarTopView = topView
         topView.translatesAutoresizingMaskIntoConstraints = false
@@ -56,7 +48,7 @@ public class FlightCalendarVC: JTCalendarVC {
         calendarView.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor).isActive = true
     }
     
-    public override func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         priceIndicator?.loadPriceIndicator { [weak self] in
@@ -73,7 +65,7 @@ public class FlightCalendarVC: JTCalendarVC {
     
     private var sildeAnimationEnabled = false
     
-    public override func setupUI() {
+    override func setupUI() {
         super.setupUI()
         
         if priceIndicator != nil {
@@ -119,7 +111,7 @@ public class FlightCalendarVC: JTCalendarVC {
         }
     }
     
-    public override func configureCell(_ cell: JTACDayCell?, cellState: CellState, date: Date) {
+    override func configureCell(_ cell: JTACDayCell?, cellState: CellState, date: Date) {
         guard let cell = cell as? JTDateCell else { return }
         super.configureCell(cell, cellState: cellState, date: date)
         if let indicator = indicatorType(for: date) {
@@ -153,7 +145,7 @@ public class FlightCalendarVC: JTCalendarVC {
         }
     }
     
-    public override func calendarDidScroll(_ calendar: JTACMonthView) {
+    override func calendarDidScroll(_ calendar: JTACMonthView) {
         guard sildeAnimationEnabled else { return }
         guard priceIndicator != nil else { return }
         if calendar.panGestureRecognizer.translation(in: calendar.superview).y > 0 {

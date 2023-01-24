@@ -12,7 +12,7 @@ public protocol RedeemTripcoinViewDelegate: AnyObject {
     func didChangeRedeemAmount(dicount: Double)
 }
 
-public class RedeemTripcoinView: UIStackView, NibBased {
+class RedeemTripcoinView: UIStackView, NibBased {
     
     @IBOutlet private weak var checkbox: GDCheckbox!
     @IBOutlet private weak var collapsibleContainer: UIView!

@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class SingleCellTripCoinView: UIView, NibBased {
+class SingleCellTripCoinView: UIView, NibBased {
     
     @IBOutlet private weak var earnedTripCoinLabel: UILabel!
     @IBOutlet private weak var redeemTripCoinLabel: UILabel!

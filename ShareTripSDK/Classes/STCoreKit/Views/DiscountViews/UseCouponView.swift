@@ -8,7 +8,7 @@
 
 import UIKit
 
-public extension UseCouponView {
+extension UseCouponView {
     class Callback {
         public var needsReload: () -> Void = { }
         public var didTapApplyCoupon: () -> Void = { }
@@ -23,7 +23,7 @@ public extension UseCouponView {
     }
 }
 
-public class UseCouponView: UIStackView, NibBased {
+class UseCouponView: UIStackView, NibBased {
     @IBOutlet private weak var checkbox: GDCheckbox!
     @IBOutlet private weak var collapsibleContainer: UIView!
     @IBOutlet private weak var applyButton: UIButton!

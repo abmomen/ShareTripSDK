@@ -23,7 +23,7 @@ public struct JTCalendarDateViewData {
     }
 }
 
-public class JTCalendarView: UIView, NibBased {
+class JTCalendarView: UIView, NibBased {
     
     // MARK: - Outlets
     @IBOutlet public weak var calendar: JTACMonthView!

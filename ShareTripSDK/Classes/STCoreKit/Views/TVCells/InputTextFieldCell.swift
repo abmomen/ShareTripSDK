@@ -9,13 +9,13 @@
 import UIKit
 
 //MARK: - InputTextValidator
-public protocol InputTextValidator: AnyObject {
+protocol InputTextValidator: AnyObject {
     func validate(text: String?) -> Result<Void, AppError>
 }
 
-public class InputTextFieldCell: UITableViewCell {
+class InputTextFieldCell: UITableViewCell {
     
-    public var didChangeText: (String?) -> Void = { _ in }
+    var didChangeText: (String?) -> Void = { _ in }
     
     private var title: String = "Title Lablel"
     private var state: ValidationState = .normal {
@@ -75,7 +75,7 @@ public class InputTextFieldCell: UITableViewCell {
         setupUI()
     }
     
-    // MARK: - Public Functions
+    // MARK: - Functions
     func validateOnInputEnd(with validator: InputTextValidator) {
         self.validator = validator
     }
@@ -139,12 +139,12 @@ public class InputTextFieldCell: UITableViewCell {
 
 //MARK: - ConfigurableTableViewCellDataContainer
 extension InputTextFieldCell: ConfigurableTableViewCellDataContainer {
-    public typealias AccecptableViewModelType = InputTextFieldCellData
+    typealias AccecptableViewModelType = InputTextFieldCellData
 }
 
 //MARK: - ConfigurableTableViewCell
 extension InputTextFieldCell: ConfigurableTableViewCell {
-    public func configure(viewModel: ConfigurableTableViewCellData) {
+    func configure(viewModel: ConfigurableTableViewCellData) {
         guard let viewModel = viewModel as? AccecptableViewModelType else {
             STLog.error("Can't convert ConfigurableTableViewCellData as \(String(describing: AccecptableViewModelType.self))")
             return
@@ -166,11 +166,11 @@ extension InputTextFieldCell: ConfigurableTableViewCell {
 
 //MARK: - UITextFieldDelegate
 extension InputTextFieldCell: UITextFieldDelegate {
-    public func textFieldDidBeginEditing(_ textField: UITextField) {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
         state = .active
     }
     
-    public func textFieldDidEndEditing(_ textField: UITextField) {
+    func textFieldDidEndEditing(_ textField: UITextField) {
         textField.resignFirstResponder()
         didChangeText(textField.text)
         
