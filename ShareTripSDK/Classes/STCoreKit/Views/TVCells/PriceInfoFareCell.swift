@@ -48,6 +48,8 @@ public class PriceInfoFareCell: UITableViewCell {
     
     public override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        backgroundColor = .white
+        contentView.backgroundColor = .white
         
         titleLabel.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
         titleLabel.textColor = UIColor.black
@@ -68,7 +70,6 @@ public class PriceInfoFareCell: UITableViewCell {
         taxLabel.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
         taxLabel.textColor = UIColor.black
         taxLabel.textAlignment = .right
-        contentView.backgroundColor = .white
 
         contentView.addSubview(titleLabel)
         contentView.addSubview(showMoreButton)

@@ -31,7 +31,9 @@ public class LeftRightPriceInfoCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        backgroundColor = .white
         contentView.backgroundColor = .white
+        
         contentView.addSubview(titleLabel)
         contentView.addSubview(amountLabel)
         

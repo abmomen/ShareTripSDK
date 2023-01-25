@@ -19,7 +19,6 @@ public class LeftRightInfoCell: UITableViewCell {
     
     public override func awakeFromNib() {
         super.awakeFromNib()
-        contentView.backgroundColor = .white
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -32,12 +31,14 @@ public class LeftRightInfoCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        contentView.backgroundColor = .white
+        backgroundColor = .white
         
+        contentView.addSubview(leftLabel)
         leftLabel.font = UIFont.systemFont(ofSize: 15.0, weight: .regular)
         leftLabel.textColor = UIColor.black
         leftLabel.textAlignment = .left
         leftLabel.translatesAutoresizingMaskIntoConstraints = false
-        self.contentView.addSubview(leftLabel)
         
         rightLabel.font = UIFont.systemFont(ofSize: 15.0, weight: .semibold)
         rightLabel.textColor = UIColor.black

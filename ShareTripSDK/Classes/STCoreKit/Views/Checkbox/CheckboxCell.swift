@@ -30,6 +30,9 @@ public class CheckboxCell: UITableViewCell {
     
     //MARK:- SetupView
     private func setupView() {
+        backgroundColor = .white
+        contentView.backgroundColor = .white
+        
         checkbox.checkColor = .white
         checkbox.checkWidth = 3.0
         checkbox.containerColor = UIColor.blueGray

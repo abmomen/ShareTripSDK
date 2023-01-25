@@ -25,6 +25,7 @@ class FlightPassengerInfoVC: ViewController {
 
     lazy var tableView: UITableView = {
         let tableView = UITableView()
+        tableView.backgroundColor = .offWhite
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
     }()

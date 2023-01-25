@@ -44,6 +44,7 @@ class FlightPassengerListVC: ViewController {
     //MARK: - Utils
     private func setupUI() {
         title = "Checkout"
+        tableView.backgroundColor = .offWhite
         tableView.tableFooterView = UIView()
         continueButton.backgroundColor = .appPrimary
         tableView.registerConfigurableCellDataContainer(SingleInfoCell.self)
@@ -169,7 +170,8 @@ extension FlightPassengerListVC: UITableViewDataSource {
               let cell = tableView.dequeueReusableCell(withIdentifier: type(of: rowViewModel).reuseableIDForContainer, for: indexPath) as? ConfigurableTableViewCell else {
                   return tableView.dequeueReusableCell(forIndexPath: indexPath)
               }
-        
+        cell.contentView.backgroundColor = .white
+        cell.backgroundColor = .white
         cell.configure(viewModel: rowViewModel)
         
         return cell

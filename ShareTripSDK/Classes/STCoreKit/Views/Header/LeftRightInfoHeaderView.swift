@@ -52,6 +52,9 @@ public class LeftRightInfoHeaderView: UITableViewHeaderFooterView {
     }
 
     private func setupView() {
+        backgroundColor = .white
+        contentView.backgroundColor = .white
+        
         contentView.addSubview(labelContainerView)
         labelContainerView.addSubview(leftLabel)
         labelContainerView.addSubview(rightLabel)

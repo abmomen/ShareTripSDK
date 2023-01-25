@@ -121,7 +121,8 @@ public class GenderSelectionCell: UITableViewCell {
     
     private func setupConstraints() {
         selectionStyle = .none
-        
+        backgroundColor = .white
+        contentView.backgroundColor = .white
         contentView.addSubview(titleLabel)
         
         let stackView = UIStackView()

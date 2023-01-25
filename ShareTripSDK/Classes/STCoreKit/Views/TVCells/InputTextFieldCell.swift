@@ -42,6 +42,7 @@ class InputTextFieldCell: UITableViewCell {
         textField.placeholder = "Placeholder"
         textField.autocorrectionType = .no
         textField.tintColor = .black
+        textField.textColor = .black
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
     }()
@@ -83,6 +84,8 @@ class InputTextFieldCell: UITableViewCell {
     // MARK: - Utils
     private func setupContraints() {
         selectionStyle = .none
+        backgroundColor = .white
+        contentView.backgroundColor = .white
         
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),

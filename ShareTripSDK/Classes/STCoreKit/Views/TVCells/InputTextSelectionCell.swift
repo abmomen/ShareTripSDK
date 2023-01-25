@@ -43,6 +43,8 @@ public class InputTextSelectionCell: UITableViewCell {
         textField.rightView = downArrowImageView
         textField.rightView?.tintColor = UIColor.blueGray
         textField.rightViewMode = .always
+        textField.tintColor = .black
+        textField.textColor = .black
         
         return textField
     }()
@@ -83,6 +85,8 @@ public class InputTextSelectionCell: UITableViewCell {
     // MARK: - Utils
     private func setupContraints() {
         selectionStyle = .none
+        backgroundColor = .white
+        contentView.backgroundColor = .white
         
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),

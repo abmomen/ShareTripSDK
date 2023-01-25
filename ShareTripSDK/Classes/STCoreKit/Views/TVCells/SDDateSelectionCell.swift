@@ -48,6 +48,8 @@ public class SDDateSelectionCell: UITableViewCell {
     private lazy var textField: NoSelectTextField = {
         let textField = NoSelectTextField()
         textField.placeholder = "Placeholder"
+        textField.tintColor = .black
+        textField.textColor = .black
         textField.translatesAutoresizingMaskIntoConstraints = false
         
         //right down arrow
@@ -125,6 +127,7 @@ public class SDDateSelectionCell: UITableViewCell {
     
     private func setupUI() {
         textField.delegate = self
+        backgroundColor = .white
         contentView.backgroundColor = .white
         contentView.addSubview(titleLabel)
         contentView.addSubview(textField)

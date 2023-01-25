@@ -123,6 +123,7 @@ extension TravellerClassVC: UITableViewDataSource {
             
         case .flightClass(let className):
             let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as UITableViewCell
+            cell.backgroundColor = .white
             cell.contentView.backgroundColor = .white
             configClassCell(cell, text: className.title)
             setCellSelection(cell, selected: travellerClassViewModel.flightClass.intValue == indexPath.row)
@@ -142,6 +143,7 @@ extension TravellerClassVC: UITableViewDataSource {
         cell.accessoryType = selected ? .checkmark : .none
         cell.textLabel?.textColor = selected ? UIColor.appPrimary : .black
         cell.contentView.backgroundColor = .white
+        cell.backgroundColor = .white
     }
 }
 

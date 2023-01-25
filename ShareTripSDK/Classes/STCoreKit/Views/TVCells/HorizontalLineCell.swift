@@ -26,6 +26,9 @@ public class HorizontalLineCell: UITableViewCell {
     }
     
     private func setupView() {
+        backgroundColor = .white
+        contentView.backgroundColor = .white
+        
         bottomHorizontalLine.backgroundColor = UIColor.paleGray
         contentView.addSubview(bottomHorizontalLine)
         bottomHorizontalLine.translatesAutoresizingMaskIntoConstraints = false
