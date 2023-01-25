@@ -15,6 +15,7 @@ class FlightPriceBreakdownVC: ViewController {
     @IBOutlet weak var totalPayableLabel: UILabel!
     @IBOutlet weak var bookingButton: UIButton!
     @IBOutlet weak var currencyImageView: UIImageView!
+    @IBOutlet weak var topDetailsContainerView: UIView!
     
     var buttonTitle = "Pay Now"
     
@@ -62,6 +63,9 @@ class FlightPriceBreakdownVC: ViewController {
         bookingButton.setTitle(buttonTitle, for: .normal)
         
         setupTotalPaybleLabel()
+        
+        topDetailsContainerView.backgroundColor = .white
+        pricaTableView.backgroundColor = .white
     }
     
 
@@ -190,11 +194,11 @@ extension FlightPriceBreakdownVC: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return section == 0 ? 34.0: 0.0
+        return section == 0 ? 34.0: .leastNonzeroMagnitude
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 0.0
+        return .leastNonzeroMagnitude
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {

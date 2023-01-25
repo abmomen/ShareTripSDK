@@ -23,6 +23,7 @@ class FlightSummaryVC: ViewController {
     @IBOutlet weak var discountViewArrow: UIImageView!
     @IBOutlet weak var paymentGatewayViewHolder: UIStackView!
     
+    @IBOutlet weak var containerScrollView: UIScrollView!
     //Terms and conditions
     @IBOutlet weak var checkbox: GDCheckbox!
     @IBOutlet weak var termsAndConditionsLabel: UILabel!
@@ -116,6 +117,7 @@ class FlightSummaryVC: ViewController {
         
         planeRightImageView.image = UIImage(named: "plane-right")
         discountImageView.image = UIImage(named: "discount-mono")
+        containerScrollView.backgroundColor = .offWhite
     }
     
     private func setupCheckbox() {

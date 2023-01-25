@@ -56,6 +56,7 @@ class AirportSearchVC: ViewController {
         
         searchPlaceTableView.separatorStyle = .singleLine
         searchPlaceTableView.separatorInset = .zero
+        searchPlaceTableView.backgroundColor = .offWhite
         
         let tapGesture = UITapGestureRecognizer(target: self.view, action: #selector(self.view.endEditing(_:)))
         tapGesture.cancelsTouchesInView = false
