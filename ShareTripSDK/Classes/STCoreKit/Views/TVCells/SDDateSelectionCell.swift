@@ -125,7 +125,7 @@ public class SDDateSelectionCell: UITableViewCell {
     
     private func setupUI() {
         textField.delegate = self
-        
+        contentView.backgroundColor = .white
         contentView.addSubview(titleLabel)
         contentView.addSubview(textField)
         contentView.addSubview(icon)

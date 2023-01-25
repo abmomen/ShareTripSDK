@@ -19,6 +19,7 @@ public class LeftRightInfoCell: UITableViewCell {
     
     public override func awakeFromNib() {
         super.awakeFromNib()
+        contentView.backgroundColor = .white
     }
     
     required init?(coder aDecoder: NSCoder) {

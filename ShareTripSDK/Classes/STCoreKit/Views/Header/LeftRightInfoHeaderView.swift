@@ -12,6 +12,7 @@ public class LeftRightInfoHeaderView: UITableViewHeaderFooterView {
     
     public lazy var labelContainerView: UIView = {
         let view = UIView()
+        view.backgroundColor = .white
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()

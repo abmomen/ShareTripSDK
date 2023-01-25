@@ -68,7 +68,8 @@ public class PriceInfoFareCell: UITableViewCell {
         taxLabel.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
         taxLabel.textColor = UIColor.black
         taxLabel.textAlignment = .right
-        
+        contentView.backgroundColor = .white
+
         contentView.addSubview(titleLabel)
         contentView.addSubview(showMoreButton)
         contentView.addSubview(baseFareTitleLabel)

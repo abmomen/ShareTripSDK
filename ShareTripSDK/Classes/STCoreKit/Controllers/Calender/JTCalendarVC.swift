@@ -40,6 +40,7 @@ class JTCalendarVC: ViewController, JTACMonthViewDataSource, JTACMonthViewDelega
     override func loadView() {
         super.loadView()
         loadNibs()
+        calendar.backgroundColor = .white
     }
     
     open func loadNibs() {
@@ -49,11 +50,8 @@ class JTCalendarVC: ViewController, JTACMonthViewDataSource, JTACMonthViewDelega
         view.addSubview(calendarView)
         
         var safeArea: UILayoutGuide
-        if #available(iOS 11.0, *) {
-            safeArea = view.safeAreaLayoutGuide
-        } else {
-            safeArea = view.layoutMarginsGuide
-        }
+        safeArea = view.safeAreaLayoutGuide
+        
         NSLayoutConstraint.activate([
             calendarView.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor),
             calendarView.topAnchor.constraint(equalTo: safeArea.topAnchor),

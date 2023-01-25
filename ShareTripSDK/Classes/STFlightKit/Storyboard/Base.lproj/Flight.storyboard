@@ -35,13 +35,13 @@
         <!--Flights-->
         <scene sceneID="6rb-Bw-jTl">
             <objects>
-                <viewController storyboardIdentifier="FlightSearchVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zxa-6f-3DU" customClass="FlightSearchVC" customModule="ShareTripSDK" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FlightSearchVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zxa-6f-3DU" customClass="FlightSearchVC" customModule="ShareTripSDK" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HWV-8d-AFS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="804"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zJL-jm-IrH">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="770"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="804"/>
                                 <color key="backgroundColor" white="0.89324700342465757" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
@@ -56,7 +56,7 @@
                                 <variation key="heightClass=regular-widthClass=regular" constant="16"/>
                             </constraint>
                             <constraint firstItem="zJL-jm-IrH" firstAttribute="top" secondItem="Zna-zn-8nL" secondAttribute="top" id="R2G-iQ-dSd"/>
-                            <constraint firstItem="Zna-zn-8nL" firstAttribute="bottom" secondItem="zJL-jm-IrH" secondAttribute="bottom" id="Wrf-k4-ZY1"/>
+                            <constraint firstAttribute="bottom" secondItem="zJL-jm-IrH" secondAttribute="bottom" id="Wrf-k4-ZY1"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Flights" id="9J1-j9-yul"/>
@@ -140,16 +140,17 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Available Flight" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zs5-TY-dgg">
                                                 <rect key="frame" x="0.0" y="0.0" width="126.5" height="18"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*Price includes VAT &amp; Tax" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0xI-D5-nE3">
                                                 <rect key="frame" x="0.0" y="18" width="126.5" height="12"/>
                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="10"/>
-                                                <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="Zs5-TY-dgg" secondAttribute="trailing" id="24S-01-CLJ"/>
                                             <constraint firstAttribute="bottom" secondItem="0xI-D5-nE3" secondAttribute="bottom" id="4Wy-Ib-RrY"/>
@@ -197,12 +198,13 @@
                                                         </connections>
                                                     </button>
                                                 </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="27" id="gWs-As-R9l"/>
                                                 </constraints>
                                             </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="4zF-sl-RHP" firstAttribute="leading" secondItem="nzl-Zh-QnF" secondAttribute="leading" id="8H2-vw-OMP"/>
                                             <constraint firstAttribute="trailing" secondItem="4zF-sl-RHP" secondAttribute="trailing" id="AEp-DY-Tz9"/>
@@ -247,7 +249,7 @@
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cKd-zy-lmA">
                                 <rect key="frame" x="0.0" y="79" width="414" height="56"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="ep9-lv-MIm"/>
                                 </constraints>
@@ -264,6 +266,7 @@
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="qJL-Hi-NP1">
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </collectionViewCellContentView>
                                     </collectionViewCell>
                                 </cells>
