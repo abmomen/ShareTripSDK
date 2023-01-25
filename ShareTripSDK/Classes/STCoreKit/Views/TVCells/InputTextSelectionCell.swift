@@ -45,6 +45,7 @@ public class InputTextSelectionCell: UITableViewCell {
         textField.rightViewMode = .always
         textField.tintColor = .black
         textField.textColor = .black
+        textField.backgroundColor = .white
         
         return textField
     }()

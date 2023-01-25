@@ -50,6 +50,7 @@ public class SDDateSelectionCell: UITableViewCell {
         textField.placeholder = "Placeholder"
         textField.tintColor = .black
         textField.textColor = .black
+        textField.backgroundColor = .white
         textField.translatesAutoresizingMaskIntoConstraints = false
         
         //right down arrow

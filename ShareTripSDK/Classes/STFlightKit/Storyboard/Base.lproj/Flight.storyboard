@@ -928,19 +928,19 @@
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="DAC - KUL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="trN-zF-RFX">
                                                                         <rect key="frame" x="56" y="10" width="302" height="20"/>
                                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
-                                                                        <nil key="textColor"/>
+                                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="22 Dec 19 - 25 Jan 20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cwg-et-poR">
                                                                         <rect key="frame" x="56" y="34" width="109" height="12"/>
                                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="10"/>
-                                                                        <nil key="textColor"/>
+                                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="3 Traveller(s)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pAq-M6-b2I">
                                                                         <rect key="frame" x="173" y="34" width="185" height="12"/>
                                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="10"/>
-                                                                        <nil key="textColor"/>
+                                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow-down-mono" translatesAutoresizingMaskIntoConstraints="NO" id="Ap5-R5-7ky">
@@ -952,7 +952,7 @@
                                                                         </constraints>
                                                                     </imageView>
                                                                 </subviews>
-                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <gestureRecognizers/>
                                                                 <constraints>
                                                                     <constraint firstItem="trN-zF-RFX" firstAttribute="top" secondItem="ODL-9N-zum" secondAttribute="top" constant="10" id="CHK-aX-jv2"/>
@@ -979,7 +979,7 @@
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B8L-7E-JWN">
                                                                         <rect key="frame" x="0.0" y="0.0" width="398" height="1"/>
-                                                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="1" id="YuD-Ye-CF2"/>
                                                                         </constraints>
@@ -987,7 +987,7 @@
                                                                 </subviews>
                                                             </stackView>
                                                         </subviews>
-                                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                                 <integer key="value" value="4"/>
@@ -995,7 +995,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </stackView>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="trailing" secondItem="hY2-3P-Fw2" secondAttribute="trailing" id="87L-KE-k5V"/>
                                                     <constraint firstAttribute="bottom" secondItem="hY2-3P-Fw2" secondAttribute="bottom" id="U5n-2P-nwN"/>
@@ -1030,7 +1030,7 @@
                                                                         <string key="text">I want to Earn Trip Coin &amp; Avail 
 Discount Offer</string>
                                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
-                                                                        <nil key="textColor"/>
+                                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <stackView hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="zJj-ZI-dpa">
@@ -1039,13 +1039,13 @@ Discount Offer</string>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Select Discount Option" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwe-32-64x">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="298" height="20"/>
                                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
-                                                                                <nil key="textColor"/>
+                                                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose your discount option" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pA7-uv-hkZ">
                                                                                 <rect key="frame" x="0.0" y="24" width="298" height="12"/>
                                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="10"/>
-                                                                                <nil key="textColor"/>
+                                                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                         </subviews>
@@ -1059,7 +1059,7 @@ Discount Offer</string>
                                                                         </constraints>
                                                                     </imageView>
                                                                 </subviews>
-                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <gestureRecognizers/>
                                                                 <constraints>
                                                                     <constraint firstItem="PzA-UV-cGl" firstAttribute="centerY" secondItem="RYl-ek-M8K" secondAttribute="centerY" id="2jS-rE-v4r"/>
@@ -1093,7 +1093,7 @@ Discount Offer</string>
                                                                 </subviews>
                                                             </stackView>
                                                         </subviews>
-                                                        <color key="backgroundColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                                 <integer key="value" value="4"/>
@@ -1101,7 +1101,7 @@ Discount Offer</string>
                                                         </userDefinedRuntimeAttributes>
                                                     </stackView>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="dHX-9U-aV1" secondAttribute="bottom" id="BQv-RP-D5n"/>
                                                     <constraint firstItem="dHX-9U-aV1" firstAttribute="top" secondItem="z4R-tJ-W6P" secondAttribute="top" id="StU-gF-fpp"/>
@@ -1122,12 +1122,13 @@ Discount Offer</string>
                                                         <subviews>
                                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9SY-eO-3Tx">
                                                                 <rect key="frame" x="0.0" y="0.0" width="398" height="0.0"/>
-                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" id="kEo-Yo-Fw9"/>
                                                                 </constraints>
                                                             </view>
                                                         </subviews>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                                 <integer key="value" value="4"/>
@@ -1135,7 +1136,7 @@ Discount Offer</string>
                                                         </userDefinedRuntimeAttributes>
                                                     </stackView>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="zam-y9-fec" firstAttribute="top" secondItem="9NI-oN-V0q" secondAttribute="top" id="Fdr-PJ-usT"/>
                                                     <constraint firstItem="zam-y9-fec" firstAttribute="leading" secondItem="9NI-oN-V0q" secondAttribute="leading" id="GEw-Pj-ssg"/>
@@ -1153,7 +1154,7 @@ Discount Offer</string>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tp0-s3-mGQ" customClass="GDCheckbox" customModule="ShareTripSDK">
                                                         <rect key="frame" x="16" y="16" width="20" height="20"/>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="Tp0-s3-mGQ" secondAttribute="height" multiplier="1:1" id="Yj0-Md-xFs"/>
                                                             <constraint firstAttribute="height" constant="20" id="ueX-z8-70m"/>
@@ -1165,7 +1166,7 @@ Discount Offer</string>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oSp-iZ-vIn">
                                                         <rect key="frame" x="44" y="16" width="346" height="32"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -1257,9 +1258,6 @@ Discount Offer</string>
         </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

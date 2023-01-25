@@ -43,6 +43,7 @@ class InputTextFieldCell: UITableViewCell {
         textField.autocorrectionType = .no
         textField.tintColor = .black
         textField.textColor = .black
+        textField.backgroundColor = .white
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
     }()
