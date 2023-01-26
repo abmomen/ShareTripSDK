@@ -1,30 +1,18 @@
 Pod::Spec.new do |s|
     s.name             = 'ShareTripSDK'
-    s.version          = '0.1.0'
-    s.summary          = 'A Title name of ShareTripSDK.'
-    s.description      = <<-DESC
-    
-    TODO: will add long description.
-    
-    DESC
-    
-    s.homepage         = 'https://github.com/sharetrip-ios/ShareTripSDK'
-    # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+    s.version          = '1.0.0'
+    s.summary          = 'A small summary for sdk'
+    s.homepage         = 'https://www.sharetrip.net'
     s.license          = { :type => 'MIT', :file => 'LICENSE' }
-    s.author           = { 'sharetrip-ios' => 'abdulmomen130@gmail.com' }
-    s.source           = { :git => 'https://github.com/sharetrip-ios/ShareTripSDK.git', :tag => s.version.to_s }
-    # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+    s.author           = { 'abmomen' => 'abdulmomen130@gmail.com' }
+    s.source           = { :git => 'https://github.com/abmomen/ShareTripSDK.git', :tag => s.version.to_s }
     
     s.swift_version = '5.0'
     s.static_framework = true
     s.ios.deployment_target = '11.0'
     
     s.source_files = 'ShareTripSDK/Classes/**/*.{swift}'
-    
     s.resources = 'ShareTripSDK/**/*.{xcassets,storyboard,xib,json}'
-
-    s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'}
-    s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'}
         
     s.dependency 'JWT'
     s.dependency 'PKHUD'
