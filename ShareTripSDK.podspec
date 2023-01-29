@@ -13,6 +13,9 @@ Pod::Spec.new do |s|
     
     s.source_files = 'ShareTripSDK/Classes/**/*.{swift}'
     s.resources = 'ShareTripSDK/**/*.{xcassets,storyboard,xib,json}'
+    
+    s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+    s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
         
     s.dependency 'JWT'
     s.dependency 'PKHUD'
