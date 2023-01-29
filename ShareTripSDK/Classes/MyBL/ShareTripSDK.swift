@@ -9,7 +9,7 @@ import UIKit
 import FirebaseCore
 import IQKeyboardManagerSwift
 
-public final class ShareTripSDK {
+public final class STSDK {
     private static var accessToken = ""
     public static var theme: SDKColorThemes = .sharetrip
     
@@ -27,9 +27,9 @@ public enum SDKColorThemes {
     case banglalink
 }
 
-extension ShareTripSDK {
+extension STSDK {
     static let bundle: Bundle = {
-        let myBundle = Bundle(for: ShareTripSDK.self)
+        let myBundle = Bundle(for: STSDK.self)
         return myBundle
     }()
 }

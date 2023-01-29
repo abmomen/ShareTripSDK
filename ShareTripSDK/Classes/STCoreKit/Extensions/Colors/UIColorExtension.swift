@@ -30,7 +30,7 @@ public extension UIColor {
     // MARK:- App Template
     // MARK: App Primary Colors
     static var appPrimary: UIColor {
-        switch ShareTripSDK.theme {
+        switch STSDK.theme {
         case .sharetrip:
             return .appPrimary
             

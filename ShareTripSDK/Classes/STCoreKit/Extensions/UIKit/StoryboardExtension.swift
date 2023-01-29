@@ -29,7 +29,7 @@ extension NibBased where Self: UIView {
     /// This method instantiate a uiview from nib file
     /// - Returns: UIView
     static func instantiate() -> Self  {        
-        let nib = ShareTripSDK.bundle.loadNibNamed(nibName, owner: self, options: nil)
+        let nib = STSDK.bundle.loadNibNamed(nibName, owner: self, options: nil)
         guard let view = nib?.first as? Self else {
             fatalError("Can't load view \(Self.self) from nib \(nibName)")
         }
@@ -63,7 +63,7 @@ public extension StoryboardBased where Self: UIViewController {
     /// This method instantiate a UIViewController from UIStoryboard
     /// - Returns: ViewController
     static func instantiate() -> Self  {
-        let storyboard = UIStoryboard(name: storyboardName , bundle: ShareTripSDK.bundle)
+        let storyboard = UIStoryboard(name: storyboardName , bundle: STSDK.bundle)
         guard let viewController = storyboard.instantiateViewController(withIdentifier: storyboardIdentifier) as? Self else {
             fatalError("Can't load view controller \(Self.self) from storyboard named \(storyboardName)")
         }

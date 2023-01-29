@@ -56,10 +56,10 @@ class JTCalendarView: UIView, NibBased {
     //MARK:- SetupUI
     private func setupUI() {
         calendar.scrollingMode = .none        
-        let cellNib = UINib(nibName: "\(JTDateCell.self)", bundle: ShareTripSDK.bundle)
+        let cellNib = UINib(nibName: "\(JTDateCell.self)", bundle: STSDK.bundle)
         calendar.register(cellNib, forCellWithReuseIdentifier: "\(JTDateCell.self)")
         
-        let headerNib = UINib(nibName: "\(JTCalendarHeader.self)", bundle: ShareTripSDK.bundle)
+        let headerNib = UINib(nibName: "\(JTCalendarHeader.self)", bundle: STSDK.bundle)
         calendar.register(headerNib, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "\(JTCalendarHeader.self)")
         
         let calendarWidth = Double(UIScreen.main.bounds.size.width)
