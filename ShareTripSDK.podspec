@@ -13,7 +13,7 @@ Pod::Spec.new do |spec|
 
   spec.source       = { :http => "https://github.com/abmomen/ShareTripSDK/releases/download/1.0.0/ShareTripSDK.xcframework.zip", :type => "zip" }
   
-  spec.ios.vendored_framework = "ShareTripSDK.xcframework"
+  spec.vendored_frameworks = "ShareTripSDK.xcframework"
   
   spec.dependency 'JWT'
   spec.dependency 'PKHUD'
