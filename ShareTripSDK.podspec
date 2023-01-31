@@ -11,8 +11,40 @@ Pod::Spec.new do |spec|
   spec.swift_version = "5.0"
   spec.ios.deployment_target = "11.0"
 
-  spec.source       = { :git => "http://EXAMPLE/ShareTripSDK.git", :tag => "#{spec.version}" }
-
-  spec.dependency "JSONKit", "~> 1.4"
+  spec.source       = { :http => "https://github.com/abmomen/ShareTripSDK/releases/download/1.0.0/ShareTripSDK.xcframework.zip"}
+  
+  spec.vendored_frameworks = "ShareTripSDK.xcframework"
+  
+  spec.dependency 'JWT'
+  spec.dependency 'PKHUD'
+  spec.dependency 'Base64'
+  spec.dependency 'Koloda'
+  spec.dependency 'BlueECC'
+  spec.dependency 'BlueRSA'
+  spec.dependency 'Alamofire'
+  spec.dependency 'lottie-ios'
+  spec.dependency 'SwiftyJSON'
+  spec.dependency 'Kingfisher'
+  spec.dependency 'Bolts-Swift'
+  spec.dependency 'BlueCryptor'
+  spec.dependency 'FloatingPanel'
+  spec.dependency 'GoogleSignIn'
+  spec.dependency 'ImageSlideshow'
+  spec.dependency 'JTAppleCalendar'
+  spec.dependency 'SwiftKeychainWrapper'
+  spec.dependency 'Socket.IO-Client-Swift'
+  spec.dependency 'FBSDKCoreKit'
+  spec.dependency 'FBSDKLoginKit'
+  spec.dependency 'FBSDKShareKit'
+  spec.dependency 'FirebaseAuth'
+  spec.dependency 'FirebaseFirestore'
+  spec.dependency 'FirebaseAnalytics'
+  spec.dependency 'FirebaseMessaging'
+  spec.dependency 'FirebaseCrashlytics'
+  spec.dependency 'FirebaseRemoteConfig'
+  spec.dependency 'FirebaseDynamicLinks'
+  spec.dependency 'IQKeyboardManagerSwift'
+  spec.dependency 'FirebaseCoreDiagnostics'
+  
 
 end
