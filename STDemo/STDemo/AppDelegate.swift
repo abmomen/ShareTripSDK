@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISceneDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         
-        STSDK.configure("$2b$10$pv.ZAnzyuSTD7GIMm/yHL.hdPTFQgUDN2rfXPnQXh67e4JsKJ0Fl.")
+        STSDK(accessToken: "$2b$10$pv.ZAnzyuSTD7GIMm/yHL.hdPTFQgUDN2rfXPnQXh67e4JsKJ0Fl.")
         window?.rootViewController =  UINavigationController(rootViewController: MyBLHomeVC.instantiate())
         
         window?.makeKeyAndVisible()

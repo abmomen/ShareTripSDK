@@ -7,14 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C72A419446BB2C80ED553797 /* Pods_STDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71A147BA6865C8E2D2B56379 /* Pods_STDemo.framework */; };
-		CC4E1EE52988E0940094C470 /* ShareTripSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC4E1EE42988E0940094C470 /* ShareTripSDK.xcframework */; };
-		CC4E1EE62988E0940094C470 /* ShareTripSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CC4E1EE42988E0940094C470 /* ShareTripSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CCF03FD52987ED0300E2406A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CCF03FD42987ED0300E2406A /* GoogleService-Info.plist */; };
 		CCF3BC612987E3D70028A79C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF3BC602987E3D70028A79C /* AppDelegate.swift */; };
 		CCF3BC652987E3D70028A79C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF3BC642987E3D70028A79C /* ViewController.swift */; };
 		CCF3BC6A2987E3DA0028A79C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCF3BC692987E3DA0028A79C /* Assets.xcassets */; };
 		CCF3BC6D2987E3DA0028A79C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCF3BC6B2987E3DA0028A79C /* LaunchScreen.storyboard */; };
+		E0CEB17FA050D4FB7055613D /* Pods_STDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFD6834C4E1970B2813927A7 /* Pods_STDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +22,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				CC4E1EE62988E0940094C470 /* ShareTripSDK.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -32,10 +29,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		6C10EAEC9B83823FB6AA288D /* Pods-STDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-STDemo.debug.xcconfig"; path = "Target Support Files/Pods-STDemo/Pods-STDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		71A147BA6865C8E2D2B56379 /* Pods_STDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_STDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9A60917FCCFFB61A128FB863 /* Pods-STDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-STDemo.release.xcconfig"; path = "Target Support Files/Pods-STDemo/Pods-STDemo.release.xcconfig"; sourceTree = "<group>"; };
-		CC4E1EE42988E0940094C470 /* ShareTripSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ShareTripSDK.xcframework; path = ../ShareTripSDK/xcframeworks/ShareTripSDK.xcframework; sourceTree = "<group>"; };
+		261B8B578959014CE828D58E /* Pods-STDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-STDemo.debug.xcconfig"; path = "Target Support Files/Pods-STDemo/Pods-STDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		BFD6834C4E1970B2813927A7 /* Pods_STDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_STDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCF03FD42987ED0300E2406A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CCF3BC5D2987E3D70028A79C /* STDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = STDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCF3BC602987E3D70028A79C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +38,7 @@
 		CCF3BC692987E3DA0028A79C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CCF3BC6C2987E3DA0028A79C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CCF3BC6E2987E3DA0028A79C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE0B54ECCBC81E4BCA361742 /* Pods-STDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-STDemo.release.xcconfig"; path = "Target Support Files/Pods-STDemo/Pods-STDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,8 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C72A419446BB2C80ED553797 /* Pods_STDemo.framework in Frameworks */,
-				CC4E1EE52988E0940094C470 /* ShareTripSDK.xcframework in Frameworks */,
+				E0CEB17FA050D4FB7055613D /* Pods_STDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,17 +56,16 @@
 		0232029D286654FAEE7F2FAB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				6C10EAEC9B83823FB6AA288D /* Pods-STDemo.debug.xcconfig */,
-				9A60917FCCFFB61A128FB863 /* Pods-STDemo.release.xcconfig */,
+				261B8B578959014CE828D58E /* Pods-STDemo.debug.xcconfig */,
+				FE0B54ECCBC81E4BCA361742 /* Pods-STDemo.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		1C3D26ED9B41A869DC7A603E /* Frameworks */ = {
+		48A888FF20A7CDA2D6213ED9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CC4E1EE42988E0940094C470 /* ShareTripSDK.xcframework */,
-				71A147BA6865C8E2D2B56379 /* Pods_STDemo.framework */,
+				BFD6834C4E1970B2813927A7 /* Pods_STDemo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -82,7 +76,7 @@
 				CCF3BC5F2987E3D70028A79C /* STDemo */,
 				CCF3BC5E2987E3D70028A79C /* Products */,
 				0232029D286654FAEE7F2FAB /* Pods */,
-				1C3D26ED9B41A869DC7A603E /* Frameworks */,
+				48A888FF20A7CDA2D6213ED9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -114,12 +108,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CCF3BC712987E3DA0028A79C /* Build configuration list for PBXNativeTarget "STDemo" */;
 			buildPhases = (
-				F08F3D184BCF44F04CE548D5 /* [CP] Check Pods Manifest.lock */,
+				0E8D2F40918464D92EAE657E /* [CP] Check Pods Manifest.lock */,
 				CCF3BC592987E3D70028A79C /* Sources */,
 				CCF3BC5A2987E3D70028A79C /* Frameworks */,
 				CCF3BC5B2987E3D70028A79C /* Resources */,
-				ED212CE4E8B61787021F7A42 /* [CP] Embed Pods Frameworks */,
 				CCF03FD82988D0C400E2406A /* Embed Frameworks */,
+				E3E78939C901453FB0941746 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -177,24 +171,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		ED212CE4E8B61787021F7A42 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-STDemo/Pods-STDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-STDemo/Pods-STDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-STDemo/Pods-STDemo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F08F3D184BCF44F04CE548D5 /* [CP] Check Pods Manifest.lock */ = {
+		0E8D2F40918464D92EAE657E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -214,6 +191,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3E78939C901453FB0941746 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-STDemo/Pods-STDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-STDemo/Pods-STDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-STDemo/Pods-STDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -358,7 +352,7 @@
 		};
 		CCF3BC722987E3DA0028A79C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6C10EAEC9B83823FB6AA288D /* Pods-STDemo.debug.xcconfig */;
+			baseConfigurationReference = 261B8B578959014CE828D58E /* Pods-STDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -388,7 +382,7 @@
 		};
 		CCF3BC732987E3DA0028A79C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9A60917FCCFFB61A128FB863 /* Pods-STDemo.release.xcconfig */;
+			baseConfigurationReference = FE0B54ECCBC81E4BCA361742 /* Pods-STDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

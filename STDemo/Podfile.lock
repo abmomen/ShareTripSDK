@@ -831,6 +831,37 @@ PODS:
   - PKHUD (5.3.0)
   - pop (1.0.12)
   - PromisesObjC (2.1.1)
+  - ShareTripSDK (1.0.0):
+    - Alamofire
+    - Base64
+    - BlueCryptor
+    - BlueECC
+    - BlueRSA
+    - Bolts-Swift
+    - FBSDKCoreKit
+    - FBSDKLoginKit
+    - FBSDKShareKit
+    - FirebaseAnalytics
+    - FirebaseAuth
+    - FirebaseCoreDiagnostics
+    - FirebaseCrashlytics
+    - FirebaseDynamicLinks
+    - FirebaseFirestore
+    - FirebaseMessaging
+    - FirebaseRemoteConfig
+    - FloatingPanel
+    - GoogleSignIn
+    - ImageSlideshow
+    - IQKeyboardManagerSwift
+    - JTAppleCalendar
+    - JWT
+    - Kingfisher
+    - Koloda
+    - lottie-ios
+    - PKHUD
+    - Socket.IO-Client-Swift
+    - SwiftKeychainWrapper
+    - SwiftyJSON
   - Socket.IO-Client-Swift (16.0.1):
     - Starscream (~> 4.0)
   - Starscream (4.0.4)
@@ -838,36 +869,7 @@ PODS:
   - SwiftyJSON (5.0.1)
 
 DEPENDENCIES:
-  - Alamofire
-  - Base64
-  - BlueCryptor
-  - BlueECC
-  - BlueRSA
-  - Bolts-Swift
-  - FBSDKCoreKit
-  - FBSDKLoginKit
-  - FBSDKShareKit
-  - FirebaseAnalytics
-  - FirebaseAuth
-  - FirebaseCoreDiagnostics
-  - FirebaseCrashlytics
-  - FirebaseDynamicLinks
-  - FirebaseFirestore
-  - FirebaseMessaging
-  - FirebaseRemoteConfig
-  - FloatingPanel
-  - GoogleSignIn
-  - ImageSlideshow
-  - IQKeyboardManagerSwift
-  - JTAppleCalendar
-  - JWT
-  - Kingfisher
-  - Koloda
-  - lottie-ios
-  - PKHUD
-  - Socket.IO-Client-Swift
-  - SwiftKeychainWrapper
-  - SwiftyJSON
+  - ShareTripSDK (from `https://github.com/abmomen/ShareTripSDK.git`)
 
 SPEC REPOS:
   trunk:
@@ -924,6 +926,15 @@ SPEC REPOS:
     - SwiftKeychainWrapper
     - SwiftyJSON
 
+EXTERNAL SOURCES:
+  ShareTripSDK:
+    :git: https://github.com/abmomen/ShareTripSDK.git
+
+CHECKOUT OPTIONS:
+  ShareTripSDK:
+    :commit: 1035bacd6133a92bf386039f3f540a393a3d6115
+    :git: https://github.com/abmomen/ShareTripSDK.git
+
 SPEC CHECKSUMS:
   abseil: ebe5b5529fb05d93a8bdb7951607be08b7fa71bc
   Alamofire: 4e95d97098eacb88856099c4fc79b526a299e48c
@@ -973,11 +984,12 @@ SPEC CHECKSUMS:
   PKHUD: 98f3e4bc904b9c916f1c5bb6d765365b5357291b
   pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
   PromisesObjC: ab77feca74fa2823e7af4249b8326368e61014cb
+  ShareTripSDK: 195a18be31d26aa3faef58aac6442e42ae6d4cc4
   Socket.IO-Client-Swift: c116d6dc9fd6be9c259bacfe143f8725bce7d79e
   Starscream: 5178aed56b316f13fa3bc55694e583d35dd414d9
   SwiftKeychainWrapper: 807ba1d63c33a7d0613288512399cd1eda1e470c
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
 
-PODFILE CHECKSUM: d9d04e404ddb64b103f80c8ceb08466d7b002de8
+PODFILE CHECKSUM: 0627578544c4d89fd4c081dd81e0d04f5b7710a2
 
 COCOAPODS: 1.11.3
