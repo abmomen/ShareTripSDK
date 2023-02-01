@@ -18,7 +18,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		sFZKYnM9TFUU6f9yj6fi3RkBNFU=
+		cjovsYEDy6SBavfgT2bIVva4bho=
 		</data>
 		<key>BaggageInfoTVCell.nib</key>
 		<data>
@@ -418,11 +418,11 @@
 		</data>
 		<key>Modules/ShareTripSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		sp2VpXRp+S0i4y3ueTLA4k+ymVo=
+		MWqLnA1HPGUsxi654re0GzS+pPA=
 		</data>
 		<key>Modules/ShareTripSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		w7LrbIgFhUAJRkTGnZzrm11lUvg=
+		wSzwNsimXNB8oJYPfKXoJvyLiXs=
 		</data>
 		<key>Modules/ShareTripSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -430,11 +430,11 @@
 		</data>
 		<key>Modules/ShareTripSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		w7LrbIgFhUAJRkTGnZzrm11lUvg=
+		wSzwNsimXNB8oJYPfKXoJvyLiXs=
 		</data>
 		<key>Modules/ShareTripSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		Ik3Egzv+dYqUpduF9nWAHulsZ+U=
+		7IrwvtCuHk9QzFGerkM+PaBJtDk=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -668,7 +668,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			qn8PFuYbjYWBWKyx/NhyvcO/9O4ZkTjLCkQkentrwXk=
+			j/7aASPKUBk/RDwkn4qn05PUo/fU4k4lVwBcLrKY7HQ=
 			</data>
 		</dict>
 		<key>BaggageInfoTVCell.nib</key>
@@ -1361,14 +1361,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			c/rDaPxs+kLZjdWbLjuQbiVxevzYe/x8RxwJ3tT6gdU=
+			rL08um2PeyAywHRCEXk7Uyf/5bZWzrMGNsLbqGRr9cg=
 			</data>
 		</dict>
 		<key>Modules/ShareTripSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			lLwEs5lcpYbh9n4rdapKLWIX7pFJy+nr8vEBHC6l5v8=
+			kgWX2IdlU6mGUul/JLjXO0HBwhIaNhzLzBaWvt/ptoc=
 			</data>
 		</dict>
 		<key>Modules/ShareTripSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
@@ -1382,14 +1382,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			lLwEs5lcpYbh9n4rdapKLWIX7pFJy+nr8vEBHC6l5v8=
+			kgWX2IdlU6mGUul/JLjXO0HBwhIaNhzLzBaWvt/ptoc=
 			</data>
 		</dict>
 		<key>Modules/ShareTripSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			70Sg4pM/vs0Xdqe1rRnWiLSvu/YIIXc+oUNfhKLFm/o=
+			e/Z5DmMZTLnPDBAHoQmVypRXAHrESWohPWo+jHAqK50=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
