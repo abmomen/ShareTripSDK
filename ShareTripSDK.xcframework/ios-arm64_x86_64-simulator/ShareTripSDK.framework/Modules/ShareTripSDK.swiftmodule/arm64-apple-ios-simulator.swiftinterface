@@ -1405,9 +1405,9 @@ public struct SingleInputTitleData {
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
 }
-final public class STSDK {
+@_hasMissingDesignatedInitializers final public class STSDK {
   public static var consumer: ShareTripSDK.SDKConsumers
-  public init(_ accessToken: Swift.String)
+  public static func initiate(_ accessToken: Swift.String)
   @objc deinit
 }
 public enum SDKConsumers {
