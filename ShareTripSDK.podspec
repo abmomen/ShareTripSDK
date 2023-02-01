@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
     s.name              = 'ShareTripSDK'
     s.version           = '1.0.1'
-    s.summary           = 'ST Spec'
+    s.summary           = 'ShareTripSDK'
     s.homepage          = 'https://github.com/abmomen/ShareTripSDK.git'
     s.source            = { :git => 'https://github.com/abmomen/ShareTripSDK.git', :tag => '1.0.1' }
     s.author            = { 'Abdul Momen' => 'abdulmomenict@gmail.com' }
