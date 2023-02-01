@@ -6,6 +6,7 @@ Requirements:
  - Swift 5.0 or higher
  - ShareTrip AccessToken
  - GoodleService-Info file.
+ - Camera Access Descriptions.
  
 ## How to Install: 
 
